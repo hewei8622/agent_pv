@@ -1,0 +1,983 @@
+{
+  "$defs": {
+    "CaptureRGB": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "minimum": 1,
+          "title": "Action Id",
+          "type": "integer"
+        },
+        "kind": {
+          "const": "capture_rgb",
+          "title": "Kind",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "timeout_s": {
+          "exclusiveMinimum": 0,
+          "maximum": 15,
+          "title": "Timeout S",
+          "type": "number"
+        }
+      },
+      "required": [
+        "schema_version",
+        "action_id",
+        "timeout_s",
+        "kind"
+      ],
+      "title": "CaptureRGB",
+      "type": "object"
+    },
+    "Decision": {
+      "additionalProperties": false,
+      "properties": {
+        "action": {
+          "discriminator": {
+            "mapping": {
+              "capture_rgb": "#/$defs/CaptureRGB",
+              "finish": "#/$defs/Finish",
+              "move_camera": "#/$defs/MoveCamera",
+              "probe_voltage": "#/$defs/ProbeVoltage",
+              "request_help": "#/$defs/RequestHelp",
+              "safe_stop": "#/$defs/SafeStop",
+              "set_voltage": "#/$defs/SetVoltage",
+              "wait": "#/$defs/Wait"
+            },
+            "propertyName": "kind"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/MoveCamera"
+            },
+            {
+              "$ref": "#/$defs/SetVoltage"
+            },
+            {
+              "$ref": "#/$defs/ProbeVoltage"
+            },
+            {
+              "$ref": "#/$defs/CaptureRGB"
+            },
+            {
+              "$ref": "#/$defs/Wait"
+            },
+            {
+              "$ref": "#/$defs/RequestHelp"
+            },
+            {
+              "$ref": "#/$defs/SafeStop"
+            },
+            {
+              "$ref": "#/$defs/Finish"
+            }
+          ],
+          "title": "Action"
+        },
+        "evidence_refs": {
+          "items": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "title": "Evidence Refs",
+          "type": "array"
+        },
+        "hypothesis_probabilities": {
+          "anyOf": [
+            {
+              "items": {
+                "$ref": "#/$defs/HypothesisProbability"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Hypothesis Probabilities"
+        },
+        "predictions": {
+          "items": {
+            "$ref": "#/$defs/Prediction"
+          },
+          "title": "Predictions",
+          "type": "array"
+        },
+        "rationale": {
+          "maxLength": 1000,
+          "title": "Rationale",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "unresolved_hypotheses": {
+          "items": {
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "type": "string"
+          },
+          "title": "Unresolved Hypotheses",
+          "type": "array"
+        }
+      },
+      "required": [
+        "schema_version",
+        "action",
+        "predictions",
+        "hypothesis_probabilities",
+        "unresolved_hypotheses",
+        "evidence_refs",
+        "rationale"
+      ],
+      "title": "Decision",
+      "type": "object"
+    },
+    "Finish": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "minimum": 1,
+          "title": "Action Id",
+          "type": "integer"
+        },
+        "kind": {
+          "const": "finish",
+          "title": "Kind",
+          "type": "string"
+        },
+        "resolution": {
+          "enum": [
+            "resolved",
+            "unresolved",
+            "help_needed"
+          ],
+          "title": "Resolution",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "timeout_s": {
+          "exclusiveMinimum": 0,
+          "maximum": 15,
+          "title": "Timeout S",
+          "type": "number"
+        }
+      },
+      "required": [
+        "schema_version",
+        "action_id",
+        "timeout_s",
+        "kind",
+        "resolution"
+      ],
+      "title": "Finish",
+      "type": "object"
+    },
+    "HypothesisProbability": {
+      "additionalProperties": false,
+      "properties": {
+        "hypothesis": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_-]+$",
+          "title": "Hypothesis",
+          "type": "string"
+        },
+        "probability": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Probability",
+          "type": "number"
+        }
+      },
+      "required": [
+        "hypothesis",
+        "probability"
+      ],
+      "title": "HypothesisProbability",
+      "type": "object"
+    },
+    "InformationChoice": {
+      "additionalProperties": false,
+      "properties": {
+        "choice_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_-]+$",
+          "title": "Choice Id",
+          "type": "string"
+        },
+        "context_sequence_id": {
+          "minimum": 0,
+          "title": "Context Sequence Id",
+          "type": "integer"
+        },
+        "information_refs": {
+          "default": [],
+          "items": {
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "type": "string"
+          },
+          "maxItems": 3,
+          "title": "Information Refs",
+          "type": "array"
+        },
+        "kind": {
+          "const": "information",
+          "default": "information",
+          "title": "Kind",
+          "type": "string"
+        },
+        "observation_refs": {
+          "default": [],
+          "items": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "title": "Observation Refs",
+          "type": "array"
+        },
+        "request": {
+          "$ref": "#/$defs/InteractionRequest"
+        },
+        "schema_version": {
+          "const": "investigation/1.0",
+          "default": "investigation/1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "self_model": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SelfModel"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "world_belief": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/WorldBelief"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "choice_id",
+        "context_sequence_id",
+        "request"
+      ],
+      "title": "InformationChoice",
+      "type": "object"
+    },
+    "InteractionRequest": {
+      "additionalProperties": false,
+      "properties": {
+        "channel": {
+          "enum": [
+            "human",
+            "internet"
+          ],
+          "title": "Channel",
+          "type": "string"
+        },
+        "episode_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_-]+$",
+          "title": "Episode Id",
+          "type": "string"
+        },
+        "information_gap": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Information Gap",
+          "type": "string"
+        },
+        "intended_decision": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Intended Decision",
+          "type": "string"
+        },
+        "parent_request_id": {
+          "anyOf": [
+            {
+              "maxLength": 128,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Parent Request Id"
+        },
+        "question": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Question",
+          "type": "string"
+        },
+        "request_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_-]+$",
+          "title": "Request Id",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "interaction/1.0",
+          "default": "interaction/1.0",
+          "title": "Schema Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "episode_id",
+        "request_id",
+        "channel",
+        "question",
+        "information_gap",
+        "intended_decision"
+      ],
+      "title": "InteractionRequest",
+      "type": "object"
+    },
+    "MoveCamera": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "minimum": 1,
+          "title": "Action Id",
+          "type": "integer"
+        },
+        "capture_after_settle": {
+          "title": "Capture After Settle",
+          "type": "boolean"
+        },
+        "kind": {
+          "const": "move_camera",
+          "title": "Kind",
+          "type": "string"
+        },
+        "pitch_rad": {
+          "maximum": 0.5235987755982988,
+          "minimum": -0.5235987755982988,
+          "title": "Pitch Rad",
+          "type": "number"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "slide_m": {
+          "maximum": 0.15,
+          "minimum": -0.15,
+          "title": "Slide M",
+          "type": "number"
+        },
+        "timeout_s": {
+          "exclusiveMinimum": 0,
+          "maximum": 15,
+          "title": "Timeout S",
+          "type": "number"
+        },
+        "yaw_rad": {
+          "maximum": 0.7853981633974483,
+          "minimum": -0.7853981633974483,
+          "title": "Yaw Rad",
+          "type": "number"
+        }
+      },
+      "required": [
+        "schema_version",
+        "action_id",
+        "timeout_s",
+        "kind",
+        "slide_m",
+        "yaw_rad",
+        "pitch_rad",
+        "capture_after_settle"
+      ],
+      "title": "MoveCamera",
+      "type": "object"
+    },
+    "PhysicalChoice": {
+      "additionalProperties": false,
+      "properties": {
+        "choice_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_-]+$",
+          "title": "Choice Id",
+          "type": "string"
+        },
+        "context_sequence_id": {
+          "minimum": 0,
+          "title": "Context Sequence Id",
+          "type": "integer"
+        },
+        "decision": {
+          "$ref": "#/$defs/Decision"
+        },
+        "information_refs": {
+          "default": [],
+          "items": {
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "type": "string"
+          },
+          "maxItems": 3,
+          "title": "Information Refs",
+          "type": "array"
+        },
+        "kind": {
+          "const": "physical",
+          "default": "physical",
+          "title": "Kind",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "investigation/1.0",
+          "default": "investigation/1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "self_model": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SelfModel"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "world_belief": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/WorldBelief"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "choice_id",
+        "context_sequence_id",
+        "decision"
+      ],
+      "title": "PhysicalChoice",
+      "type": "object"
+    },
+    "Prediction": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "minimum": 1,
+          "title": "Action Id",
+          "type": "integer"
+        },
+        "channel": {
+          "enum": [
+            "voltage_v",
+            "current_a",
+            "temperature_c",
+            "reference_w_m2"
+          ],
+          "title": "Channel",
+          "type": "string"
+        },
+        "horizon_s": {
+          "exclusiveMinimum": 0,
+          "title": "Horizon S",
+          "type": "number"
+        },
+        "interval_90": {
+          "anyOf": [
+            {
+              "maxItems": 2,
+              "minItems": 2,
+              "prefixItems": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Interval 90"
+        },
+        "mean": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Mean"
+        },
+        "missingness_probability": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Missingness Probability"
+        },
+        "query_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_-]+$",
+          "title": "Query Id",
+          "type": "string"
+        },
+        "sigma": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Sigma"
+        },
+        "status": {
+          "enum": [
+            "predicted",
+            "not_predictable"
+          ],
+          "title": "Status",
+          "type": "string"
+        }
+      },
+      "required": [
+        "query_id",
+        "action_id",
+        "channel",
+        "horizon_s",
+        "mean",
+        "sigma",
+        "status"
+      ],
+      "title": "Prediction",
+      "type": "object"
+    },
+    "ProbeVoltage": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "minimum": 1,
+          "title": "Action Id",
+          "type": "integer"
+        },
+        "dwell_s": {
+          "maximum": 2.0,
+          "minimum": 0.2,
+          "title": "Dwell S",
+          "type": "number"
+        },
+        "kind": {
+          "const": "probe_voltage",
+          "title": "Kind",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "timeout_s": {
+          "exclusiveMinimum": 0,
+          "maximum": 15,
+          "title": "Timeout S",
+          "type": "number"
+        },
+        "voltages_v": {
+          "items": {
+            "maximum": 4.0,
+            "minimum": 0.2,
+            "type": "number"
+          },
+          "maxItems": 3,
+          "minItems": 1,
+          "title": "Voltages V",
+          "type": "array"
+        }
+      },
+      "required": [
+        "schema_version",
+        "action_id",
+        "timeout_s",
+        "kind",
+        "voltages_v",
+        "dwell_s"
+      ],
+      "title": "ProbeVoltage",
+      "type": "object"
+    },
+    "RequestHelp": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "minimum": 1,
+          "title": "Action Id",
+          "type": "integer"
+        },
+        "kind": {
+          "const": "request_help",
+          "title": "Kind",
+          "type": "string"
+        },
+        "measurement": {
+          "enum": [
+            "reference_irradiance",
+            "rear_inspection"
+          ],
+          "title": "Measurement",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "timeout_s": {
+          "exclusiveMinimum": 0,
+          "maximum": 15,
+          "title": "Timeout S",
+          "type": "number"
+        }
+      },
+      "required": [
+        "schema_version",
+        "action_id",
+        "timeout_s",
+        "kind",
+        "measurement"
+      ],
+      "title": "RequestHelp",
+      "type": "object"
+    },
+    "SafeStop": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "minimum": 1,
+          "title": "Action Id",
+          "type": "integer"
+        },
+        "kind": {
+          "const": "safe_stop",
+          "title": "Kind",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "timeout_s": {
+          "exclusiveMinimum": 0,
+          "maximum": 15,
+          "title": "Timeout S",
+          "type": "number"
+        }
+      },
+      "required": [
+        "schema_version",
+        "action_id",
+        "timeout_s",
+        "kind"
+      ],
+      "title": "SafeStop",
+      "type": "object"
+    },
+    "SelfModel": {
+      "additionalProperties": false,
+      "description": "Policy assessment; cannot expand advertised capabilities or budgets.",
+      "properties": {
+        "as_of_sequence_id": {
+          "minimum": 0,
+          "title": "As Of Sequence Id",
+          "type": "integer"
+        },
+        "information_refs": {
+          "default": [],
+          "items": {
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "type": "string"
+          },
+          "maxItems": 3,
+          "title": "Information Refs",
+          "type": "array"
+        },
+        "observation_refs": {
+          "default": [],
+          "items": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "title": "Observation Refs",
+          "type": "array"
+        },
+        "summary": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Summary",
+          "type": "string"
+        },
+        "unavailable_tools": {
+          "default": [],
+          "items": {
+            "anyOf": [
+              {
+                "enum": [
+                  "move_camera",
+                  "set_voltage",
+                  "probe_voltage",
+                  "capture_rgb",
+                  "wait",
+                  "request_help",
+                  "safe_stop",
+                  "finish"
+                ],
+                "type": "string"
+              },
+              {
+                "enum": [
+                  "human",
+                  "internet"
+                ],
+                "type": "string"
+              }
+            ]
+          },
+          "title": "Unavailable Tools",
+          "type": "array"
+        }
+      },
+      "required": [
+        "as_of_sequence_id",
+        "summary"
+      ],
+      "title": "SelfModel",
+      "type": "object"
+    },
+    "SetVoltage": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "minimum": 1,
+          "title": "Action Id",
+          "type": "integer"
+        },
+        "kind": {
+          "const": "set_voltage",
+          "title": "Kind",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "timeout_s": {
+          "exclusiveMinimum": 0,
+          "maximum": 15,
+          "title": "Timeout S",
+          "type": "number"
+        },
+        "voltage_v": {
+          "maximum": 4.0,
+          "minimum": 0.2,
+          "title": "Voltage V",
+          "type": "number"
+        }
+      },
+      "required": [
+        "schema_version",
+        "action_id",
+        "timeout_s",
+        "kind",
+        "voltage_v"
+      ],
+      "title": "SetVoltage",
+      "type": "object"
+    },
+    "Wait": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "minimum": 1,
+          "title": "Action Id",
+          "type": "integer"
+        },
+        "duration_s": {
+          "maximum": 5,
+          "minimum": 0.1,
+          "title": "Duration S",
+          "type": "number"
+        },
+        "kind": {
+          "const": "wait",
+          "title": "Kind",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "timeout_s": {
+          "exclusiveMinimum": 0,
+          "maximum": 15,
+          "title": "Timeout S",
+          "type": "number"
+        }
+      },
+      "required": [
+        "schema_version",
+        "action_id",
+        "timeout_s",
+        "kind",
+        "duration_s"
+      ],
+      "title": "Wait",
+      "type": "object"
+    },
+    "WorldBelief": {
+      "additionalProperties": false,
+      "description": "Recorded interpretation, never an evaluator's hidden physical state.",
+      "properties": {
+        "alternatives": {
+          "default": [],
+          "items": {
+            "maxLength": 1000,
+            "minLength": 1,
+            "type": "string"
+          },
+          "maxItems": 8,
+          "title": "Alternatives",
+          "type": "array"
+        },
+        "as_of_sequence_id": {
+          "minimum": 0,
+          "title": "As Of Sequence Id",
+          "type": "integer"
+        },
+        "information_gap": {
+          "anyOf": [
+            {
+              "maxLength": 1000,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Information Gap"
+        },
+        "information_refs": {
+          "default": [],
+          "items": {
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "type": "string"
+          },
+          "maxItems": 3,
+          "title": "Information Refs",
+          "type": "array"
+        },
+        "observation_refs": {
+          "default": [],
+          "items": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "title": "Observation Refs",
+          "type": "array"
+        },
+        "summary": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Summary",
+          "type": "string"
+        }
+      },
+      "required": [
+        "as_of_sequence_id",
+        "summary"
+      ],
+      "title": "WorldBelief",
+      "type": "object"
+    }
+  },
+  "discriminator": {
+    "mapping": {
+      "information": "#/$defs/InformationChoice",
+      "physical": "#/$defs/PhysicalChoice"
+    },
+    "propertyName": "kind"
+  },
+  "oneOf": [
+    {
+      "$ref": "#/$defs/PhysicalChoice"
+    },
+    {
+      "$ref": "#/$defs/InformationChoice"
+    }
+  ]
+}

@@ -1,0 +1,1163 @@
+{
+  "$defs": {
+    "ActuationFixtures": {
+      "additionalProperties": false,
+      "properties": {
+        "load_drop_commands": {
+          "default": [],
+          "items": {
+            "minimum": 1,
+            "type": "integer"
+          },
+          "title": "Load Drop Commands",
+          "type": "array"
+        },
+        "load_extra_delay_s": {
+          "default": [],
+          "items": {
+            "maxItems": 2,
+            "minItems": 2,
+            "prefixItems": [
+              {
+                "minimum": 1,
+                "type": "integer"
+              },
+              {
+                "minimum": 0,
+                "type": "number"
+              }
+            ],
+            "type": "array"
+          },
+          "title": "Load Extra Delay S",
+          "type": "array"
+        },
+        "move_stall_commands": {
+          "default": [],
+          "items": {
+            "minimum": 1,
+            "type": "integer"
+          },
+          "title": "Move Stall Commands",
+          "type": "array"
+        }
+      },
+      "title": "ActuationFixtures",
+      "type": "object"
+    },
+    "BackendConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "camera": {
+          "const": "agent_rgb",
+          "title": "Camera",
+          "type": "string"
+        },
+        "name": {
+          "const": "mujoco",
+          "title": "Name",
+          "type": "string"
+        },
+        "renderer": {
+          "const": "classic",
+          "title": "Renderer",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "camera",
+        "renderer"
+      ],
+      "title": "BackendConfig",
+      "type": "object"
+    },
+    "Budgets": {
+      "additionalProperties": false,
+      "properties": {
+        "angular_path_rad": {
+          "minimum": 0,
+          "title": "Angular Path Rad",
+          "type": "number"
+        },
+        "decisions": {
+          "minimum": 0,
+          "title": "Decisions",
+          "type": "integer"
+        },
+        "help_requests": {
+          "minimum": 0,
+          "title": "Help Requests",
+          "type": "integer"
+        },
+        "rgb_frames": {
+          "minimum": 0,
+          "title": "Rgb Frames",
+          "type": "integer"
+        },
+        "slide_path_m": {
+          "minimum": 0,
+          "title": "Slide Path M",
+          "type": "number"
+        },
+        "time_s": {
+          "minimum": 0,
+          "title": "Time S",
+          "type": "number"
+        },
+        "voltage_points": {
+          "minimum": 0,
+          "title": "Voltage Points",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "time_s",
+        "rgb_frames",
+        "voltage_points",
+        "help_requests",
+        "decisions",
+        "slide_path_m",
+        "angular_path_rad"
+      ],
+      "title": "Budgets",
+      "type": "object"
+    },
+    "CameraConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "angular_acceleration_rad_s2": {
+          "exclusiveMinimum": 0,
+          "title": "Angular Acceleration Rad S2",
+          "type": "number"
+        },
+        "angular_rate_rad_s": {
+          "exclusiveMinimum": 0,
+          "title": "Angular Rate Rad S",
+          "type": "number"
+        },
+        "fovy_deg": {
+          "exclusiveMaximum": 180,
+          "exclusiveMinimum": 0,
+          "title": "Fovy Deg",
+          "type": "number"
+        },
+        "headlight": {
+          "title": "Headlight",
+          "type": "boolean"
+        },
+        "height": {
+          "minimum": 1,
+          "title": "Height",
+          "type": "integer"
+        },
+        "home_position_m": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Home Position M",
+          "type": "array"
+        },
+        "pitch_limits_rad": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Pitch Limits Rad",
+          "type": "array"
+        },
+        "settle_s": {
+          "exclusiveMinimum": 0,
+          "title": "Settle S",
+          "type": "number"
+        },
+        "slide_acceleration_m_s2": {
+          "exclusiveMinimum": 0,
+          "title": "Slide Acceleration M S2",
+          "type": "number"
+        },
+        "slide_limits_m": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Slide Limits M",
+          "type": "array"
+        },
+        "slide_rate_m_s": {
+          "exclusiveMinimum": 0,
+          "title": "Slide Rate M S",
+          "type": "number"
+        },
+        "width": {
+          "minimum": 1,
+          "title": "Width",
+          "type": "integer"
+        },
+        "yaw_limits_rad": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Yaw Limits Rad",
+          "type": "array"
+        }
+      },
+      "required": [
+        "width",
+        "height",
+        "fovy_deg",
+        "home_position_m",
+        "slide_limits_m",
+        "yaw_limits_rad",
+        "pitch_limits_rad",
+        "slide_rate_m_s",
+        "slide_acceleration_m_s2",
+        "angular_rate_rad_s",
+        "angular_acceleration_rad_s2",
+        "settle_s",
+        "headlight"
+      ],
+      "title": "CameraConfig",
+      "type": "object"
+    },
+    "CostWeights": {
+      "additionalProperties": false,
+      "properties": {
+        "angle_per_rad": {
+          "minimum": 0,
+          "title": "Angle Per Rad",
+          "type": "number"
+        },
+        "help_request": {
+          "minimum": 0,
+          "title": "Help Request",
+          "type": "number"
+        },
+        "pv_energy_scale_j": {
+          "exclusiveMinimum": 0,
+          "title": "Pv Energy Scale J",
+          "type": "number"
+        },
+        "rgb": {
+          "minimum": 0,
+          "title": "Rgb",
+          "type": "number"
+        },
+        "slide_per_m": {
+          "minimum": 0,
+          "title": "Slide Per M",
+          "type": "number"
+        },
+        "voltage_point": {
+          "minimum": 0,
+          "title": "Voltage Point",
+          "type": "number"
+        }
+      },
+      "required": [
+        "pv_energy_scale_j",
+        "rgb",
+        "voltage_point",
+        "help_request",
+        "slide_per_m",
+        "angle_per_rad"
+      ],
+      "title": "CostWeights",
+      "type": "object"
+    },
+    "LoadConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "delay_s": {
+          "minimum": 0,
+          "title": "Delay S",
+          "type": "number"
+        },
+        "help_delay_s": {
+          "exclusiveMinimum": 0,
+          "title": "Help Delay S",
+          "type": "number"
+        },
+        "probe_dwell_bounds_s": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            }
+          ],
+          "title": "Probe Dwell Bounds S",
+          "type": "array"
+        },
+        "probe_max_points": {
+          "maximum": 3,
+          "minimum": 1,
+          "title": "Probe Max Points",
+          "type": "integer"
+        },
+        "settle_s": {
+          "exclusiveMinimum": 0,
+          "title": "Settle S",
+          "type": "number"
+        },
+        "slew_v_s": {
+          "exclusiveMinimum": 0,
+          "title": "Slew V S",
+          "type": "number"
+        },
+        "wait_bounds_s": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            }
+          ],
+          "title": "Wait Bounds S",
+          "type": "array"
+        }
+      },
+      "required": [
+        "delay_s",
+        "slew_v_s",
+        "settle_s",
+        "probe_dwell_bounds_s",
+        "probe_max_points",
+        "wait_bounds_s",
+        "help_delay_s"
+      ],
+      "title": "LoadConfig",
+      "type": "object"
+    },
+    "M2Config": {
+      "additionalProperties": false,
+      "properties": {
+        "actuation": {
+          "$ref": "#/$defs/ActuationFixtures"
+        },
+        "sensing": {
+          "$ref": "#/$defs/SensingFixtures"
+        },
+        "view": {
+          "$ref": "#/$defs/ViewFixtures"
+        }
+      },
+      "title": "M2Config",
+      "type": "object"
+    },
+    "PVConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "backend": {
+          "const": "piecewise_cell_v1",
+          "title": "Backend",
+          "type": "string"
+        },
+        "bisection_current_bounds_a": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Bisection Current Bounds A",
+          "type": "array"
+        },
+        "bypass_voltage_v": {
+          "exclusiveMinimum": 0,
+          "title": "Bypass Voltage V",
+          "type": "number"
+        },
+        "cells_per_substring": {
+          "exclusiveMinimum": 0,
+          "title": "Cells Per Substring",
+          "type": "integer"
+        },
+        "current_limit_a": {
+          "exclusiveMinimum": 0,
+          "title": "Current Limit A",
+          "type": "number"
+        },
+        "initial_voltage_v": {
+          "title": "Initial Voltage V",
+          "type": "number"
+        },
+        "isc_reference_a": {
+          "exclusiveMinimum": 0,
+          "title": "Isc Reference A",
+          "type": "number"
+        },
+        "isc_temperature_coefficient_per_k": {
+          "title": "Isc Temperature Coefficient Per K",
+          "type": "number"
+        },
+        "reference_irradiance_w_m2": {
+          "exclusiveMinimum": 0,
+          "title": "Reference Irradiance W M2",
+          "type": "number"
+        },
+        "reference_temperature_c": {
+          "title": "Reference Temperature C",
+          "type": "number"
+        },
+        "reverse_resistance_ohm": {
+          "exclusiveMinimum": 0,
+          "title": "Reverse Resistance Ohm",
+          "type": "number"
+        },
+        "root_convention": {
+          "const": "lowest_nonnegative_root",
+          "title": "Root Convention",
+          "type": "string"
+        },
+        "substrings_in_series": {
+          "exclusiveMinimum": 0,
+          "title": "Substrings In Series",
+          "type": "integer"
+        },
+        "voc_log_irradiance_coefficient_v": {
+          "title": "Voc Log Irradiance Coefficient V",
+          "type": "number"
+        },
+        "voc_reference_v": {
+          "exclusiveMinimum": 0,
+          "title": "Voc Reference V",
+          "type": "number"
+        },
+        "voc_temperature_coefficient_v_k": {
+          "title": "Voc Temperature Coefficient V K",
+          "type": "number"
+        },
+        "voltage_limits_v": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Voltage Limits V",
+          "type": "array"
+        }
+      },
+      "required": [
+        "backend",
+        "cells_per_substring",
+        "substrings_in_series",
+        "voltage_limits_v",
+        "current_limit_a",
+        "initial_voltage_v",
+        "reference_irradiance_w_m2",
+        "reference_temperature_c",
+        "isc_reference_a",
+        "isc_temperature_coefficient_per_k",
+        "voc_reference_v",
+        "voc_temperature_coefficient_v_k",
+        "voc_log_irradiance_coefficient_v",
+        "reverse_resistance_ohm",
+        "bypass_voltage_v",
+        "bisection_current_bounds_a",
+        "root_convention"
+      ],
+      "title": "PVConfig",
+      "type": "object"
+    },
+    "PilotConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "actuator_failures": {
+          "title": "Actuator Failures",
+          "type": "boolean"
+        },
+        "encoder_noise": {
+          "title": "Encoder Noise",
+          "type": "boolean"
+        },
+        "numeric_noise": {
+          "title": "Numeric Noise",
+          "type": "boolean"
+        },
+        "rgb_required": {
+          "title": "Rgb Required",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "numeric_noise",
+        "encoder_noise",
+        "actuator_failures",
+        "rgb_required"
+      ],
+      "title": "PilotConfig",
+      "type": "object"
+    },
+    "PrivateWorld": {
+      "additionalProperties": false,
+      "properties": {
+        "ambient_temperature_c": {
+          "maximum": 40,
+          "minimum": 0,
+          "title": "Ambient Temperature C",
+          "type": "number"
+        },
+        "cell_area_m2": {
+          "exclusiveMinimum": 0,
+          "title": "Cell Area M2",
+          "type": "number"
+        },
+        "columns": {
+          "exclusiveMinimum": 0,
+          "title": "Columns",
+          "type": "integer"
+        },
+        "dhi_w_m2": {
+          "maximum": 200,
+          "minimum": 0,
+          "title": "Dhi W M2",
+          "type": "number"
+        },
+        "diffuse_visibility": {
+          "const": "uniform_unoccluded",
+          "title": "Diffuse Visibility",
+          "type": "string"
+        },
+        "dni_w_m2": {
+          "maximum": 1200,
+          "minimum": 0,
+          "title": "Dni W M2",
+          "type": "number"
+        },
+        "initial_temperature_c": {
+          "maximum": 60,
+          "minimum": 0,
+          "title": "Initial Temperature C",
+          "type": "number"
+        },
+        "optical_grid_per_axis": {
+          "minimum": 1,
+          "title": "Optical Grid Per Axis",
+          "type": "integer"
+        },
+        "panel_center_m": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Panel Center M",
+          "type": "array"
+        },
+        "panel_normal": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Panel Normal",
+          "type": "array"
+        },
+        "panel_size_m": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            }
+          ],
+          "title": "Panel Size M",
+          "type": "array"
+        },
+        "reference_position_m": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Reference Position M",
+          "type": "array"
+        },
+        "reflected_w_m2": {
+          "minimum": 0,
+          "title": "Reflected W M2",
+          "type": "number"
+        },
+        "rows": {
+          "exclusiveMinimum": 0,
+          "title": "Rows",
+          "type": "integer"
+        },
+        "series_resistance_ohm": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Series Resistance Ohm",
+          "type": "number"
+        },
+        "source_direction": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Source Direction",
+          "type": "array"
+        },
+        "transmission": {
+          "items": {
+            "maximum": 1,
+            "minimum": 0,
+            "type": "number"
+          },
+          "maxItems": 8,
+          "minItems": 8,
+          "title": "Transmission",
+          "type": "array"
+        }
+      },
+      "required": [
+        "panel_size_m",
+        "panel_center_m",
+        "panel_normal",
+        "columns",
+        "rows",
+        "cell_area_m2",
+        "source_direction",
+        "dni_w_m2",
+        "dhi_w_m2",
+        "transmission",
+        "series_resistance_ohm",
+        "ambient_temperature_c",
+        "initial_temperature_c",
+        "reference_position_m",
+        "optical_grid_per_axis",
+        "diffuse_visibility",
+        "reflected_w_m2"
+      ],
+      "title": "PrivateWorld",
+      "type": "object"
+    },
+    "SensingFixtures": {
+      "additionalProperties": false,
+      "properties": {
+        "encoder": {
+          "$ref": "#/$defs/TimingProfile"
+        },
+        "numeric": {
+          "$ref": "#/$defs/TimingProfile"
+        },
+        "rgb": {
+          "$ref": "#/$defs/TimingProfile"
+        }
+      },
+      "title": "SensingFixtures",
+      "type": "object"
+    },
+    "SensorConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "angular_sigma_rad": {
+          "minimum": 0,
+          "title": "Angular Sigma Rad",
+          "type": "number"
+        },
+        "current_sigma_a": {
+          "minimum": 0,
+          "title": "Current Sigma A",
+          "type": "number"
+        },
+        "encoder_hz": {
+          "exclusiveMinimum": 0,
+          "title": "Encoder Hz",
+          "type": "number"
+        },
+        "encoder_latency_s": {
+          "minimum": 0,
+          "title": "Encoder Latency S",
+          "type": "number"
+        },
+        "numeric_hz": {
+          "exclusiveMinimum": 0,
+          "title": "Numeric Hz",
+          "type": "number"
+        },
+        "numeric_latency_s": {
+          "minimum": 0,
+          "title": "Numeric Latency S",
+          "type": "number"
+        },
+        "reference_sigma_w_m2": {
+          "minimum": 0,
+          "title": "Reference Sigma W M2",
+          "type": "number"
+        },
+        "rgb_approximation": {
+          "const": "midpoint_snapshot",
+          "title": "Rgb Approximation",
+          "type": "string"
+        },
+        "rgb_exposure_s": {
+          "exclusiveMinimum": 0,
+          "title": "Rgb Exposure S",
+          "type": "number"
+        },
+        "rgb_latency_s": {
+          "minimum": 0,
+          "title": "Rgb Latency S",
+          "type": "number"
+        },
+        "rgb_max_hz": {
+          "exclusiveMinimum": 0,
+          "title": "Rgb Max Hz",
+          "type": "number"
+        },
+        "slide_sigma_m": {
+          "minimum": 0,
+          "title": "Slide Sigma M",
+          "type": "number"
+        },
+        "temperature_sigma_c": {
+          "minimum": 0,
+          "title": "Temperature Sigma C",
+          "type": "number"
+        },
+        "voltage_sigma_v": {
+          "minimum": 0,
+          "title": "Voltage Sigma V",
+          "type": "number"
+        }
+      },
+      "required": [
+        "numeric_hz",
+        "encoder_hz",
+        "rgb_max_hz",
+        "numeric_latency_s",
+        "encoder_latency_s",
+        "rgb_latency_s",
+        "rgb_exposure_s",
+        "rgb_approximation",
+        "voltage_sigma_v",
+        "current_sigma_a",
+        "temperature_sigma_c",
+        "reference_sigma_w_m2",
+        "slide_sigma_m",
+        "angular_sigma_rad"
+      ],
+      "title": "SensorConfig",
+      "type": "object"
+    },
+    "ServoConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "camera_mass_kg": {
+          "exclusiveMinimum": 0,
+          "title": "Camera Mass Kg",
+          "type": "number"
+        },
+        "carriage_mass_kg": {
+          "exclusiveMinimum": 0,
+          "title": "Carriage Mass Kg",
+          "type": "number"
+        },
+        "hinge_damping_nm_s_rad": {
+          "minimum": 0,
+          "title": "Hinge Damping Nm S Rad",
+          "type": "number"
+        },
+        "hinge_kp_nm_rad": {
+          "exclusiveMinimum": 0,
+          "title": "Hinge Kp Nm Rad",
+          "type": "number"
+        },
+        "hinge_torque_cap_nm": {
+          "exclusiveMinimum": 0,
+          "title": "Hinge Torque Cap Nm",
+          "type": "number"
+        },
+        "slide_damping_n_s_m": {
+          "minimum": 0,
+          "title": "Slide Damping N S M",
+          "type": "number"
+        },
+        "slide_force_cap_n": {
+          "exclusiveMinimum": 0,
+          "title": "Slide Force Cap N",
+          "type": "number"
+        },
+        "slide_kp_n_m": {
+          "exclusiveMinimum": 0,
+          "title": "Slide Kp N M",
+          "type": "number"
+        },
+        "yaw_mass_kg": {
+          "exclusiveMinimum": 0,
+          "title": "Yaw Mass Kg",
+          "type": "number"
+        }
+      },
+      "required": [
+        "carriage_mass_kg",
+        "yaw_mass_kg",
+        "camera_mass_kg",
+        "slide_kp_n_m",
+        "slide_damping_n_s_m",
+        "slide_force_cap_n",
+        "hinge_kp_nm_rad",
+        "hinge_damping_nm_s_rad",
+        "hinge_torque_cap_nm"
+      ],
+      "title": "ServoConfig",
+      "type": "object"
+    },
+    "SimulationConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "decision_overhead_s": {
+          "exclusiveMinimum": 0,
+          "title": "Decision Overhead S",
+          "type": "number"
+        },
+        "dt_s": {
+          "exclusiveMinimum": 0,
+          "title": "Dt S",
+          "type": "number"
+        },
+        "horizon_s": {
+          "exclusiveMinimum": 0,
+          "title": "Horizon S",
+          "type": "number"
+        },
+        "max_action_timeout_s": {
+          "exclusiveMinimum": 0,
+          "maximum": 15,
+          "title": "Max Action Timeout S",
+          "type": "number"
+        },
+        "minimum_decision_spacing_s": {
+          "exclusiveMinimum": 0,
+          "title": "Minimum Decision Spacing S",
+          "type": "number"
+        },
+        "verification_tail_s": {
+          "exclusiveMinimum": 0,
+          "title": "Verification Tail S",
+          "type": "number"
+        }
+      },
+      "required": [
+        "dt_s",
+        "horizon_s",
+        "decision_overhead_s",
+        "minimum_decision_spacing_s",
+        "verification_tail_s",
+        "max_action_timeout_s"
+      ],
+      "title": "SimulationConfig",
+      "type": "object"
+    },
+    "SourceStep": {
+      "additionalProperties": false,
+      "description": "Private exogenous DNI change; source direction and diffuse field stay fixed.",
+      "properties": {
+        "dni_w_m2": {
+          "maximum": 1200,
+          "minimum": 0,
+          "title": "Dni W M2",
+          "type": "number"
+        },
+        "time_s": {
+          "exclusiveMinimum": 0,
+          "title": "Time S",
+          "type": "number"
+        }
+      },
+      "required": [
+        "time_s",
+        "dni_w_m2"
+      ],
+      "title": "SourceStep",
+      "type": "object"
+    },
+    "ThermalConfig": {
+      "additionalProperties": false,
+      "properties": {
+        "absorptance": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Absorptance",
+          "type": "number"
+        },
+        "conductance_w_k": {
+          "exclusiveMinimum": 0,
+          "title": "Conductance W K",
+          "type": "number"
+        },
+        "heat_capacity_j_k": {
+          "exclusiveMinimum": 0,
+          "title": "Heat Capacity J K",
+          "type": "number"
+        },
+        "trip_temperature_c": {
+          "title": "Trip Temperature C",
+          "type": "number"
+        },
+        "update": {
+          "const": "exact_linear_cooling_frozen_input",
+          "title": "Update",
+          "type": "string"
+        }
+      },
+      "required": [
+        "absorptance",
+        "heat_capacity_j_k",
+        "conductance_w_k",
+        "trip_temperature_c",
+        "update"
+      ],
+      "title": "ThermalConfig",
+      "type": "object"
+    },
+    "TimingProfile": {
+      "additionalProperties": false,
+      "properties": {
+        "dropout_probability": {
+          "default": 0.0,
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Dropout Probability",
+          "type": "number"
+        },
+        "extra_delay_s": {
+          "default": 0.0,
+          "minimum": 0,
+          "title": "Extra Delay S",
+          "type": "number"
+        },
+        "jitter_s": {
+          "default": 0.0,
+          "minimum": 0,
+          "title": "Jitter S",
+          "type": "number"
+        },
+        "stale_after_s": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Stale After S"
+        }
+      },
+      "title": "TimingProfile",
+      "type": "object"
+    },
+    "ViewFixtures": {
+      "additionalProperties": false,
+      "properties": {
+        "rail_locked": {
+          "default": false,
+          "title": "Rail Locked",
+          "type": "boolean"
+        },
+        "screen_half_width_m": {
+          "anyOf": [
+            {
+              "enum": [
+                0.03,
+                0.06
+              ],
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Screen Half Width M"
+        }
+      },
+      "title": "ViewFixtures",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "backend": {
+      "$ref": "#/$defs/BackendConfig"
+    },
+    "budgets": {
+      "$ref": "#/$defs/Budgets"
+    },
+    "camera": {
+      "$ref": "#/$defs/CameraConfig"
+    },
+    "cost_weights": {
+      "$ref": "#/$defs/CostWeights"
+    },
+    "load": {
+      "$ref": "#/$defs/LoadConfig"
+    },
+    "m2": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/M2Config"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "mode": {
+      "const": "trusted-policy/local",
+      "title": "Mode",
+      "type": "string"
+    },
+    "pilot": {
+      "$ref": "#/$defs/PilotConfig"
+    },
+    "private_world": {
+      "$ref": "#/$defs/PrivateWorld"
+    },
+    "pv": {
+      "$ref": "#/$defs/PVConfig"
+    },
+    "schema_version": {
+      "const": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "sensors": {
+      "$ref": "#/$defs/SensorConfig"
+    },
+    "servos": {
+      "$ref": "#/$defs/ServoConfig"
+    },
+    "simulation": {
+      "$ref": "#/$defs/SimulationConfig"
+    },
+    "source_schedule": {
+      "anyOf": [
+        {
+          "items": {
+            "$ref": "#/$defs/SourceStep"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Source Schedule"
+    },
+    "thermal": {
+      "$ref": "#/$defs/ThermalConfig"
+    }
+  },
+  "required": [
+    "schema_version",
+    "mode",
+    "simulation",
+    "backend",
+    "camera",
+    "servos",
+    "pv",
+    "thermal",
+    "sensors",
+    "load",
+    "budgets",
+    "cost_weights",
+    "private_world",
+    "pilot"
+  ],
+  "title": "Config",
+  "type": "object"
+}

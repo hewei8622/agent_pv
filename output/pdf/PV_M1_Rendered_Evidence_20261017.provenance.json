@@ -1,0 +1,2612 @@
+{
+  "schema_version": "1.0",
+  "created_utc": "2026-10-17T19:30:16.479643+00:00",
+  "output": "./output/pdf/PV_M1_Rendered_Evidence_20261017.pdf",
+  "pdf_sha256": "d9b26bfe0f221839bbfee46531511db6bda0871534723fa5dbdbb640ef73e6dd",
+  "pages": 8,
+  "draft": false,
+  "full_m1_pass": true,
+  "primary_recording_scope": "complete rendered pilot",
+  "read_only_generation": true,
+  "policy_wall_time_interpretation": "original recorded policy wall time; not remeasured by replay",
+  "sources": [
+    {
+      "id": "S1",
+      "label": "Verified source recording manifest",
+      "path": "./private_eval/m1-desktop-20261017T192106Z-8055-s11/manifest.json",
+      "sha256": "ab7713aba74db4708e4539069c2522b7edce2ebb83424e57eb7663a38726d038",
+      "snapshot": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/inputs/S01-manifest.json",
+      "bytes": 7617,
+      "show_in_pdf": true
+    },
+    {
+      "id": "S2",
+      "label": "Private actual-state trace",
+      "path": "./private_eval/m1-desktop-20261017T192106Z-8055-s11/truth.jsonl",
+      "sha256": "db21505bd7f93f477119d29c9fd648179f6f94355680f108d67a0b9349ff9f53",
+      "snapshot": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/inputs/S02-truth.jsonl",
+      "bytes": 6097875,
+      "show_in_pdf": true
+    },
+    {
+      "id": "S3",
+      "label": "Recorded energy and cost metrics",
+      "path": "./private_eval/m1-desktop-20261017T192106Z-8055-s11/metrics.json",
+      "sha256": "a74e7bb748fc0fde1c1a7e3f23bed96ac502ac32f721385d2025a40fe8a80a53",
+      "snapshot": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/inputs/S03-metrics.json",
+      "bytes": 1779,
+      "show_in_pdf": true
+    },
+    {
+      "id": "S4",
+      "label": "Expanded private configuration",
+      "path": "./private_eval/m1-desktop-20261017T192106Z-8055-s11/config.json",
+      "sha256": "fef54964e97a8c3901e56230a8dc2f02f0d2ed98d6de9e55826462a4601099f8",
+      "snapshot": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/inputs/S04-config.json",
+      "bytes": 2907,
+      "show_in_pdf": true
+    },
+    {
+      "id": "S5",
+      "label": "JUnit test evidence",
+      "path": "./runs/m1-desktop-20261017T192106Z-8055/tests.xml",
+      "sha256": "a5081745d18fb3d06f8562e25307fcac2be5f8d2e20874b27ce5fbecf2239799",
+      "snapshot": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/inputs/S05-tests.xml",
+      "bytes": 51750,
+      "show_in_pdf": true
+    },
+    {
+      "id": "S6",
+      "label": "Independent review input",
+      "path": "./output/review/M1_DESKTOP_GATE_REVIEW_20261017.txt",
+      "sha256": "9ecf5f676029dc41fb6782950276537d24b020ad8e4008256fc866932fdf5453",
+      "snapshot": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/inputs/S06-M1_DESKTOP_GATE_REVIEW_20261017.txt",
+      "bytes": 15420,
+      "show_in_pdf": true
+    },
+    {
+      "id": "S7",
+      "label": "Matched recorded-action replay report",
+      "path": "./runs/m1-desktop-20261017T192106Z-8055-s11-replay/evidence/replay.json",
+      "sha256": "1825ba7a61a767653b3e160d84686636f82c7b55c3653776747ee786eff22efc",
+      "snapshot": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/inputs/S07-replay.json",
+      "bytes": 2724,
+      "show_in_pdf": true
+    },
+    {
+      "id": "S8",
+      "label": "Primary public observations.jsonl",
+      "path": "./runs/m1-desktop-20261017T192106Z-8055-s11/public/observations.jsonl",
+      "sha256": "e02a3c43e57467affc09136a8de0468e8b354a278f1d82a7231d2280cc21df0e",
+      "snapshot": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/inputs/S08-observations.jsonl",
+      "bytes": 152303,
+      "show_in_pdf": false
+    },
+    {
+      "id": "S9",
+      "label": "Primary public actions.jsonl",
+      "path": "./runs/m1-desktop-20261017T192106Z-8055-s11/public/actions.jsonl",
+      "sha256": "e231e9b7b96e909e1e8e613fdb3761b4fd7781908adc44296fb941f59cc66c2c",
+      "snapshot": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/inputs/S09-actions.jsonl",
+      "bytes": 1543,
+      "show_in_pdf": false
+    },
+    {
+      "id": "S10",
+      "label": "Desktop batch execution report",
+      "path": "./runs/m1-desktop-20261017T192106Z-8055/batch-report.json",
+      "sha256": "cb6dbee1262f6d08fb9aba36b2e1c967de04725e8cf3421ff31df97bb7e496da",
+      "snapshot": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/inputs/S10-batch-report.json",
+      "bytes": 879,
+      "show_in_pdf": true
+    },
+    {
+      "id": "S11",
+      "label": "Desktop machine evidence audit",
+      "path": "./runs/m1-desktop-20261017T192106Z-8055/machine-audit.json",
+      "sha256": "3625125ef12997b88c3ca70310342f030833a85f6ce3f029fbf72155f3f7f9d0",
+      "snapshot": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/inputs/S11-machine-audit.json",
+      "bytes": 4656,
+      "show_in_pdf": true
+    },
+    {
+      "id": "S12",
+      "label": "Seed 11 pilot manifest",
+      "path": "./private_eval/m1-desktop-20261017T192106Z-8055-s11/manifest.json",
+      "sha256": "ab7713aba74db4708e4539069c2522b7edce2ebb83424e57eb7663a38726d038",
+      "snapshot": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/inputs/S12-manifest.json",
+      "bytes": 7617,
+      "show_in_pdf": false
+    },
+    {
+      "id": "S13",
+      "label": "Seed 11 pilot metrics",
+      "path": "./private_eval/m1-desktop-20261017T192106Z-8055-s11/metrics.json",
+      "sha256": "a74e7bb748fc0fde1c1a7e3f23bed96ac502ac32f721385d2025a40fe8a80a53",
+      "snapshot": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/inputs/S13-metrics.json",
+      "bytes": 1779,
+      "show_in_pdf": false
+    },
+    {
+      "id": "S14",
+      "label": "Seed 11 public observations",
+      "path": "./runs/m1-desktop-20261017T192106Z-8055-s11/public/observations.jsonl",
+      "sha256": "e02a3c43e57467affc09136a8de0468e8b354a278f1d82a7231d2280cc21df0e",
+      "snapshot": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/inputs/S14-observations.jsonl",
+      "bytes": 152303,
+      "show_in_pdf": false
+    },
+    {
+      "id": "S15",
+      "label": "Seed 11 rendered replay",
+      "path": "./runs/m1-desktop-20261017T192106Z-8055-s11-replay/evidence/replay.json",
+      "sha256": "1825ba7a61a767653b3e160d84686636f82c7b55c3653776747ee786eff22efc",
+      "snapshot": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/inputs/S15-replay.json",
+      "bytes": 2724,
+      "show_in_pdf": false
+    },
+    {
+      "id": "S16",
+      "label": "Seed 23 pilot manifest",
+      "path": "./private_eval/m1-desktop-20261017T192106Z-8055-s23/manifest.json",
+      "sha256": "97a37191d7800fb661bbba898d0859195f85f8f5a57bccb6159f9a636394c035",
+      "snapshot": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/inputs/S16-manifest.json",
+      "bytes": 7619,
+      "show_in_pdf": false
+    },
+    {
+      "id": "S17",
+      "label": "Seed 23 pilot metrics",
+      "path": "./private_eval/m1-desktop-20261017T192106Z-8055-s23/metrics.json",
+      "sha256": "892e811fb74c0e77ba40d00781a9591df57e0d1a4d1bff2918a3b0f8e14ae6ae",
+      "snapshot": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/inputs/S17-metrics.json",
+      "bytes": 1779,
+      "show_in_pdf": false
+    },
+    {
+      "id": "S18",
+      "label": "Seed 23 public observations",
+      "path": "./runs/m1-desktop-20261017T192106Z-8055-s23/public/observations.jsonl",
+      "sha256": "241ebf5c31e556ffcae7f40944d7d08fb2275839ca409e1e70b51ef9c2b06745",
+      "snapshot": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/inputs/S18-observations.jsonl",
+      "bytes": 152303,
+      "show_in_pdf": false
+    },
+    {
+      "id": "S19",
+      "label": "Seed 23 rendered replay",
+      "path": "./runs/m1-desktop-20261017T192106Z-8055-s23-replay/evidence/replay.json",
+      "sha256": "c303130f5d8e599a85bef6997c224fff42db4bdb4b0c5d7b157fb788c0ebb77a",
+      "snapshot": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/inputs/S19-replay.json",
+      "bytes": 2724,
+      "show_in_pdf": false
+    },
+    {
+      "id": "S20",
+      "label": "Seed 47 pilot manifest",
+      "path": "./private_eval/m1-desktop-20261017T192106Z-8055-s47/manifest.json",
+      "sha256": "f8c5d0bc9252c992e4f445e130fd5f81b2d011d5e7229fb6535f155560697298",
+      "snapshot": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/inputs/S20-manifest.json",
+      "bytes": 7618,
+      "show_in_pdf": false
+    },
+    {
+      "id": "S21",
+      "label": "Seed 47 pilot metrics",
+      "path": "./private_eval/m1-desktop-20261017T192106Z-8055-s47/metrics.json",
+      "sha256": "a79a81acfc1dc2a5788b0d74936f50a081753d55f6ed54ae18fc6d43f48db530",
+      "snapshot": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/inputs/S21-metrics.json",
+      "bytes": 1778,
+      "show_in_pdf": false
+    },
+    {
+      "id": "S22",
+      "label": "Seed 47 public observations",
+      "path": "./runs/m1-desktop-20261017T192106Z-8055-s47/public/observations.jsonl",
+      "sha256": "056af33cf2b3d392cb5325eab390e288cc11f1b81fee19eaa968379ef129a619",
+      "snapshot": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/inputs/S22-observations.jsonl",
+      "bytes": 152303,
+      "show_in_pdf": false
+    },
+    {
+      "id": "S23",
+      "label": "Seed 47 rendered replay",
+      "path": "./runs/m1-desktop-20261017T192106Z-8055-s47-replay/evidence/replay.json",
+      "sha256": "5201c833d31fc4ca0ae397a7250d668811358d7ef7472515e49a286b63b9677c",
+      "snapshot": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/inputs/S23-replay.json",
+      "bytes": 2724,
+      "show_in_pdf": false
+    },
+    {
+      "id": "S24",
+      "label": "Actual unmodified camera PNG, seed 11, Home",
+      "path": "./runs/m1-desktop-20261017T192106Z-8055-s11/public/frames/frame_000001.png",
+      "sha256": "de339600b351a3a82b2de9606c304be751bebfce264a523fb6f58646d95b178c",
+      "snapshot": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/inputs/S24-frame_000001.png",
+      "bytes": 4996,
+      "show_in_pdf": false
+    },
+    {
+      "id": "S25",
+      "label": "Actual unmodified camera PNG, seed 11, Side",
+      "path": "./runs/m1-desktop-20261017T192106Z-8055-s11/public/frames/frame_000002.png",
+      "sha256": "4c7e463d90fd9b97e397b017839cbedf8ce2a87c011ba94120d375d5afe42064",
+      "snapshot": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/inputs/S25-frame_000002.png",
+      "bytes": 8587,
+      "show_in_pdf": false
+    },
+    {
+      "id": "S26",
+      "label": "Actual unmodified camera PNG, seed 23, Home",
+      "path": "./runs/m1-desktop-20261017T192106Z-8055-s23/public/frames/frame_000001.png",
+      "sha256": "de339600b351a3a82b2de9606c304be751bebfce264a523fb6f58646d95b178c",
+      "snapshot": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/inputs/S26-frame_000001.png",
+      "bytes": 4996,
+      "show_in_pdf": false
+    },
+    {
+      "id": "S27",
+      "label": "Actual unmodified camera PNG, seed 23, Side",
+      "path": "./runs/m1-desktop-20261017T192106Z-8055-s23/public/frames/frame_000002.png",
+      "sha256": "4c7e463d90fd9b97e397b017839cbedf8ce2a87c011ba94120d375d5afe42064",
+      "snapshot": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/inputs/S27-frame_000002.png",
+      "bytes": 8587,
+      "show_in_pdf": false
+    },
+    {
+      "id": "S28",
+      "label": "Actual unmodified camera PNG, seed 47, Home",
+      "path": "./runs/m1-desktop-20261017T192106Z-8055-s47/public/frames/frame_000001.png",
+      "sha256": "de339600b351a3a82b2de9606c304be751bebfce264a523fb6f58646d95b178c",
+      "snapshot": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/inputs/S28-frame_000001.png",
+      "bytes": 4996,
+      "show_in_pdf": false
+    },
+    {
+      "id": "S29",
+      "label": "Actual unmodified camera PNG, seed 47, Side",
+      "path": "./runs/m1-desktop-20261017T192106Z-8055-s47/public/frames/frame_000002.png",
+      "sha256": "4c7e463d90fd9b97e397b017839cbedf8ce2a87c011ba94120d375d5afe42064",
+      "snapshot": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/inputs/S29-frame_000002.png",
+      "bytes": 8587,
+      "show_in_pdf": false
+    }
+  ],
+  "tests": {
+    "total": 408,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 408,
+    "groups": {
+      "tests.integration.test_budget_stop": 10,
+      "tests.integration.test_m1_core": 19,
+      "tests.integration.test_m1_replay": 6,
+      "tests.render.test_calibration": 5,
+      "tests.render.test_m1_camera": 16,
+      "tests.render.test_m1_loop": 1,
+      "tests.security.test_policy_boundary": 16,
+      "tests.unit.test_command_recorder": 7,
+      "tests.unit.test_config_cli": 36,
+      "tests.unit.test_contracts": 59,
+      "tests.unit.test_fiducials": 6,
+      "tests.unit.test_m1_batch_audit": 30,
+      "tests.unit.test_m1_cli": 6,
+      "tests.unit.test_m1_desktop_controller": 4,
+      "tests.unit.test_motion": 15,
+      "tests.unit.test_optics": 16,
+      "tests.unit.test_png_contract": 31,
+      "tests.unit.test_policies": 17,
+      "tests.unit.test_pv": 36,
+      "tests.unit.test_recorder": 13,
+      "tests.unit.test_scenarios": 9,
+      "tests.unit.test_scheduler": 19,
+      "tests.unit.test_sensors": 14,
+      "tests.unit.test_thermal": 17
+    },
+    "render_cases": 22,
+    "time_s": 15.82,
+    "timestamps": [
+      "2026-10-17T20:21:06.812673+01:00"
+    ]
+  },
+  "review_verdict": "PASS_M1",
+  "historical_source_changes": [],
+  "measurements": {
+    "electrical_thermal": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/figures/electrical_thermal.png",
+    "motion": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/figures/actual_joint_motion.png",
+    "geometry": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/figures/recorded_camera_geometry.png",
+    "sample_count": 5261,
+    "elapsed_s": 10.52,
+    "temperature_start_c": 25.0,
+    "temperature_final_c": 40.065106601568466,
+    "power_min_w": 0.5985255528596601,
+    "power_max_w": 1.0478860993359511,
+    "maximum_power_identity_error_w": 0.0,
+    "q_final": [
+      0.12,
+      0.26060239174734046,
+      -8.339320462364767e-97
+    ],
+    "setpoint_final": [
+      0.12,
+      0.26060239174734096,
+      0.0
+    ],
+    "maximum_dynamic_tracking_error": [
+      0.002501068698178348,
+      0.018332964962063464,
+      8.807328233948707e-36
+    ],
+    "maximum_saved_joint_rates": [
+      0.051242689367758644,
+      0.48243167076947724,
+      7.911940725596995e-35
+    ],
+    "maximum_saved_setpoint_rates": [
+      0.04999999999999988,
+      0.49999999999999994,
+      0.0
+    ],
+    "final_tracking_error": [
+      0.0,
+      4.996003610813204e-16,
+      8.339320462364767e-97
+    ],
+    "camera_start_m": [
+      0.0,
+      -0.45,
+      0.35
+    ],
+    "camera_final_m": [
+      0.12,
+      -0.45,
+      0.35
+    ],
+    "captures": [
+      {
+        "frame": {
+          "calibration_id": "nominal_v1",
+          "camera_id": "agent_rgb",
+          "encoding": "png_rgb8",
+          "exposure": {
+            "approximation": "midpoint_snapshot",
+            "duration_s": 0.012
+          },
+          "frame_id": "frame_000001",
+          "height": 480,
+          "k": [
+            579.4112549695427,
+            0.0,
+            319.5,
+            0.0,
+            579.4112549695427,
+            239.5,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "png_file": "frames/frame_000001.png",
+          "png_sha256": "de339600b351a3a82b2de9606c304be751bebfce264a523fb6f58646d95b178c",
+          "t_capture_s": 0.226,
+          "t_deliver_s": 0.332,
+          "t_end_s": 0.232,
+          "t_start_s": 0.22,
+          "validity": "valid",
+          "width": 640
+        },
+        "seed": 11,
+        "pose": {
+          "actuator_force": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "actuator_work_j": 0.0,
+          "camera_position_m": [
+            0.0,
+            -0.45,
+            0.35
+          ],
+          "camera_rotation": [
+            0.9999999999999999,
+            0.0,
+            0.0,
+            0.0,
+            0.6139406135149205,
+            -0.7893522173763262,
+            0.0,
+            0.7893522173763262,
+            0.6139406135149205
+          ],
+          "q": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "qdot": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "setpoint": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "setpoint_rate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "tick": 113,
+          "time_s": 0.226
+        },
+        "view": "Home"
+      },
+      {
+        "frame": {
+          "calibration_id": "nominal_v1",
+          "camera_id": "agent_rgb",
+          "encoding": "png_rgb8",
+          "exposure": {
+            "approximation": "midpoint_snapshot",
+            "duration_s": 0.012
+          },
+          "frame_id": "frame_000002",
+          "height": 480,
+          "k": [
+            579.4112549695427,
+            0.0,
+            319.5,
+            0.0,
+            579.4112549695427,
+            239.5,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "png_file": "frames/frame_000002.png",
+          "png_sha256": "4c7e463d90fd9b97e397b017839cbedf8ce2a87c011ba94120d375d5afe42064",
+          "t_capture_s": 3.466,
+          "t_deliver_s": 3.572,
+          "t_end_s": 3.472,
+          "t_start_s": 3.46,
+          "validity": "valid",
+          "width": 640
+        },
+        "seed": 11,
+        "pose": {
+          "actuator_force": [
+            -9.324822063483396e-05,
+            0.0,
+            1.3813314489911565e-38
+          ],
+          "actuator_work_j": 0.00043333635557040606,
+          "camera_position_m": [
+            0.11999639069717918,
+            -0.45,
+            0.35
+          ],
+          "camera_rotation": [
+            0.9662349396012464,
+            -0.15818956576489068,
+            0.20338658455485942,
+            0.25766265056033183,
+            0.5932108716183413,
+            -0.7626996920807244,
+            0.0,
+            0.7893522173763262,
+            0.6139406135149206
+          ],
+          "q": [
+            0.11999639069717918,
+            0.26060239174734046,
+            9.555079015664416e-38
+          ],
+          "qdot": [
+            9.083570054338127e-05,
+            1.2254275992670464e-14,
+            -3.079435478411682e-36
+          ],
+          "setpoint": [
+            0.12,
+            0.26060239174734096,
+            0.0
+          ],
+          "setpoint_rate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "tick": 1733,
+          "time_s": 3.466
+        },
+        "view": "Side"
+      },
+      {
+        "frame": {
+          "calibration_id": "nominal_v1",
+          "camera_id": "agent_rgb",
+          "encoding": "png_rgb8",
+          "exposure": {
+            "approximation": "midpoint_snapshot",
+            "duration_s": 0.012
+          },
+          "frame_id": "frame_000001",
+          "height": 480,
+          "k": [
+            579.4112549695427,
+            0.0,
+            319.5,
+            0.0,
+            579.4112549695427,
+            239.5,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "png_file": "frames/frame_000001.png",
+          "png_sha256": "de339600b351a3a82b2de9606c304be751bebfce264a523fb6f58646d95b178c",
+          "t_capture_s": 0.226,
+          "t_deliver_s": 0.332,
+          "t_end_s": 0.232,
+          "t_start_s": 0.22,
+          "validity": "valid",
+          "width": 640
+        },
+        "seed": 23,
+        "pose": {
+          "actuator_force": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "actuator_work_j": 0.0,
+          "camera_position_m": [
+            0.0,
+            -0.45,
+            0.35
+          ],
+          "camera_rotation": [
+            0.9999999999999999,
+            0.0,
+            0.0,
+            0.0,
+            0.6139406135149205,
+            -0.7893522173763262,
+            0.0,
+            0.7893522173763262,
+            0.6139406135149205
+          ],
+          "q": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "qdot": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "setpoint": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "setpoint_rate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "tick": 113,
+          "time_s": 0.226
+        },
+        "view": "Home"
+      },
+      {
+        "frame": {
+          "calibration_id": "nominal_v1",
+          "camera_id": "agent_rgb",
+          "encoding": "png_rgb8",
+          "exposure": {
+            "approximation": "midpoint_snapshot",
+            "duration_s": 0.012
+          },
+          "frame_id": "frame_000002",
+          "height": 480,
+          "k": [
+            579.4112549695427,
+            0.0,
+            319.5,
+            0.0,
+            579.4112549695427,
+            239.5,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "png_file": "frames/frame_000002.png",
+          "png_sha256": "4c7e463d90fd9b97e397b017839cbedf8ce2a87c011ba94120d375d5afe42064",
+          "t_capture_s": 3.466,
+          "t_deliver_s": 3.572,
+          "t_end_s": 3.472,
+          "t_start_s": 3.46,
+          "validity": "valid",
+          "width": 640
+        },
+        "seed": 23,
+        "pose": {
+          "actuator_force": [
+            -9.324822063483396e-05,
+            0.0,
+            1.3813314489911565e-38
+          ],
+          "actuator_work_j": 0.00043333635557040606,
+          "camera_position_m": [
+            0.11999639069717918,
+            -0.45,
+            0.35
+          ],
+          "camera_rotation": [
+            0.9662349396012464,
+            -0.15818956576489068,
+            0.20338658455485942,
+            0.25766265056033183,
+            0.5932108716183413,
+            -0.7626996920807244,
+            0.0,
+            0.7893522173763262,
+            0.6139406135149206
+          ],
+          "q": [
+            0.11999639069717918,
+            0.26060239174734046,
+            9.555079015664416e-38
+          ],
+          "qdot": [
+            9.083570054338127e-05,
+            1.2254275992670464e-14,
+            -3.079435478411682e-36
+          ],
+          "setpoint": [
+            0.12,
+            0.26060239174734096,
+            0.0
+          ],
+          "setpoint_rate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "tick": 1733,
+          "time_s": 3.466
+        },
+        "view": "Side"
+      },
+      {
+        "frame": {
+          "calibration_id": "nominal_v1",
+          "camera_id": "agent_rgb",
+          "encoding": "png_rgb8",
+          "exposure": {
+            "approximation": "midpoint_snapshot",
+            "duration_s": 0.012
+          },
+          "frame_id": "frame_000001",
+          "height": 480,
+          "k": [
+            579.4112549695427,
+            0.0,
+            319.5,
+            0.0,
+            579.4112549695427,
+            239.5,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "png_file": "frames/frame_000001.png",
+          "png_sha256": "de339600b351a3a82b2de9606c304be751bebfce264a523fb6f58646d95b178c",
+          "t_capture_s": 0.226,
+          "t_deliver_s": 0.332,
+          "t_end_s": 0.232,
+          "t_start_s": 0.22,
+          "validity": "valid",
+          "width": 640
+        },
+        "seed": 47,
+        "pose": {
+          "actuator_force": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "actuator_work_j": 0.0,
+          "camera_position_m": [
+            0.0,
+            -0.45,
+            0.35
+          ],
+          "camera_rotation": [
+            0.9999999999999999,
+            0.0,
+            0.0,
+            0.0,
+            0.6139406135149205,
+            -0.7893522173763262,
+            0.0,
+            0.7893522173763262,
+            0.6139406135149205
+          ],
+          "q": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "qdot": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "setpoint": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "setpoint_rate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "tick": 113,
+          "time_s": 0.226
+        },
+        "view": "Home"
+      },
+      {
+        "frame": {
+          "calibration_id": "nominal_v1",
+          "camera_id": "agent_rgb",
+          "encoding": "png_rgb8",
+          "exposure": {
+            "approximation": "midpoint_snapshot",
+            "duration_s": 0.012
+          },
+          "frame_id": "frame_000002",
+          "height": 480,
+          "k": [
+            579.4112549695427,
+            0.0,
+            319.5,
+            0.0,
+            579.4112549695427,
+            239.5,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "png_file": "frames/frame_000002.png",
+          "png_sha256": "4c7e463d90fd9b97e397b017839cbedf8ce2a87c011ba94120d375d5afe42064",
+          "t_capture_s": 3.466,
+          "t_deliver_s": 3.572,
+          "t_end_s": 3.472,
+          "t_start_s": 3.46,
+          "validity": "valid",
+          "width": 640
+        },
+        "seed": 47,
+        "pose": {
+          "actuator_force": [
+            -9.324822063483396e-05,
+            0.0,
+            1.3813314489911565e-38
+          ],
+          "actuator_work_j": 0.00043333635557040606,
+          "camera_position_m": [
+            0.11999639069717918,
+            -0.45,
+            0.35
+          ],
+          "camera_rotation": [
+            0.9662349396012464,
+            -0.15818956576489068,
+            0.20338658455485942,
+            0.25766265056033183,
+            0.5932108716183413,
+            -0.7626996920807244,
+            0.0,
+            0.7893522173763262,
+            0.6139406135149206
+          ],
+          "q": [
+            0.11999639069717918,
+            0.26060239174734046,
+            9.555079015664416e-38
+          ],
+          "qdot": [
+            9.083570054338127e-05,
+            1.2254275992670464e-14,
+            -3.079435478411682e-36
+          ],
+          "setpoint": [
+            0.12,
+            0.26060239174734096,
+            0.0
+          ],
+          "setpoint_rate": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "tick": 1733,
+          "time_s": 3.466
+        },
+        "view": "Side"
+      }
+    ],
+    "pilot_details": [
+      {
+        "seed": 11,
+        "observations": {
+          "probe_points": [
+            {
+              "voltage_v": 0.7999999999999999,
+              "current_a": 0.7481959780124213,
+              "power_w": 0.598556782409937,
+              "t_capture_s": 4.6000000000000005,
+              "t_deliver_s": 4.62
+            },
+            {
+              "voltage_v": 1.7999999999999998,
+              "current_a": 0.5533160726759079,
+              "power_w": 0.9959689308166341,
+              "t_capture_s": 5.5,
+              "t_deliver_s": 5.5200000000000005
+            },
+            {
+              "voltage_v": 2.9999999999999996,
+              "current_a": 0.31734687683078167,
+              "power_w": 0.9520406304923449,
+              "t_capture_s": 6.4,
+              "t_deliver_s": 6.42
+            }
+          ],
+          "completed": {
+            "capture_rgb": {
+              "action_id": 1,
+              "code": "completed",
+              "commanded_target": {
+                "action_id": 1,
+                "kind": "capture_rgb",
+                "schema_version": "1.0",
+                "timeout_s": 8.0
+              },
+              "measured_confirmation": [],
+              "reason": null,
+              "t_accepted_s": 0.22,
+              "t_terminal_s": 0.332
+            },
+            "move_camera": {
+              "action_id": 2,
+              "code": "completed",
+              "commanded_target": {
+                "action_id": 2,
+                "capture_after_settle": true,
+                "kind": "move_camera",
+                "pitch_rad": 0.0,
+                "schema_version": "1.0",
+                "slide_m": 0.12,
+                "timeout_s": 8.0,
+                "yaw_rad": 0.26060239174734096
+              },
+              "measured_confirmation": [
+                {
+                  "age_s": 0.12199999999999989,
+                  "sample": {
+                    "pitch_rad": 1.4768597061516518e-37,
+                    "pitch_rate_rad_s": -3.413911970587715e-36,
+                    "sensor_id": "sensor_encoders",
+                    "sigma": {
+                      "pitch_rad": 0.001,
+                      "slide_m": 0.0005,
+                      "yaw_rad": 0.001
+                    },
+                    "slide_m": 0.11999490323637257,
+                    "slide_rate_m_s": 9.303871185722064e-05,
+                    "t_capture_s": 3.45,
+                    "t_deliver_s": 3.46,
+                    "validity": "valid",
+                    "yaw_rad": 0.26060239174734046,
+                    "yaw_rate_rad_s": 1.2254275992670464e-14
+                  }
+                }
+              ],
+              "reason": null,
+              "t_accepted_s": 0.532,
+              "t_terminal_s": 3.572
+            },
+            "probe_voltage": {
+              "action_id": 3,
+              "code": "completed",
+              "commanded_target": {
+                "action_id": 3,
+                "dwell_s": 0.5,
+                "kind": "probe_voltage",
+                "schema_version": "1.0",
+                "timeout_s": 8.0,
+                "voltages_v": [
+                  0.8,
+                  1.8,
+                  3.0
+                ]
+              },
+              "measured_confirmation": [
+                {
+                  "age_s": 0.020000000000000462,
+                  "sample": {
+                    "channel": "voltage_v",
+                    "sensor_id": "sensor_voltage_v",
+                    "sigma": 0.01,
+                    "t_capture_s": 7.0,
+                    "t_deliver_s": 7.0200000000000005,
+                    "validity": "valid",
+                    "value": 1.8
+                  }
+                },
+                {
+                  "age_s": 0.020000000000000462,
+                  "sample": {
+                    "channel": "current_a",
+                    "sensor_id": "sensor_current_a",
+                    "sigma": 0.005,
+                    "t_capture_s": 7.0,
+                    "t_deliver_s": 7.0200000000000005,
+                    "validity": "valid",
+                    "value": 0.551336154574272
+                  }
+                }
+              ],
+              "reason": null,
+              "t_accepted_s": 3.7720000000000002,
+              "t_terminal_s": 7.0200000000000005
+            },
+            "set_voltage": {
+              "action_id": 4,
+              "code": "completed",
+              "commanded_target": {
+                "action_id": 4,
+                "kind": "set_voltage",
+                "schema_version": "1.0",
+                "timeout_s": 8.0,
+                "voltage_v": 1.8
+              },
+              "measured_confirmation": [
+                {
+                  "age_s": 0.019999999999999574,
+                  "sample": {
+                    "channel": "voltage_v",
+                    "sensor_id": "sensor_voltage_v",
+                    "sigma": 0.01,
+                    "t_capture_s": 7.6000000000000005,
+                    "t_deliver_s": 7.62,
+                    "validity": "valid",
+                    "value": 1.7999999999999998
+                  }
+                },
+                {
+                  "age_s": 0.019999999999999574,
+                  "sample": {
+                    "channel": "current_a",
+                    "sensor_id": "sensor_current_a",
+                    "sigma": 0.005,
+                    "t_capture_s": 7.6000000000000005,
+                    "t_deliver_s": 7.62,
+                    "validity": "valid",
+                    "value": 0.5505492871401404
+                  }
+                }
+              ],
+              "reason": null,
+              "t_accepted_s": 7.22,
+              "t_terminal_s": 7.62
+            },
+            "wait": {
+              "action_id": 5,
+              "code": "completed",
+              "commanded_target": {
+                "action_id": 5,
+                "duration_s": 0.5,
+                "kind": "wait",
+                "schema_version": "1.0",
+                "timeout_s": 1.0
+              },
+              "measured_confirmation": [],
+              "reason": null,
+              "t_accepted_s": 7.82,
+              "t_terminal_s": 8.32
+            },
+            "finish": {
+              "action_id": 6,
+              "code": "completed",
+              "commanded_target": {
+                "action_id": 6,
+                "kind": "finish",
+                "resolution": "unresolved",
+                "schema_version": "1.0",
+                "timeout_s": 2.0
+              },
+              "measured_confirmation": [
+                {
+                  "age_s": 0.019999999999999574,
+                  "sample": {
+                    "channel": "voltage_v",
+                    "sensor_id": "sensor_voltage_v",
+                    "sigma": 0.01,
+                    "t_capture_s": 10.5,
+                    "t_deliver_s": 10.52,
+                    "validity": "valid",
+                    "value": 1.8
+                  }
+                },
+                {
+                  "age_s": 0.019999999999999574,
+                  "sample": {
+                    "channel": "current_a",
+                    "sensor_id": "sensor_current_a",
+                    "sigma": 0.005,
+                    "t_capture_s": 10.5,
+                    "t_deliver_s": 10.52,
+                    "validity": "valid",
+                    "value": 0.5467871534618484
+                  }
+                },
+                {
+                  "age_s": 0.019999999999999574,
+                  "sample": {
+                    "channel": "temperature_c",
+                    "sensor_id": "sensor_temperature_c",
+                    "sigma": 0.2,
+                    "t_capture_s": 10.5,
+                    "t_deliver_s": 10.52,
+                    "validity": "valid",
+                    "value": 40.03938363066294
+                  }
+                },
+                {
+                  "age_s": 0.019999999999999574,
+                  "sample": {
+                    "channel": "reference_w_m2",
+                    "sensor_id": "sensor_reference_w_m2",
+                    "sigma": 5.0,
+                    "t_capture_s": 10.5,
+                    "t_deliver_s": 10.52,
+                    "validity": "valid",
+                    "value": 900.0
+                  }
+                }
+              ],
+              "reason": null,
+              "t_accepted_s": 8.52,
+              "t_terminal_s": 10.52
+            }
+          },
+          "finish_confirmations": {
+            "voltage_v": {
+              "channel": "voltage_v",
+              "sensor_id": "sensor_voltage_v",
+              "sigma": 0.01,
+              "t_capture_s": 10.5,
+              "t_deliver_s": 10.52,
+              "validity": "valid",
+              "value": 1.8
+            },
+            "current_a": {
+              "channel": "current_a",
+              "sensor_id": "sensor_current_a",
+              "sigma": 0.005,
+              "t_capture_s": 10.5,
+              "t_deliver_s": 10.52,
+              "validity": "valid",
+              "value": 0.5467871534618484
+            },
+            "temperature_c": {
+              "channel": "temperature_c",
+              "sensor_id": "sensor_temperature_c",
+              "sigma": 0.2,
+              "t_capture_s": 10.5,
+              "t_deliver_s": 10.52,
+              "validity": "valid",
+              "value": 40.03938363066294
+            },
+            "reference_w_m2": {
+              "channel": "reference_w_m2",
+              "sensor_id": "sensor_reference_w_m2",
+              "sigma": 5.0,
+              "t_capture_s": 10.5,
+              "t_deliver_s": 10.52,
+              "validity": "valid",
+              "value": 900.0
+            }
+          }
+        },
+        "metrics": {
+          "absorbed_j": 511.2719999999483,
+          "actuator_work_j": 0.0004333370103773018,
+          "core_only": false,
+          "decisions": 6,
+          "elapsed_s": 10.52,
+          "energy_balance_residual_j": -4.8828496801434085e-11,
+          "final_dynamics": {
+            "actuator_force": [
+              0.0,
+              0.0,
+              4.169660231182688e-97
+            ],
+            "actuator_work_j": 0.0004333370103773018,
+            "camera_position_m": [
+              0.12,
+              -0.45,
+              0.35
+            ],
+            "camera_rotation": [
+              0.9662349396012464,
+              -0.15818956576489068,
+              0.20338658455485942,
+              0.25766265056033183,
+              0.5932108716183413,
+              -0.7626996920807244,
+              0.0,
+              0.7893522173763262,
+              0.6139406135149206
+            ],
+            "q": [
+              0.12,
+              0.26060239174734046,
+              -8.339320462364767e-97
+            ],
+            "qdot": [
+              -1.7543679452324847e-16,
+              1.2254275992670464e-14,
+              -1.5225645938560091e-108
+            ],
+            "setpoint": [
+              0.12,
+              0.26060239174734096,
+              0.0
+            ],
+            "setpoint_rate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "tick": 5260,
+            "time_s": 10.52
+          },
+          "final_operating_point": {
+            "current_a": 0.546761453951722,
+            "mode": "generating",
+            "open_circuit_voltage_v": 4.533671770617026,
+            "power_w": 0.9841706171130997,
+            "voltage_v": 1.8
+          },
+          "final_temperature_c": 40.065106601568466,
+          "heat_loss_j": 49.2133094727531,
+          "help_delay_s": 0.0,
+          "help_requests": 0,
+          "load_disconnected": false,
+          "mode": "trusted-policy/local",
+          "pilot_checks": {
+            "energy_balance": true,
+            "finished": true,
+            "four_voltage_points": true,
+            "home_and_side_images": true,
+            "measured_choice": true,
+            "newer_verification": true,
+            "no_adapter_failure": true,
+            "verification_tail": true
+          },
+          "pilot_passed": true,
+          "pitch_path_rad": 2.0018521389030455e-35,
+          "policy": "scan",
+          "policy_adapter_failure": null,
+          "policy_wall_s": 0.018473167903721333,
+          "potential_energy_j": 11.049062875508339,
+          "prediction_coverage": 0.0,
+          "pv_energy_j": 10.10549248018993,
+          "rgb_frames": 2,
+          "slide_path_m": 0.12021866290371405,
+          "storage_j": 451.9531980470541,
+          "synthetic_dimensionless_utility": -0.9047145763693919,
+          "terminal_reason": "finished",
+          "tick": 5260,
+          "verification_tail_complete": true,
+          "voltage_points": 4,
+          "yaw_path_rad": 0.26060239174734046
+        },
+        "replay": {
+          "core_only": false,
+          "metric_annotation_policy": "Original CLI annotations retained separately; every runtime env.metrics key compared.",
+          "metrics_comparison": {
+            "maximum_numeric_absolute_error": 0.0,
+            "mismatches": [],
+            "numeric_values_compared": 49,
+            "passed": true
+          },
+          "observations": [
+            {
+              "frames_compared": 0,
+              "maximum_frame_mean_absolute_error": 0.0,
+              "maximum_numeric_absolute_error": 0.0,
+              "maximum_pixel_absolute_error": 0,
+              "mismatches": [],
+              "numeric_values_compared": 31,
+              "passed": true
+            },
+            {
+              "frames_compared": 1,
+              "maximum_frame_mean_absolute_error": 0.0,
+              "maximum_numeric_absolute_error": 0.0,
+              "maximum_pixel_absolute_error": 0,
+              "mismatches": [],
+              "numeric_values_compared": 137,
+              "passed": true
+            },
+            {
+              "frames_compared": 1,
+              "maximum_frame_mean_absolute_error": 0.0,
+              "maximum_numeric_absolute_error": 0.0,
+              "maximum_pixel_absolute_error": 0,
+              "mismatches": [],
+              "numeric_values_compared": 1268,
+              "passed": true
+            },
+            {
+              "frames_compared": 0,
+              "maximum_frame_mean_absolute_error": 0.0,
+              "maximum_numeric_absolute_error": 0.0,
+              "maximum_pixel_absolute_error": 0,
+              "mismatches": [],
+              "numeric_values_compared": 1394,
+              "passed": true
+            },
+            {
+              "frames_compared": 0,
+              "maximum_frame_mean_absolute_error": 0.0,
+              "maximum_numeric_absolute_error": 0.0,
+              "maximum_pixel_absolute_error": 0,
+              "mismatches": [],
+              "numeric_values_compared": 249,
+              "passed": true
+            },
+            {
+              "frames_compared": 0,
+              "maximum_frame_mean_absolute_error": 0.0,
+              "maximum_numeric_absolute_error": 0.0,
+              "maximum_pixel_absolute_error": 0,
+              "mismatches": [],
+              "numeric_values_compared": 277,
+              "passed": true
+            },
+            {
+              "frames_compared": 0,
+              "maximum_frame_mean_absolute_error": 0.0,
+              "maximum_numeric_absolute_error": 0.0,
+              "maximum_pixel_absolute_error": 0,
+              "mismatches": [],
+              "numeric_values_compared": 865,
+              "passed": true
+            }
+          ],
+          "original_metric_annotations": {
+            "pilot_checks": {
+              "energy_balance": true,
+              "finished": true,
+              "four_voltage_points": true,
+              "home_and_side_images": true,
+              "measured_choice": true,
+              "newer_verification": true,
+              "no_adapter_failure": true,
+              "verification_tail": true
+            },
+            "pilot_passed": true,
+            "policy": "scan",
+            "policy_adapter_failure": null
+          },
+          "policy_requeried": false,
+          "policy_wall_time_source": "recorded decision latency; no new policy computation",
+          "provenance": {
+            "libraries_match": true,
+            "platform_matches": true,
+            "python_matches": true,
+            "renderer_matches": true,
+            "source_matches": true
+          },
+          "rendered_gate_satisfied": true,
+          "same_pinned_host_only": true,
+          "schema_version": "1.0",
+          "source_manifest_sha256": "ab7713aba74db4708e4539069c2522b7edce2ebb83424e57eb7663a38726d038",
+          "status": "passed",
+          "task_matches": true,
+          "tick_mismatches": [],
+          "tolerances": {
+            "numeric_absolute": 1e-10,
+            "numeric_relative": 1e-10,
+            "pixel_max_absolute": 2,
+            "pixel_mean_absolute": 0.1,
+            "version": "m1-replay-v1"
+          },
+          "truth_comparison": {
+            "actual_records": 5261,
+            "expected_records": 5261,
+            "maximum_numeric_absolute_error": 0.0,
+            "mismatches": [],
+            "numeric_values_compared": 242006,
+            "passed": true,
+            "records_compared": 5261
+          }
+        }
+      },
+      {
+        "seed": 23,
+        "observations": {
+          "probe_points": [
+            {
+              "voltage_v": 0.7999999999999999,
+              "current_a": 0.7481959780124213,
+              "power_w": 0.598556782409937,
+              "t_capture_s": 4.6000000000000005,
+              "t_deliver_s": 4.62
+            },
+            {
+              "voltage_v": 1.7999999999999998,
+              "current_a": 0.5533160726759079,
+              "power_w": 0.9959689308166341,
+              "t_capture_s": 5.5,
+              "t_deliver_s": 5.5200000000000005
+            },
+            {
+              "voltage_v": 2.9999999999999996,
+              "current_a": 0.31734687683078167,
+              "power_w": 0.9520406304923449,
+              "t_capture_s": 6.4,
+              "t_deliver_s": 6.42
+            }
+          ],
+          "completed": {
+            "capture_rgb": {
+              "action_id": 1,
+              "code": "completed",
+              "commanded_target": {
+                "action_id": 1,
+                "kind": "capture_rgb",
+                "schema_version": "1.0",
+                "timeout_s": 8.0
+              },
+              "measured_confirmation": [],
+              "reason": null,
+              "t_accepted_s": 0.22,
+              "t_terminal_s": 0.332
+            },
+            "move_camera": {
+              "action_id": 2,
+              "code": "completed",
+              "commanded_target": {
+                "action_id": 2,
+                "capture_after_settle": true,
+                "kind": "move_camera",
+                "pitch_rad": 0.0,
+                "schema_version": "1.0",
+                "slide_m": 0.12,
+                "timeout_s": 8.0,
+                "yaw_rad": 0.26060239174734096
+              },
+              "measured_confirmation": [
+                {
+                  "age_s": 0.12199999999999989,
+                  "sample": {
+                    "pitch_rad": 1.4768597061516518e-37,
+                    "pitch_rate_rad_s": -3.413911970587715e-36,
+                    "sensor_id": "sensor_encoders",
+                    "sigma": {
+                      "pitch_rad": 0.001,
+                      "slide_m": 0.0005,
+                      "yaw_rad": 0.001
+                    },
+                    "slide_m": 0.11999490323637257,
+                    "slide_rate_m_s": 9.303871185722064e-05,
+                    "t_capture_s": 3.45,
+                    "t_deliver_s": 3.46,
+                    "validity": "valid",
+                    "yaw_rad": 0.26060239174734046,
+                    "yaw_rate_rad_s": 1.2254275992670464e-14
+                  }
+                }
+              ],
+              "reason": null,
+              "t_accepted_s": 0.532,
+              "t_terminal_s": 3.572
+            },
+            "probe_voltage": {
+              "action_id": 3,
+              "code": "completed",
+              "commanded_target": {
+                "action_id": 3,
+                "dwell_s": 0.5,
+                "kind": "probe_voltage",
+                "schema_version": "1.0",
+                "timeout_s": 8.0,
+                "voltages_v": [
+                  0.8,
+                  1.8,
+                  3.0
+                ]
+              },
+              "measured_confirmation": [
+                {
+                  "age_s": 0.020000000000000462,
+                  "sample": {
+                    "channel": "voltage_v",
+                    "sensor_id": "sensor_voltage_v",
+                    "sigma": 0.01,
+                    "t_capture_s": 7.0,
+                    "t_deliver_s": 7.0200000000000005,
+                    "validity": "valid",
+                    "value": 1.8
+                  }
+                },
+                {
+                  "age_s": 0.020000000000000462,
+                  "sample": {
+                    "channel": "current_a",
+                    "sensor_id": "sensor_current_a",
+                    "sigma": 0.005,
+                    "t_capture_s": 7.0,
+                    "t_deliver_s": 7.0200000000000005,
+                    "validity": "valid",
+                    "value": 0.551336154574272
+                  }
+                }
+              ],
+              "reason": null,
+              "t_accepted_s": 3.7720000000000002,
+              "t_terminal_s": 7.0200000000000005
+            },
+            "set_voltage": {
+              "action_id": 4,
+              "code": "completed",
+              "commanded_target": {
+                "action_id": 4,
+                "kind": "set_voltage",
+                "schema_version": "1.0",
+                "timeout_s": 8.0,
+                "voltage_v": 1.8
+              },
+              "measured_confirmation": [
+                {
+                  "age_s": 0.019999999999999574,
+                  "sample": {
+                    "channel": "voltage_v",
+                    "sensor_id": "sensor_voltage_v",
+                    "sigma": 0.01,
+                    "t_capture_s": 7.6000000000000005,
+                    "t_deliver_s": 7.62,
+                    "validity": "valid",
+                    "value": 1.7999999999999998
+                  }
+                },
+                {
+                  "age_s": 0.019999999999999574,
+                  "sample": {
+                    "channel": "current_a",
+                    "sensor_id": "sensor_current_a",
+                    "sigma": 0.005,
+                    "t_capture_s": 7.6000000000000005,
+                    "t_deliver_s": 7.62,
+                    "validity": "valid",
+                    "value": 0.5505492871401404
+                  }
+                }
+              ],
+              "reason": null,
+              "t_accepted_s": 7.22,
+              "t_terminal_s": 7.62
+            },
+            "wait": {
+              "action_id": 5,
+              "code": "completed",
+              "commanded_target": {
+                "action_id": 5,
+                "duration_s": 0.5,
+                "kind": "wait",
+                "schema_version": "1.0",
+                "timeout_s": 1.0
+              },
+              "measured_confirmation": [],
+              "reason": null,
+              "t_accepted_s": 7.82,
+              "t_terminal_s": 8.32
+            },
+            "finish": {
+              "action_id": 6,
+              "code": "completed",
+              "commanded_target": {
+                "action_id": 6,
+                "kind": "finish",
+                "resolution": "unresolved",
+                "schema_version": "1.0",
+                "timeout_s": 2.0
+              },
+              "measured_confirmation": [
+                {
+                  "age_s": 0.019999999999999574,
+                  "sample": {
+                    "channel": "voltage_v",
+                    "sensor_id": "sensor_voltage_v",
+                    "sigma": 0.01,
+                    "t_capture_s": 10.5,
+                    "t_deliver_s": 10.52,
+                    "validity": "valid",
+                    "value": 1.8
+                  }
+                },
+                {
+                  "age_s": 0.019999999999999574,
+                  "sample": {
+                    "channel": "current_a",
+                    "sensor_id": "sensor_current_a",
+                    "sigma": 0.005,
+                    "t_capture_s": 10.5,
+                    "t_deliver_s": 10.52,
+                    "validity": "valid",
+                    "value": 0.5467871534618484
+                  }
+                },
+                {
+                  "age_s": 0.019999999999999574,
+                  "sample": {
+                    "channel": "temperature_c",
+                    "sensor_id": "sensor_temperature_c",
+                    "sigma": 0.2,
+                    "t_capture_s": 10.5,
+                    "t_deliver_s": 10.52,
+                    "validity": "valid",
+                    "value": 40.03938363066294
+                  }
+                },
+                {
+                  "age_s": 0.019999999999999574,
+                  "sample": {
+                    "channel": "reference_w_m2",
+                    "sensor_id": "sensor_reference_w_m2",
+                    "sigma": 5.0,
+                    "t_capture_s": 10.5,
+                    "t_deliver_s": 10.52,
+                    "validity": "valid",
+                    "value": 900.0
+                  }
+                }
+              ],
+              "reason": null,
+              "t_accepted_s": 8.52,
+              "t_terminal_s": 10.52
+            }
+          },
+          "finish_confirmations": {
+            "voltage_v": {
+              "channel": "voltage_v",
+              "sensor_id": "sensor_voltage_v",
+              "sigma": 0.01,
+              "t_capture_s": 10.5,
+              "t_deliver_s": 10.52,
+              "validity": "valid",
+              "value": 1.8
+            },
+            "current_a": {
+              "channel": "current_a",
+              "sensor_id": "sensor_current_a",
+              "sigma": 0.005,
+              "t_capture_s": 10.5,
+              "t_deliver_s": 10.52,
+              "validity": "valid",
+              "value": 0.5467871534618484
+            },
+            "temperature_c": {
+              "channel": "temperature_c",
+              "sensor_id": "sensor_temperature_c",
+              "sigma": 0.2,
+              "t_capture_s": 10.5,
+              "t_deliver_s": 10.52,
+              "validity": "valid",
+              "value": 40.03938363066294
+            },
+            "reference_w_m2": {
+              "channel": "reference_w_m2",
+              "sensor_id": "sensor_reference_w_m2",
+              "sigma": 5.0,
+              "t_capture_s": 10.5,
+              "t_deliver_s": 10.52,
+              "validity": "valid",
+              "value": 900.0
+            }
+          }
+        },
+        "metrics": {
+          "absorbed_j": 511.2719999999483,
+          "actuator_work_j": 0.0004333370103773018,
+          "core_only": false,
+          "decisions": 6,
+          "elapsed_s": 10.52,
+          "energy_balance_residual_j": -4.8828496801434085e-11,
+          "final_dynamics": {
+            "actuator_force": [
+              0.0,
+              0.0,
+              4.169660231182688e-97
+            ],
+            "actuator_work_j": 0.0004333370103773018,
+            "camera_position_m": [
+              0.12,
+              -0.45,
+              0.35
+            ],
+            "camera_rotation": [
+              0.9662349396012464,
+              -0.15818956576489068,
+              0.20338658455485942,
+              0.25766265056033183,
+              0.5932108716183413,
+              -0.7626996920807244,
+              0.0,
+              0.7893522173763262,
+              0.6139406135149206
+            ],
+            "q": [
+              0.12,
+              0.26060239174734046,
+              -8.339320462364767e-97
+            ],
+            "qdot": [
+              -1.7543679452324847e-16,
+              1.2254275992670464e-14,
+              -1.5225645938560091e-108
+            ],
+            "setpoint": [
+              0.12,
+              0.26060239174734096,
+              0.0
+            ],
+            "setpoint_rate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "tick": 5260,
+            "time_s": 10.52
+          },
+          "final_operating_point": {
+            "current_a": 0.546761453951722,
+            "mode": "generating",
+            "open_circuit_voltage_v": 4.533671770617026,
+            "power_w": 0.9841706171130997,
+            "voltage_v": 1.8
+          },
+          "final_temperature_c": 40.065106601568466,
+          "heat_loss_j": 49.2133094727531,
+          "help_delay_s": 0.0,
+          "help_requests": 0,
+          "load_disconnected": false,
+          "mode": "trusted-policy/local",
+          "pilot_checks": {
+            "energy_balance": true,
+            "finished": true,
+            "four_voltage_points": true,
+            "home_and_side_images": true,
+            "measured_choice": true,
+            "newer_verification": true,
+            "no_adapter_failure": true,
+            "verification_tail": true
+          },
+          "pilot_passed": true,
+          "pitch_path_rad": 2.0018521389030455e-35,
+          "policy": "scan",
+          "policy_adapter_failure": null,
+          "policy_wall_s": 0.018728207796812057,
+          "potential_energy_j": 11.049062875508339,
+          "prediction_coverage": 0.0,
+          "pv_energy_j": 10.10549248018993,
+          "rgb_frames": 2,
+          "slide_path_m": 0.12021866290371405,
+          "storage_j": 451.9531980470541,
+          "synthetic_dimensionless_utility": -0.9047145763693919,
+          "terminal_reason": "finished",
+          "tick": 5260,
+          "verification_tail_complete": true,
+          "voltage_points": 4,
+          "yaw_path_rad": 0.26060239174734046
+        },
+        "replay": {
+          "core_only": false,
+          "metric_annotation_policy": "Original CLI annotations retained separately; every runtime env.metrics key compared.",
+          "metrics_comparison": {
+            "maximum_numeric_absolute_error": 0.0,
+            "mismatches": [],
+            "numeric_values_compared": 49,
+            "passed": true
+          },
+          "observations": [
+            {
+              "frames_compared": 0,
+              "maximum_frame_mean_absolute_error": 0.0,
+              "maximum_numeric_absolute_error": 0.0,
+              "maximum_pixel_absolute_error": 0,
+              "mismatches": [],
+              "numeric_values_compared": 31,
+              "passed": true
+            },
+            {
+              "frames_compared": 1,
+              "maximum_frame_mean_absolute_error": 0.0,
+              "maximum_numeric_absolute_error": 0.0,
+              "maximum_pixel_absolute_error": 0,
+              "mismatches": [],
+              "numeric_values_compared": 137,
+              "passed": true
+            },
+            {
+              "frames_compared": 1,
+              "maximum_frame_mean_absolute_error": 0.0,
+              "maximum_numeric_absolute_error": 0.0,
+              "maximum_pixel_absolute_error": 0,
+              "mismatches": [],
+              "numeric_values_compared": 1268,
+              "passed": true
+            },
+            {
+              "frames_compared": 0,
+              "maximum_frame_mean_absolute_error": 0.0,
+              "maximum_numeric_absolute_error": 0.0,
+              "maximum_pixel_absolute_error": 0,
+              "mismatches": [],
+              "numeric_values_compared": 1394,
+              "passed": true
+            },
+            {
+              "frames_compared": 0,
+              "maximum_frame_mean_absolute_error": 0.0,
+              "maximum_numeric_absolute_error": 0.0,
+              "maximum_pixel_absolute_error": 0,
+              "mismatches": [],
+              "numeric_values_compared": 249,
+              "passed": true
+            },
+            {
+              "frames_compared": 0,
+              "maximum_frame_mean_absolute_error": 0.0,
+              "maximum_numeric_absolute_error": 0.0,
+              "maximum_pixel_absolute_error": 0,
+              "mismatches": [],
+              "numeric_values_compared": 277,
+              "passed": true
+            },
+            {
+              "frames_compared": 0,
+              "maximum_frame_mean_absolute_error": 0.0,
+              "maximum_numeric_absolute_error": 0.0,
+              "maximum_pixel_absolute_error": 0,
+              "mismatches": [],
+              "numeric_values_compared": 865,
+              "passed": true
+            }
+          ],
+          "original_metric_annotations": {
+            "pilot_checks": {
+              "energy_balance": true,
+              "finished": true,
+              "four_voltage_points": true,
+              "home_and_side_images": true,
+              "measured_choice": true,
+              "newer_verification": true,
+              "no_adapter_failure": true,
+              "verification_tail": true
+            },
+            "pilot_passed": true,
+            "policy": "scan",
+            "policy_adapter_failure": null
+          },
+          "policy_requeried": false,
+          "policy_wall_time_source": "recorded decision latency; no new policy computation",
+          "provenance": {
+            "libraries_match": true,
+            "platform_matches": true,
+            "python_matches": true,
+            "renderer_matches": true,
+            "source_matches": true
+          },
+          "rendered_gate_satisfied": true,
+          "same_pinned_host_only": true,
+          "schema_version": "1.0",
+          "source_manifest_sha256": "97a37191d7800fb661bbba898d0859195f85f8f5a57bccb6159f9a636394c035",
+          "status": "passed",
+          "task_matches": true,
+          "tick_mismatches": [],
+          "tolerances": {
+            "numeric_absolute": 1e-10,
+            "numeric_relative": 1e-10,
+            "pixel_max_absolute": 2,
+            "pixel_mean_absolute": 0.1,
+            "version": "m1-replay-v1"
+          },
+          "truth_comparison": {
+            "actual_records": 5261,
+            "expected_records": 5261,
+            "maximum_numeric_absolute_error": 0.0,
+            "mismatches": [],
+            "numeric_values_compared": 242006,
+            "passed": true,
+            "records_compared": 5261
+          }
+        }
+      },
+      {
+        "seed": 47,
+        "observations": {
+          "probe_points": [
+            {
+              "voltage_v": 0.7999999999999999,
+              "current_a": 0.7481959780124213,
+              "power_w": 0.598556782409937,
+              "t_capture_s": 4.6000000000000005,
+              "t_deliver_s": 4.62
+            },
+            {
+              "voltage_v": 1.7999999999999998,
+              "current_a": 0.5533160726759079,
+              "power_w": 0.9959689308166341,
+              "t_capture_s": 5.5,
+              "t_deliver_s": 5.5200000000000005
+            },
+            {
+              "voltage_v": 2.9999999999999996,
+              "current_a": 0.31734687683078167,
+              "power_w": 0.9520406304923449,
+              "t_capture_s": 6.4,
+              "t_deliver_s": 6.42
+            }
+          ],
+          "completed": {
+            "capture_rgb": {
+              "action_id": 1,
+              "code": "completed",
+              "commanded_target": {
+                "action_id": 1,
+                "kind": "capture_rgb",
+                "schema_version": "1.0",
+                "timeout_s": 8.0
+              },
+              "measured_confirmation": [],
+              "reason": null,
+              "t_accepted_s": 0.22,
+              "t_terminal_s": 0.332
+            },
+            "move_camera": {
+              "action_id": 2,
+              "code": "completed",
+              "commanded_target": {
+                "action_id": 2,
+                "capture_after_settle": true,
+                "kind": "move_camera",
+                "pitch_rad": 0.0,
+                "schema_version": "1.0",
+                "slide_m": 0.12,
+                "timeout_s": 8.0,
+                "yaw_rad": 0.26060239174734096
+              },
+              "measured_confirmation": [
+                {
+                  "age_s": 0.12199999999999989,
+                  "sample": {
+                    "pitch_rad": 1.4768597061516518e-37,
+                    "pitch_rate_rad_s": -3.413911970587715e-36,
+                    "sensor_id": "sensor_encoders",
+                    "sigma": {
+                      "pitch_rad": 0.001,
+                      "slide_m": 0.0005,
+                      "yaw_rad": 0.001
+                    },
+                    "slide_m": 0.11999490323637257,
+                    "slide_rate_m_s": 9.303871185722064e-05,
+                    "t_capture_s": 3.45,
+                    "t_deliver_s": 3.46,
+                    "validity": "valid",
+                    "yaw_rad": 0.26060239174734046,
+                    "yaw_rate_rad_s": 1.2254275992670464e-14
+                  }
+                }
+              ],
+              "reason": null,
+              "t_accepted_s": 0.532,
+              "t_terminal_s": 3.572
+            },
+            "probe_voltage": {
+              "action_id": 3,
+              "code": "completed",
+              "commanded_target": {
+                "action_id": 3,
+                "dwell_s": 0.5,
+                "kind": "probe_voltage",
+                "schema_version": "1.0",
+                "timeout_s": 8.0,
+                "voltages_v": [
+                  0.8,
+                  1.8,
+                  3.0
+                ]
+              },
+              "measured_confirmation": [
+                {
+                  "age_s": 0.020000000000000462,
+                  "sample": {
+                    "channel": "voltage_v",
+                    "sensor_id": "sensor_voltage_v",
+                    "sigma": 0.01,
+                    "t_capture_s": 7.0,
+                    "t_deliver_s": 7.0200000000000005,
+                    "validity": "valid",
+                    "value": 1.8
+                  }
+                },
+                {
+                  "age_s": 0.020000000000000462,
+                  "sample": {
+                    "channel": "current_a",
+                    "sensor_id": "sensor_current_a",
+                    "sigma": 0.005,
+                    "t_capture_s": 7.0,
+                    "t_deliver_s": 7.0200000000000005,
+                    "validity": "valid",
+                    "value": 0.551336154574272
+                  }
+                }
+              ],
+              "reason": null,
+              "t_accepted_s": 3.7720000000000002,
+              "t_terminal_s": 7.0200000000000005
+            },
+            "set_voltage": {
+              "action_id": 4,
+              "code": "completed",
+              "commanded_target": {
+                "action_id": 4,
+                "kind": "set_voltage",
+                "schema_version": "1.0",
+                "timeout_s": 8.0,
+                "voltage_v": 1.8
+              },
+              "measured_confirmation": [
+                {
+                  "age_s": 0.019999999999999574,
+                  "sample": {
+                    "channel": "voltage_v",
+                    "sensor_id": "sensor_voltage_v",
+                    "sigma": 0.01,
+                    "t_capture_s": 7.6000000000000005,
+                    "t_deliver_s": 7.62,
+                    "validity": "valid",
+                    "value": 1.7999999999999998
+                  }
+                },
+                {
+                  "age_s": 0.019999999999999574,
+                  "sample": {
+                    "channel": "current_a",
+                    "sensor_id": "sensor_current_a",
+                    "sigma": 0.005,
+                    "t_capture_s": 7.6000000000000005,
+                    "t_deliver_s": 7.62,
+                    "validity": "valid",
+                    "value": 0.5505492871401404
+                  }
+                }
+              ],
+              "reason": null,
+              "t_accepted_s": 7.22,
+              "t_terminal_s": 7.62
+            },
+            "wait": {
+              "action_id": 5,
+              "code": "completed",
+              "commanded_target": {
+                "action_id": 5,
+                "duration_s": 0.5,
+                "kind": "wait",
+                "schema_version": "1.0",
+                "timeout_s": 1.0
+              },
+              "measured_confirmation": [],
+              "reason": null,
+              "t_accepted_s": 7.82,
+              "t_terminal_s": 8.32
+            },
+            "finish": {
+              "action_id": 6,
+              "code": "completed",
+              "commanded_target": {
+                "action_id": 6,
+                "kind": "finish",
+                "resolution": "unresolved",
+                "schema_version": "1.0",
+                "timeout_s": 2.0
+              },
+              "measured_confirmation": [
+                {
+                  "age_s": 0.019999999999999574,
+                  "sample": {
+                    "channel": "voltage_v",
+                    "sensor_id": "sensor_voltage_v",
+                    "sigma": 0.01,
+                    "t_capture_s": 10.5,
+                    "t_deliver_s": 10.52,
+                    "validity": "valid",
+                    "value": 1.8
+                  }
+                },
+                {
+                  "age_s": 0.019999999999999574,
+                  "sample": {
+                    "channel": "current_a",
+                    "sensor_id": "sensor_current_a",
+                    "sigma": 0.005,
+                    "t_capture_s": 10.5,
+                    "t_deliver_s": 10.52,
+                    "validity": "valid",
+                    "value": 0.5467871534618484
+                  }
+                },
+                {
+                  "age_s": 0.019999999999999574,
+                  "sample": {
+                    "channel": "temperature_c",
+                    "sensor_id": "sensor_temperature_c",
+                    "sigma": 0.2,
+                    "t_capture_s": 10.5,
+                    "t_deliver_s": 10.52,
+                    "validity": "valid",
+                    "value": 40.03938363066294
+                  }
+                },
+                {
+                  "age_s": 0.019999999999999574,
+                  "sample": {
+                    "channel": "reference_w_m2",
+                    "sensor_id": "sensor_reference_w_m2",
+                    "sigma": 5.0,
+                    "t_capture_s": 10.5,
+                    "t_deliver_s": 10.52,
+                    "validity": "valid",
+                    "value": 900.0
+                  }
+                }
+              ],
+              "reason": null,
+              "t_accepted_s": 8.52,
+              "t_terminal_s": 10.52
+            }
+          },
+          "finish_confirmations": {
+            "voltage_v": {
+              "channel": "voltage_v",
+              "sensor_id": "sensor_voltage_v",
+              "sigma": 0.01,
+              "t_capture_s": 10.5,
+              "t_deliver_s": 10.52,
+              "validity": "valid",
+              "value": 1.8
+            },
+            "current_a": {
+              "channel": "current_a",
+              "sensor_id": "sensor_current_a",
+              "sigma": 0.005,
+              "t_capture_s": 10.5,
+              "t_deliver_s": 10.52,
+              "validity": "valid",
+              "value": 0.5467871534618484
+            },
+            "temperature_c": {
+              "channel": "temperature_c",
+              "sensor_id": "sensor_temperature_c",
+              "sigma": 0.2,
+              "t_capture_s": 10.5,
+              "t_deliver_s": 10.52,
+              "validity": "valid",
+              "value": 40.03938363066294
+            },
+            "reference_w_m2": {
+              "channel": "reference_w_m2",
+              "sensor_id": "sensor_reference_w_m2",
+              "sigma": 5.0,
+              "t_capture_s": 10.5,
+              "t_deliver_s": 10.52,
+              "validity": "valid",
+              "value": 900.0
+            }
+          }
+        },
+        "metrics": {
+          "absorbed_j": 511.2719999999483,
+          "actuator_work_j": 0.0004333370103773018,
+          "core_only": false,
+          "decisions": 6,
+          "elapsed_s": 10.52,
+          "energy_balance_residual_j": -4.8828496801434085e-11,
+          "final_dynamics": {
+            "actuator_force": [
+              0.0,
+              0.0,
+              4.169660231182688e-97
+            ],
+            "actuator_work_j": 0.0004333370103773018,
+            "camera_position_m": [
+              0.12,
+              -0.45,
+              0.35
+            ],
+            "camera_rotation": [
+              0.9662349396012464,
+              -0.15818956576489068,
+              0.20338658455485942,
+              0.25766265056033183,
+              0.5932108716183413,
+              -0.7626996920807244,
+              0.0,
+              0.7893522173763262,
+              0.6139406135149206
+            ],
+            "q": [
+              0.12,
+              0.26060239174734046,
+              -8.339320462364767e-97
+            ],
+            "qdot": [
+              -1.7543679452324847e-16,
+              1.2254275992670464e-14,
+              -1.5225645938560091e-108
+            ],
+            "setpoint": [
+              0.12,
+              0.26060239174734096,
+              0.0
+            ],
+            "setpoint_rate": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "tick": 5260,
+            "time_s": 10.52
+          },
+          "final_operating_point": {
+            "current_a": 0.546761453951722,
+            "mode": "generating",
+            "open_circuit_voltage_v": 4.533671770617026,
+            "power_w": 0.9841706171130997,
+            "voltage_v": 1.8
+          },
+          "final_temperature_c": 40.065106601568466,
+          "heat_loss_j": 49.2133094727531,
+          "help_delay_s": 0.0,
+          "help_requests": 0,
+          "load_disconnected": false,
+          "mode": "trusted-policy/local",
+          "pilot_checks": {
+            "energy_balance": true,
+            "finished": true,
+            "four_voltage_points": true,
+            "home_and_side_images": true,
+            "measured_choice": true,
+            "newer_verification": true,
+            "no_adapter_failure": true,
+            "verification_tail": true
+          },
+          "pilot_passed": true,
+          "pitch_path_rad": 2.0018521389030455e-35,
+          "policy": "scan",
+          "policy_adapter_failure": null,
+          "policy_wall_s": 0.01866245921701193,
+          "potential_energy_j": 11.049062875508339,
+          "prediction_coverage": 0.0,
+          "pv_energy_j": 10.10549248018993,
+          "rgb_frames": 2,
+          "slide_path_m": 0.12021866290371405,
+          "storage_j": 451.9531980470541,
+          "synthetic_dimensionless_utility": -0.9047145763693919,
+          "terminal_reason": "finished",
+          "tick": 5260,
+          "verification_tail_complete": true,
+          "voltage_points": 4,
+          "yaw_path_rad": 0.26060239174734046
+        },
+        "replay": {
+          "core_only": false,
+          "metric_annotation_policy": "Original CLI annotations retained separately; every runtime env.metrics key compared.",
+          "metrics_comparison": {
+            "maximum_numeric_absolute_error": 0.0,
+            "mismatches": [],
+            "numeric_values_compared": 49,
+            "passed": true
+          },
+          "observations": [
+            {
+              "frames_compared": 0,
+              "maximum_frame_mean_absolute_error": 0.0,
+              "maximum_numeric_absolute_error": 0.0,
+              "maximum_pixel_absolute_error": 0,
+              "mismatches": [],
+              "numeric_values_compared": 31,
+              "passed": true
+            },
+            {
+              "frames_compared": 1,
+              "maximum_frame_mean_absolute_error": 0.0,
+              "maximum_numeric_absolute_error": 0.0,
+              "maximum_pixel_absolute_error": 0,
+              "mismatches": [],
+              "numeric_values_compared": 137,
+              "passed": true
+            },
+            {
+              "frames_compared": 1,
+              "maximum_frame_mean_absolute_error": 0.0,
+              "maximum_numeric_absolute_error": 0.0,
+              "maximum_pixel_absolute_error": 0,
+              "mismatches": [],
+              "numeric_values_compared": 1268,
+              "passed": true
+            },
+            {
+              "frames_compared": 0,
+              "maximum_frame_mean_absolute_error": 0.0,
+              "maximum_numeric_absolute_error": 0.0,
+              "maximum_pixel_absolute_error": 0,
+              "mismatches": [],
+              "numeric_values_compared": 1394,
+              "passed": true
+            },
+            {
+              "frames_compared": 0,
+              "maximum_frame_mean_absolute_error": 0.0,
+              "maximum_numeric_absolute_error": 0.0,
+              "maximum_pixel_absolute_error": 0,
+              "mismatches": [],
+              "numeric_values_compared": 249,
+              "passed": true
+            },
+            {
+              "frames_compared": 0,
+              "maximum_frame_mean_absolute_error": 0.0,
+              "maximum_numeric_absolute_error": 0.0,
+              "maximum_pixel_absolute_error": 0,
+              "mismatches": [],
+              "numeric_values_compared": 277,
+              "passed": true
+            },
+            {
+              "frames_compared": 0,
+              "maximum_frame_mean_absolute_error": 0.0,
+              "maximum_numeric_absolute_error": 0.0,
+              "maximum_pixel_absolute_error": 0,
+              "mismatches": [],
+              "numeric_values_compared": 865,
+              "passed": true
+            }
+          ],
+          "original_metric_annotations": {
+            "pilot_checks": {
+              "energy_balance": true,
+              "finished": true,
+              "four_voltage_points": true,
+              "home_and_side_images": true,
+              "measured_choice": true,
+              "newer_verification": true,
+              "no_adapter_failure": true,
+              "verification_tail": true
+            },
+            "pilot_passed": true,
+            "policy": "scan",
+            "policy_adapter_failure": null
+          },
+          "policy_requeried": false,
+          "policy_wall_time_source": "recorded decision latency; no new policy computation",
+          "provenance": {
+            "libraries_match": true,
+            "platform_matches": true,
+            "python_matches": true,
+            "renderer_matches": true,
+            "source_matches": true
+          },
+          "rendered_gate_satisfied": true,
+          "same_pinned_host_only": true,
+          "schema_version": "1.0",
+          "source_manifest_sha256": "f8c5d0bc9252c992e4f445e130fd5f81b2d011d5e7229fb6535f155560697298",
+          "status": "passed",
+          "task_matches": true,
+          "tick_mismatches": [],
+          "tolerances": {
+            "numeric_absolute": 1e-10,
+            "numeric_relative": 1e-10,
+            "pixel_max_absolute": 2,
+            "pixel_mean_absolute": 0.1,
+            "version": "m1-replay-v1"
+          },
+          "truth_comparison": {
+            "actual_records": 5261,
+            "expected_records": 5261,
+            "maximum_numeric_absolute_error": 0.0,
+            "mismatches": [],
+            "numeric_values_compared": 242006,
+            "passed": true,
+            "records_compared": 5261
+          }
+        }
+      }
+    ]
+  },
+  "figures": [
+    {
+      "path": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/figures/electrical_thermal.png",
+      "sha256": "60ccebaa6f124535e53b69bd059fee19722b561adfbdd0c8f2e51343856eed88",
+      "kind": "scientific plot, not MuJoCo RGB"
+    },
+    {
+      "path": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/figures/actual_joint_motion.png",
+      "sha256": "4c0e48bafe6e55d77af25ca468edfb8affd973bd2a153299893f54f3ba7b1dc1",
+      "kind": "scientific plot, not MuJoCo RGB"
+    },
+    {
+      "path": "./runs/m1-desktop-report-20261017/PV_M1_Rendered_Evidence_20261017/figures/recorded_camera_geometry.png",
+      "sha256": "703932ad967328cd3ca80f872e8185795c20774eae5e9c4e4e5b2036b34c7e15",
+      "kind": "scientific plot, not MuJoCo RGB"
+    }
+  ],
+  "command": {
+    "argv": [
+      "scripts/build_m1_evidence_report.py",
+      "--manifest",
+      "private_eval/m1-desktop-20261017T192106Z-8055-s11/manifest.json",
+      "--tests",
+      "runs/m1-desktop-20261017T192106Z-8055/tests.xml",
+      "--review",
+      "output/review/M1_DESKTOP_GATE_REVIEW_20261017.txt",
+      "--batch-report",
+      "runs/m1-desktop-20261017T192106Z-8055/batch-report.json",
+      "--asset-dir",
+      "runs/m1-desktop-report-20261017",
+      "--output",
+      "output/pdf/PV_M1_Rendered_Evidence_20261017.pdf"
+    ],
+    "cwd": ".",
+    "python": "3.11.17 (main, Oct 14 2026, 00:55:17) [Clang 23.1.3 ]"
+  },
+  "recorded_runtime": {
+    "command": {
+      "argv": [
+        "./.venv/bin/pv-sim",
+        "demo",
+        "--config",
+        "configs/pilot.toml",
+        "--seed",
+        "11",
+        "--policy",
+        "scan",
+        "--output",
+        "runs/m1-desktop-20261017T192106Z-8055-s11"
+      ],
+      "cwd": ".",
+      "started_utc": "2026-10-17T19:21:23.867105+00:00"
+    },
+    "git": {
+      "dirty_diff": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "dirty_diff_exit_code": 0,
+      "revision": "16e038a6e6630f52833bbdda589ffe37f2f50730",
+      "revision_exit_code": 0,
+      "status": "?? output/",
+      "status_exit_code": 0
+    },
+    "libraries": {
+      "Pillow": "12.3.0",
+      "mujoco": "3.3.7",
+      "numpy": "2.4.6",
+      "pv-investigation-sim": "0.0.1",
+      "pydantic": "2.14.1"
+    },
+    "machine": "arm64",
+    "mujoco_gl": "default",
+    "platform": "macOS-15.7.4-arm64-arm-64bit",
+    "python": "3.11.17 (main, Oct 14 2026, 00:55:17) [Clang 23.1.3 ]",
+    "renderer": "mujoco_classic"
+  },
+  "report_runtime": {
+    "reportlab": "5.0.1",
+    "matplotlib": "3.11.2",
+    "pypdf": "6.21.0",
+    "Pillow": "12.3.0",
+    "numpy": "2.4.6"
+  },
+  "generator": {
+    "path": "./scripts/build_m1_evidence_report.py",
+    "sha256": "125d86194b2d5d6ef125f7451e5294cc5219864e12486a1b41926150c24df1c3"
+  },
+  "visual_qa": "pending rendered-page inspection",
+  "bundle_files": [
+    {
+      "path": "build_m1_evidence_report.py",
+      "sha256": "125d86194b2d5d6ef125f7451e5294cc5219864e12486a1b41926150c24df1c3",
+      "bytes": 57783
+    },
+    {
+      "path": "figures/actual_joint_motion.png",
+      "sha256": "4c0e48bafe6e55d77af25ca468edfb8affd973bd2a153299893f54f3ba7b1dc1",
+      "bytes": 79137
+    },
+    {
+      "path": "figures/electrical_thermal.png",
+      "sha256": "60ccebaa6f124535e53b69bd059fee19722b561adfbdd0c8f2e51343856eed88",
+      "bytes": 85243
+    },
+    {
+      "path": "figures/recorded_camera_geometry.png",
+      "sha256": "703932ad967328cd3ca80f872e8185795c20774eae5e9c4e4e5b2036b34c7e15",
+      "bytes": 139947
+    },
+    {
+      "path": "inputs/S01-manifest.json",
+      "sha256": "ab7713aba74db4708e4539069c2522b7edce2ebb83424e57eb7663a38726d038",
+      "bytes": 7617
+    },
+    {
+      "path": "inputs/S02-truth.jsonl",
+      "sha256": "db21505bd7f93f477119d29c9fd648179f6f94355680f108d67a0b9349ff9f53",
+      "bytes": 6097875
+    },
+    {
+      "path": "inputs/S03-metrics.json",
+      "sha256": "a74e7bb748fc0fde1c1a7e3f23bed96ac502ac32f721385d2025a40fe8a80a53",
+      "bytes": 1779
+    },
+    {
+      "path": "inputs/S04-config.json",
+      "sha256": "fef54964e97a8c3901e56230a8dc2f02f0d2ed98d6de9e55826462a4601099f8",
+      "bytes": 2907
+    },
+    {
+      "path": "inputs/S05-tests.xml",
+      "sha256": "a5081745d18fb3d06f8562e25307fcac2be5f8d2e20874b27ce5fbecf2239799",
+      "bytes": 51750
+    },
+    {
+      "path": "inputs/S06-M1_DESKTOP_GATE_REVIEW_20261017.txt",
+      "sha256": "9ecf5f676029dc41fb6782950276537d24b020ad8e4008256fc866932fdf5453",
+      "bytes": 15420
+    },
+    {
+      "path": "inputs/S07-replay.json",
+      "sha256": "1825ba7a61a767653b3e160d84686636f82c7b55c3653776747ee786eff22efc",
+      "bytes": 2724
+    },
+    {
+      "path": "inputs/S08-observations.jsonl",
+      "sha256": "e02a3c43e57467affc09136a8de0468e8b354a278f1d82a7231d2280cc21df0e",
+      "bytes": 152303
+    },
+    {
+      "path": "inputs/S09-actions.jsonl",
+      "sha256": "e231e9b7b96e909e1e8e613fdb3761b4fd7781908adc44296fb941f59cc66c2c",
+      "bytes": 1543
+    },
+    {
+      "path": "inputs/S10-batch-report.json",
+      "sha256": "cb6dbee1262f6d08fb9aba36b2e1c967de04725e8cf3421ff31df97bb7e496da",
+      "bytes": 879
+    },
+    {
+      "path": "inputs/S11-machine-audit.json",
+      "sha256": "3625125ef12997b88c3ca70310342f030833a85f6ce3f029fbf72155f3f7f9d0",
+      "bytes": 4656
+    },
+    {
+      "path": "inputs/S12-manifest.json",
+      "sha256": "ab7713aba74db4708e4539069c2522b7edce2ebb83424e57eb7663a38726d038",
+      "bytes": 7617
+    },
+    {
+      "path": "inputs/S13-metrics.json",
+      "sha256": "a74e7bb748fc0fde1c1a7e3f23bed96ac502ac32f721385d2025a40fe8a80a53",
+      "bytes": 1779
+    },
+    {
+      "path": "inputs/S14-observations.jsonl",
+      "sha256": "e02a3c43e57467affc09136a8de0468e8b354a278f1d82a7231d2280cc21df0e",
+      "bytes": 152303
+    },
+    {
+      "path": "inputs/S15-replay.json",
+      "sha256": "1825ba7a61a767653b3e160d84686636f82c7b55c3653776747ee786eff22efc",
+      "bytes": 2724
+    },
+    {
+      "path": "inputs/S16-manifest.json",
+      "sha256": "97a37191d7800fb661bbba898d0859195f85f8f5a57bccb6159f9a636394c035",
+      "bytes": 7619
+    },
+    {
+      "path": "inputs/S17-metrics.json",
+      "sha256": "892e811fb74c0e77ba40d00781a9591df57e0d1a4d1bff2918a3b0f8e14ae6ae",
+      "bytes": 1779
+    },
+    {
+      "path": "inputs/S18-observations.jsonl",
+      "sha256": "241ebf5c31e556ffcae7f40944d7d08fb2275839ca409e1e70b51ef9c2b06745",
+      "bytes": 152303
+    },
+    {
+      "path": "inputs/S19-replay.json",
+      "sha256": "c303130f5d8e599a85bef6997c224fff42db4bdb4b0c5d7b157fb788c0ebb77a",
+      "bytes": 2724
+    },
+    {
+      "path": "inputs/S20-manifest.json",
+      "sha256": "f8c5d0bc9252c992e4f445e130fd5f81b2d011d5e7229fb6535f155560697298",
+      "bytes": 7618
+    },
+    {
+      "path": "inputs/S21-metrics.json",
+      "sha256": "a79a81acfc1dc2a5788b0d74936f50a081753d55f6ed54ae18fc6d43f48db530",
+      "bytes": 1778
+    },
+    {
+      "path": "inputs/S22-observations.jsonl",
+      "sha256": "056af33cf2b3d392cb5325eab390e288cc11f1b81fee19eaa968379ef129a619",
+      "bytes": 152303
+    },
+    {
+      "path": "inputs/S23-replay.json",
+      "sha256": "5201c833d31fc4ca0ae397a7250d668811358d7ef7472515e49a286b63b9677c",
+      "bytes": 2724
+    },
+    {
+      "path": "inputs/S24-frame_000001.png",
+      "sha256": "de339600b351a3a82b2de9606c304be751bebfce264a523fb6f58646d95b178c",
+      "bytes": 4996
+    },
+    {
+      "path": "inputs/S25-frame_000002.png",
+      "sha256": "4c7e463d90fd9b97e397b017839cbedf8ce2a87c011ba94120d375d5afe42064",
+      "bytes": 8587
+    },
+    {
+      "path": "inputs/S26-frame_000001.png",
+      "sha256": "de339600b351a3a82b2de9606c304be751bebfce264a523fb6f58646d95b178c",
+      "bytes": 4996
+    },
+    {
+      "path": "inputs/S27-frame_000002.png",
+      "sha256": "4c7e463d90fd9b97e397b017839cbedf8ce2a87c011ba94120d375d5afe42064",
+      "bytes": 8587
+    },
+    {
+      "path": "inputs/S28-frame_000001.png",
+      "sha256": "de339600b351a3a82b2de9606c304be751bebfce264a523fb6f58646d95b178c",
+      "bytes": 4996
+    },
+    {
+      "path": "inputs/S29-frame_000002.png",
+      "sha256": "4c7e463d90fd9b97e397b017839cbedf8ce2a87c011ba94120d375d5afe42064",
+      "bytes": 8587
+    },
+    {
+      "path": "measurements.json",
+      "sha256": "c58e104a4915dc431f2fd382453e26ec5356118ce27b0072806220326bf9c044",
+      "bytes": 61192
+    }
+  ]
+}

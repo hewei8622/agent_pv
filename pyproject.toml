@@ -1,0 +1,73 @@
+[build-system]
+requires = ["hatchling>=1.26,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pv-investigation-sim"
+version = "0.0.1"
+description = "A small, deterministic PV simulator with hidden causes and an evaluator, for building and comparing agents that investigate solar panels"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+license = {file = "LICENSE"}
+authors = [{name = "Wei He"}]
+keywords = ["photovoltaics", "simulation", "agents", "fault diagnosis", "mujoco"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.11",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering",
+]
+dependencies = [
+  "mujoco==3.3.7",
+  "numpy>=2.0,<3",
+  "pydantic>=2.10,<3",
+  "Pillow>=11,<13",
+]
+
+[project.urls]
+Repository = "https://github.com/hewei8622/agent_pv"
+Issues = "https://github.com/hewei8622/agent_pv/issues"
+
+[project.scripts]
+pv-sim = "pv_sim.cli:main"
+
+[project.optional-dependencies]
+reference = ["pvlib==0.13.1"]
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "hypothesis>=6,<7", "ruff>=0.12,<1"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pv_sim"]
+
+[tool.uv]
+required-version = "==0.13.1"
+# Freeze the actual build tools used by the first installation as well as runtime deps.
+build-constraint-dependencies = [
+  "hatchling==1.32.4",
+  "packaging==26.3",
+  "pathspec==1.1.1",
+  "pluggy==1.7.0",
+  "tomlkit==0.15.2",
+  "trove-classifiers==2026.9.21.13",
+  "editables==0.6",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.ruff.lint.per-file-ignores]
+# Teaching notebooks: percent-format scripts with a backend switch before the
+# matplotlib import, long printed tables and one-line cells.
+"notebooks/*" = ["E402", "E501", "E702", "I001"]
+# Retained evidence scripts are frozen as run.
+"output/*" = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+markers = ["render: required real OpenGL render; never silently skipped"]

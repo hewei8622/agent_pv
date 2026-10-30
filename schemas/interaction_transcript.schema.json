@@ -1,0 +1,1940 @@
+{
+  "$defs": {
+    "ActionFeedback": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "minimum": 1,
+          "title": "Action Id",
+          "type": "integer"
+        },
+        "code": {
+          "enum": [
+            "accepted",
+            "executing",
+            "completed",
+            "rejected",
+            "timed_out",
+            "failed",
+            "cancelled"
+          ],
+          "title": "Code",
+          "type": "string"
+        },
+        "commanded_target": {
+          "anyOf": [
+            {
+              "discriminator": {
+                "mapping": {
+                  "capture_rgb": "#/$defs/CaptureRGB",
+                  "finish": "#/$defs/Finish",
+                  "move_camera": "#/$defs/MoveCamera",
+                  "probe_voltage": "#/$defs/ProbeVoltage",
+                  "request_help": "#/$defs/RequestHelp",
+                  "safe_stop": "#/$defs/SafeStop",
+                  "set_voltage": "#/$defs/SetVoltage",
+                  "wait": "#/$defs/Wait"
+                },
+                "propertyName": "kind"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/MoveCamera"
+                },
+                {
+                  "$ref": "#/$defs/SetVoltage"
+                },
+                {
+                  "$ref": "#/$defs/ProbeVoltage"
+                },
+                {
+                  "$ref": "#/$defs/CaptureRGB"
+                },
+                {
+                  "$ref": "#/$defs/Wait"
+                },
+                {
+                  "$ref": "#/$defs/RequestHelp"
+                },
+                {
+                  "$ref": "#/$defs/SafeStop"
+                },
+                {
+                  "$ref": "#/$defs/Finish"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Commanded Target"
+        },
+        "measured_confirmation": {
+          "items": {
+            "$ref": "#/$defs/MeasuredConfirmation"
+          },
+          "title": "Measured Confirmation",
+          "type": "array"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "enum": [
+                "out_of_range",
+                "budget",
+                "busy",
+                "sensor_unavailable",
+                "tracking_timeout",
+                "command_conflict",
+                "invalid_payload"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Reason"
+        },
+        "t_accepted_s": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "T Accepted S"
+        },
+        "t_terminal_s": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "T Terminal S"
+        }
+      },
+      "required": [
+        "action_id",
+        "code",
+        "reason",
+        "t_accepted_s",
+        "t_terminal_s",
+        "commanded_target",
+        "measured_confirmation"
+      ],
+      "title": "ActionFeedback",
+      "type": "object"
+    },
+    "AxisSigma": {
+      "additionalProperties": false,
+      "properties": {
+        "pitch_rad": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Pitch Rad"
+        },
+        "slide_m": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Slide M"
+        },
+        "yaw_rad": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Yaw Rad"
+        }
+      },
+      "required": [
+        "slide_m",
+        "yaw_rad",
+        "pitch_rad"
+      ],
+      "title": "AxisSigma",
+      "type": "object"
+    },
+    "Budgets": {
+      "additionalProperties": false,
+      "properties": {
+        "angular_path_rad": {
+          "minimum": 0,
+          "title": "Angular Path Rad",
+          "type": "number"
+        },
+        "decisions": {
+          "minimum": 0,
+          "title": "Decisions",
+          "type": "integer"
+        },
+        "help_requests": {
+          "minimum": 0,
+          "title": "Help Requests",
+          "type": "integer"
+        },
+        "rgb_frames": {
+          "minimum": 0,
+          "title": "Rgb Frames",
+          "type": "integer"
+        },
+        "slide_path_m": {
+          "minimum": 0,
+          "title": "Slide Path M",
+          "type": "number"
+        },
+        "time_s": {
+          "minimum": 0,
+          "title": "Time S",
+          "type": "number"
+        },
+        "voltage_points": {
+          "minimum": 0,
+          "title": "Voltage Points",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "time_s",
+        "rgb_frames",
+        "voltage_points",
+        "help_requests",
+        "decisions",
+        "slide_path_m",
+        "angular_path_rad"
+      ],
+      "title": "Budgets",
+      "type": "object"
+    },
+    "Calibration": {
+      "additionalProperties": false,
+      "properties": {
+        "calibration_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_-]+$",
+          "title": "Calibration Id",
+          "type": "string"
+        },
+        "camera_axes": {
+          "const": "x_right_y_up_minus_z_forward",
+          "title": "Camera Axes",
+          "type": "string"
+        },
+        "camera_id": {
+          "const": "agent_rgb",
+          "title": "Camera Id",
+          "type": "string"
+        },
+        "fovy_deg": {
+          "title": "Fovy Deg",
+          "type": "number"
+        },
+        "height": {
+          "const": 480,
+          "title": "Height",
+          "type": "integer"
+        },
+        "home_position_m": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Home Position M",
+          "type": "array"
+        },
+        "k": {
+          "maxItems": 9,
+          "minItems": 9,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "K",
+          "type": "array"
+        },
+        "pixel_convention": {
+          "const": "top_left_center_0_0_x_right_y_down",
+          "title": "Pixel Convention",
+          "type": "string"
+        },
+        "width": {
+          "const": 640,
+          "title": "Width",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "calibration_id",
+        "camera_id",
+        "width",
+        "height",
+        "fovy_deg",
+        "k",
+        "home_position_m",
+        "pixel_convention",
+        "camera_axes"
+      ],
+      "title": "Calibration",
+      "type": "object"
+    },
+    "CaptureRGB": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "minimum": 1,
+          "title": "Action Id",
+          "type": "integer"
+        },
+        "kind": {
+          "const": "capture_rgb",
+          "title": "Kind",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "timeout_s": {
+          "exclusiveMinimum": 0,
+          "maximum": 15,
+          "title": "Timeout S",
+          "type": "number"
+        }
+      },
+      "required": [
+        "schema_version",
+        "action_id",
+        "timeout_s",
+        "kind"
+      ],
+      "title": "CaptureRGB",
+      "type": "object"
+    },
+    "CompletedEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "information_completed",
+          "default": "information_completed",
+          "title": "Kind",
+          "type": "string"
+        },
+        "receipt": {
+          "$ref": "#/$defs/InformationReceipt"
+        }
+      },
+      "required": [
+        "receipt"
+      ],
+      "title": "CompletedEvent",
+      "type": "object"
+    },
+    "CostWeights": {
+      "additionalProperties": false,
+      "properties": {
+        "angle_per_rad": {
+          "minimum": 0,
+          "title": "Angle Per Rad",
+          "type": "number"
+        },
+        "help_request": {
+          "minimum": 0,
+          "title": "Help Request",
+          "type": "number"
+        },
+        "pv_energy_scale_j": {
+          "exclusiveMinimum": 0,
+          "title": "Pv Energy Scale J",
+          "type": "number"
+        },
+        "rgb": {
+          "minimum": 0,
+          "title": "Rgb",
+          "type": "number"
+        },
+        "slide_per_m": {
+          "minimum": 0,
+          "title": "Slide Per M",
+          "type": "number"
+        },
+        "voltage_point": {
+          "minimum": 0,
+          "title": "Voltage Point",
+          "type": "number"
+        }
+      },
+      "required": [
+        "pv_energy_scale_j",
+        "rgb",
+        "voltage_point",
+        "help_request",
+        "slide_per_m",
+        "angle_per_rad"
+      ],
+      "title": "CostWeights",
+      "type": "object"
+    },
+    "EncoderSample": {
+      "additionalProperties": false,
+      "properties": {
+        "pitch_rad": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Pitch Rad"
+        },
+        "pitch_rate_rad_s": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Pitch Rate Rad S"
+        },
+        "sensor_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_-]+$",
+          "title": "Sensor Id",
+          "type": "string"
+        },
+        "sigma": {
+          "$ref": "#/$defs/AxisSigma"
+        },
+        "slide_m": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Slide M"
+        },
+        "slide_rate_m_s": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Slide Rate M S"
+        },
+        "t_capture_s": {
+          "minimum": 0,
+          "title": "T Capture S",
+          "type": "number"
+        },
+        "t_deliver_s": {
+          "minimum": 0,
+          "title": "T Deliver S",
+          "type": "number"
+        },
+        "validity": {
+          "enum": [
+            "valid",
+            "missing",
+            "saturated",
+            "stale"
+          ],
+          "title": "Validity",
+          "type": "string"
+        },
+        "yaw_rad": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Yaw Rad"
+        },
+        "yaw_rate_rad_s": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Yaw Rate Rad S"
+        }
+      },
+      "required": [
+        "t_capture_s",
+        "t_deliver_s",
+        "validity",
+        "sensor_id",
+        "slide_m",
+        "yaw_rad",
+        "pitch_rad",
+        "sigma"
+      ],
+      "title": "EncoderSample",
+      "type": "object"
+    },
+    "Exposure": {
+      "additionalProperties": false,
+      "properties": {
+        "approximation": {
+          "const": "midpoint_snapshot",
+          "title": "Approximation",
+          "type": "string"
+        },
+        "duration_s": {
+          "exclusiveMinimum": 0,
+          "title": "Duration S",
+          "type": "number"
+        }
+      },
+      "required": [
+        "duration_s",
+        "approximation"
+      ],
+      "title": "Exposure",
+      "type": "object"
+    },
+    "Finish": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "minimum": 1,
+          "title": "Action Id",
+          "type": "integer"
+        },
+        "kind": {
+          "const": "finish",
+          "title": "Kind",
+          "type": "string"
+        },
+        "resolution": {
+          "enum": [
+            "resolved",
+            "unresolved",
+            "help_needed"
+          ],
+          "title": "Resolution",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "timeout_s": {
+          "exclusiveMinimum": 0,
+          "maximum": 15,
+          "title": "Timeout S",
+          "type": "number"
+        }
+      },
+      "required": [
+        "schema_version",
+        "action_id",
+        "timeout_s",
+        "kind",
+        "resolution"
+      ],
+      "title": "Finish",
+      "type": "object"
+    },
+    "InformationReceipt": {
+      "additionalProperties": false,
+      "properties": {
+        "elapsed_wall_s": {
+          "minimum": 0,
+          "title": "Elapsed Wall S",
+          "type": "number"
+        },
+        "observation_sequence_id": {
+          "minimum": 0,
+          "title": "Observation Sequence Id",
+          "type": "integer"
+        },
+        "received_monotonic_s": {
+          "minimum": 0,
+          "title": "Received Monotonic S",
+          "type": "number"
+        },
+        "received_utc": {
+          "title": "Received Utc",
+          "type": "string"
+        },
+        "remaining_requests": {
+          "maximum": 3,
+          "minimum": 0,
+          "title": "Remaining Requests",
+          "type": "integer"
+        },
+        "reply": {
+          "$ref": "#/$defs/InformationReply"
+        },
+        "request": {
+          "$ref": "#/$defs/InteractionRequest"
+        },
+        "schema_version": {
+          "const": "interaction/1.0",
+          "default": "interaction/1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "simulation_time_s": {
+          "minimum": 0,
+          "title": "Simulation Time S",
+          "type": "number"
+        },
+        "started_monotonic_s": {
+          "minimum": 0,
+          "title": "Started Monotonic S",
+          "type": "number"
+        },
+        "started_utc": {
+          "title": "Started Utc",
+          "type": "string"
+        }
+      },
+      "required": [
+        "request",
+        "reply",
+        "started_utc",
+        "received_utc",
+        "started_monotonic_s",
+        "received_monotonic_s",
+        "elapsed_wall_s",
+        "simulation_time_s",
+        "observation_sequence_id",
+        "remaining_requests"
+      ],
+      "title": "InformationReceipt",
+      "type": "object"
+    },
+    "InformationReply": {
+      "additionalProperties": false,
+      "properties": {
+        "outcome": {
+          "enum": [
+            "available",
+            "unavailable",
+            "timed_out",
+            "cancelled",
+            "invalid_response"
+          ],
+          "title": "Outcome",
+          "type": "string"
+        },
+        "provenance": {
+          "enum": [
+            "recorded",
+            "simulated"
+          ],
+          "title": "Provenance",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "interaction/1.0",
+          "default": "interaction/1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "sources": {
+          "default": [],
+          "items": {
+            "$ref": "#/$defs/InformationSource"
+          },
+          "maxItems": 8,
+          "title": "Sources",
+          "type": "array"
+        },
+        "text": {
+          "default": "",
+          "maxLength": 16000,
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "outcome",
+        "provenance"
+      ],
+      "title": "InformationReply",
+      "type": "object"
+    },
+    "InformationSource": {
+      "additionalProperties": false,
+      "properties": {
+        "source_date": {
+          "anyOf": [
+            {
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Date"
+        },
+        "title": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "url": {
+          "anyOf": [
+            {
+              "maxLength": 2048,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Url"
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "title": "InformationSource",
+      "type": "object"
+    },
+    "InteractionLimits": {
+      "additionalProperties": false,
+      "description": "Frozen Step 2 protocol, shared by scripted drivers and later comparisons.",
+      "properties": {
+        "human_deadline_s": {
+          "default": 300.0,
+          "maximum": 300,
+          "minimum": 300,
+          "title": "Human Deadline S",
+          "type": "number"
+        },
+        "internet_deadline_s": {
+          "default": 30.0,
+          "maximum": 30,
+          "minimum": 30,
+          "title": "Internet Deadline S",
+          "type": "number"
+        },
+        "max_question_bytes": {
+          "default": 2000,
+          "maximum": 2000,
+          "minimum": 2000,
+          "title": "Max Question Bytes",
+          "type": "integer"
+        },
+        "max_reply_bytes": {
+          "default": 16000,
+          "maximum": 16000,
+          "minimum": 16000,
+          "title": "Max Reply Bytes",
+          "type": "integer"
+        },
+        "max_requests": {
+          "default": 3,
+          "maximum": 3,
+          "minimum": 3,
+          "title": "Max Requests",
+          "type": "integer"
+        },
+        "max_wire_bytes": {
+          "default": 65536,
+          "maximum": 65536,
+          "minimum": 65536,
+          "title": "Max Wire Bytes",
+          "type": "integer"
+        },
+        "schema_version": {
+          "const": "interaction/1.0",
+          "default": "interaction/1.0",
+          "title": "Schema Version",
+          "type": "string"
+        }
+      },
+      "title": "InteractionLimits",
+      "type": "object"
+    },
+    "InteractionRequest": {
+      "additionalProperties": false,
+      "properties": {
+        "channel": {
+          "enum": [
+            "human",
+            "internet"
+          ],
+          "title": "Channel",
+          "type": "string"
+        },
+        "episode_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_-]+$",
+          "title": "Episode Id",
+          "type": "string"
+        },
+        "information_gap": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Information Gap",
+          "type": "string"
+        },
+        "intended_decision": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Intended Decision",
+          "type": "string"
+        },
+        "parent_request_id": {
+          "anyOf": [
+            {
+              "maxLength": 128,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Parent Request Id"
+        },
+        "question": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Question",
+          "type": "string"
+        },
+        "request_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_-]+$",
+          "title": "Request Id",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "interaction/1.0",
+          "default": "interaction/1.0",
+          "title": "Schema Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "episode_id",
+        "request_id",
+        "channel",
+        "question",
+        "information_gap",
+        "intended_decision"
+      ],
+      "title": "InteractionRequest",
+      "type": "object"
+    },
+    "Limits": {
+      "additionalProperties": false,
+      "properties": {
+        "pitch_rad": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Pitch Rad",
+          "type": "array"
+        },
+        "slide_m": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Slide M",
+          "type": "array"
+        },
+        "voltage_v": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Voltage V",
+          "type": "array"
+        },
+        "yaw_rad": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Yaw Rad",
+          "type": "array"
+        }
+      },
+      "required": [
+        "slide_m",
+        "yaw_rad",
+        "pitch_rad",
+        "voltage_v"
+      ],
+      "title": "Limits",
+      "type": "object"
+    },
+    "MeasuredConfirmation": {
+      "additionalProperties": false,
+      "properties": {
+        "age_s": {
+          "minimum": 0,
+          "title": "Age S",
+          "type": "number"
+        },
+        "sample": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ScalarSample"
+            },
+            {
+              "$ref": "#/$defs/EncoderSample"
+            }
+          ],
+          "title": "Sample"
+        }
+      },
+      "required": [
+        "sample",
+        "age_s"
+      ],
+      "title": "MeasuredConfirmation",
+      "type": "object"
+    },
+    "MoveCamera": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "minimum": 1,
+          "title": "Action Id",
+          "type": "integer"
+        },
+        "capture_after_settle": {
+          "title": "Capture After Settle",
+          "type": "boolean"
+        },
+        "kind": {
+          "const": "move_camera",
+          "title": "Kind",
+          "type": "string"
+        },
+        "pitch_rad": {
+          "maximum": 0.5235987755982988,
+          "minimum": -0.5235987755982988,
+          "title": "Pitch Rad",
+          "type": "number"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "slide_m": {
+          "maximum": 0.15,
+          "minimum": -0.15,
+          "title": "Slide M",
+          "type": "number"
+        },
+        "timeout_s": {
+          "exclusiveMinimum": 0,
+          "maximum": 15,
+          "title": "Timeout S",
+          "type": "number"
+        },
+        "yaw_rad": {
+          "maximum": 0.7853981633974483,
+          "minimum": -0.7853981633974483,
+          "title": "Yaw Rad",
+          "type": "number"
+        }
+      },
+      "required": [
+        "schema_version",
+        "action_id",
+        "timeout_s",
+        "kind",
+        "slide_m",
+        "yaw_rad",
+        "pitch_rad",
+        "capture_after_settle"
+      ],
+      "title": "MoveCamera",
+      "type": "object"
+    },
+    "Observation": {
+      "additionalProperties": false,
+      "properties": {
+        "encoders": {
+          "items": {
+            "$ref": "#/$defs/EncoderSample"
+          },
+          "title": "Encoders",
+          "type": "array"
+        },
+        "episode_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_-]+$",
+          "title": "Episode Id",
+          "type": "string"
+        },
+        "feedback": {
+          "items": {
+            "$ref": "#/$defs/ActionFeedback"
+          },
+          "title": "Feedback",
+          "type": "array"
+        },
+        "remaining_budgets": {
+          "$ref": "#/$defs/Budgets"
+        },
+        "rgb": {
+          "items": {
+            "$ref": "#/$defs/RGBSample"
+          },
+          "title": "Rgb",
+          "type": "array"
+        },
+        "scalars": {
+          "items": {
+            "$ref": "#/$defs/ScalarSample"
+          },
+          "title": "Scalars",
+          "type": "array"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "sequence_id": {
+          "minimum": 0,
+          "title": "Sequence Id",
+          "type": "integer"
+        },
+        "t_deliver_s": {
+          "minimum": 0,
+          "title": "T Deliver S",
+          "type": "number"
+        },
+        "terminal": {
+          "title": "Terminal",
+          "type": "boolean"
+        },
+        "terminal_reason": {
+          "anyOf": [
+            {
+              "enum": [
+                "finished",
+                "safe_stop",
+                "horizon",
+                "thermal_trip",
+                "overcurrent",
+                "numerical_error",
+                "joint_limit",
+                "clearance"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Terminal Reason"
+        }
+      },
+      "required": [
+        "schema_version",
+        "episode_id",
+        "sequence_id",
+        "t_deliver_s",
+        "scalars",
+        "encoders",
+        "rgb",
+        "feedback",
+        "remaining_budgets",
+        "terminal",
+        "terminal_reason"
+      ],
+      "title": "Observation",
+      "type": "object"
+    },
+    "PendingInformation": {
+      "additionalProperties": false,
+      "properties": {
+        "deadline_s": {
+          "exclusiveMinimum": 0,
+          "title": "Deadline S",
+          "type": "number"
+        },
+        "observation": {
+          "$ref": "#/$defs/Observation"
+        },
+        "request": {
+          "$ref": "#/$defs/InteractionRequest"
+        },
+        "schema_version": {
+          "const": "interaction/1.0",
+          "default": "interaction/1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "started_monotonic_s": {
+          "minimum": 0,
+          "title": "Started Monotonic S",
+          "type": "number"
+        },
+        "started_utc": {
+          "title": "Started Utc",
+          "type": "string"
+        }
+      },
+      "required": [
+        "request",
+        "observation",
+        "started_utc",
+        "started_monotonic_s",
+        "deadline_s"
+      ],
+      "title": "PendingInformation",
+      "type": "object"
+    },
+    "PhysicalDecision": {
+      "additionalProperties": false,
+      "description": "Evidence references are attribution, not a claim of verified causation.",
+      "properties": {
+        "action": {
+          "discriminator": {
+            "mapping": {
+              "capture_rgb": "#/$defs/CaptureRGB",
+              "finish": "#/$defs/Finish",
+              "move_camera": "#/$defs/MoveCamera",
+              "probe_voltage": "#/$defs/ProbeVoltage",
+              "request_help": "#/$defs/RequestHelp",
+              "safe_stop": "#/$defs/SafeStop",
+              "set_voltage": "#/$defs/SetVoltage",
+              "wait": "#/$defs/Wait"
+            },
+            "propertyName": "kind"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/MoveCamera"
+            },
+            {
+              "$ref": "#/$defs/SetVoltage"
+            },
+            {
+              "$ref": "#/$defs/ProbeVoltage"
+            },
+            {
+              "$ref": "#/$defs/CaptureRGB"
+            },
+            {
+              "$ref": "#/$defs/Wait"
+            },
+            {
+              "$ref": "#/$defs/RequestHelp"
+            },
+            {
+              "$ref": "#/$defs/SafeStop"
+            },
+            {
+              "$ref": "#/$defs/Finish"
+            }
+          ],
+          "title": "Action"
+        },
+        "information_refs": {
+          "default": [],
+          "items": {
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "type": "string"
+          },
+          "maxItems": 3,
+          "title": "Information Refs",
+          "type": "array"
+        },
+        "interpretation": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Interpretation",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "interaction/1.0",
+          "default": "interaction/1.0",
+          "title": "Schema Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "action",
+        "interpretation"
+      ],
+      "title": "PhysicalDecision",
+      "type": "object"
+    },
+    "PhysicalEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "decision": {
+          "$ref": "#/$defs/PhysicalDecision"
+        },
+        "kind": {
+          "const": "physical_decision",
+          "default": "physical_decision",
+          "title": "Kind",
+          "type": "string"
+        },
+        "observation": {
+          "$ref": "#/$defs/Observation"
+        }
+      },
+      "required": [
+        "decision",
+        "observation"
+      ],
+      "title": "PhysicalEvent",
+      "type": "object"
+    },
+    "ProbeVoltage": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "minimum": 1,
+          "title": "Action Id",
+          "type": "integer"
+        },
+        "dwell_s": {
+          "maximum": 2.0,
+          "minimum": 0.2,
+          "title": "Dwell S",
+          "type": "number"
+        },
+        "kind": {
+          "const": "probe_voltage",
+          "title": "Kind",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "timeout_s": {
+          "exclusiveMinimum": 0,
+          "maximum": 15,
+          "title": "Timeout S",
+          "type": "number"
+        },
+        "voltages_v": {
+          "items": {
+            "maximum": 4.0,
+            "minimum": 0.2,
+            "type": "number"
+          },
+          "maxItems": 3,
+          "minItems": 1,
+          "title": "Voltages V",
+          "type": "array"
+        }
+      },
+      "required": [
+        "schema_version",
+        "action_id",
+        "timeout_s",
+        "kind",
+        "voltages_v",
+        "dwell_s"
+      ],
+      "title": "ProbeVoltage",
+      "type": "object"
+    },
+    "PublicTask": {
+      "additionalProperties": false,
+      "properties": {
+        "allowed_adaptation": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Allowed Adaptation",
+          "type": "string"
+        },
+        "available_actions": {
+          "items": {
+            "enum": [
+              "move_camera",
+              "set_voltage",
+              "probe_voltage",
+              "capture_rgb",
+              "wait",
+              "request_help",
+              "safe_stop",
+              "finish"
+            ],
+            "type": "string"
+          },
+          "title": "Available Actions",
+          "type": "array"
+        },
+        "available_help": {
+          "items": {
+            "enum": [
+              "reference_irradiance",
+              "rear_inspection"
+            ],
+            "type": "string"
+          },
+          "title": "Available Help",
+          "type": "array"
+        },
+        "budgets": {
+          "$ref": "#/$defs/Budgets"
+        },
+        "cost_weights": {
+          "$ref": "#/$defs/CostWeights"
+        },
+        "episode_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_-]+$",
+          "title": "Episode Id",
+          "type": "string"
+        },
+        "goal": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Goal",
+          "type": "string"
+        },
+        "horizon_s": {
+          "exclusiveMinimum": 0,
+          "title": "Horizon S",
+          "type": "number"
+        },
+        "hypothesis_classes": {
+          "items": {
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "type": "string"
+          },
+          "title": "Hypothesis Classes",
+          "type": "array"
+        },
+        "knowledge_condition": {
+          "maxLength": 1000,
+          "minLength": 1,
+          "title": "Knowledge Condition",
+          "type": "string"
+        },
+        "limits": {
+          "$ref": "#/$defs/Limits"
+        },
+        "nominal_calibration": {
+          "$ref": "#/$defs/Calibration"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "sensors": {
+          "items": {
+            "enum": [
+              "voltage_v",
+              "current_a",
+              "temperature_c",
+              "reference_w_m2",
+              "encoders",
+              "rgb"
+            ],
+            "type": "string"
+          },
+          "title": "Sensors",
+          "type": "array"
+        }
+      },
+      "required": [
+        "schema_version",
+        "episode_id",
+        "goal",
+        "sensors",
+        "limits",
+        "available_actions",
+        "available_help",
+        "horizon_s",
+        "budgets",
+        "cost_weights",
+        "nominal_calibration",
+        "knowledge_condition",
+        "allowed_adaptation",
+        "hypothesis_classes"
+      ],
+      "title": "PublicTask",
+      "type": "object"
+    },
+    "RGBSample": {
+      "additionalProperties": false,
+      "properties": {
+        "calibration_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_-]+$",
+          "title": "Calibration Id",
+          "type": "string"
+        },
+        "camera_id": {
+          "const": "agent_rgb",
+          "title": "Camera Id",
+          "type": "string"
+        },
+        "encoding": {
+          "const": "png_rgb8",
+          "title": "Encoding",
+          "type": "string"
+        },
+        "exposure": {
+          "$ref": "#/$defs/Exposure"
+        },
+        "frame_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_-]+$",
+          "title": "Frame Id",
+          "type": "string"
+        },
+        "height": {
+          "const": 480,
+          "title": "Height",
+          "type": "integer"
+        },
+        "k": {
+          "maxItems": 9,
+          "minItems": 9,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "K",
+          "type": "array"
+        },
+        "png_base64": {
+          "anyOf": [
+            {
+              "maxLength": 2800000,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Png Base64"
+        },
+        "t_capture_s": {
+          "minimum": 0,
+          "title": "T Capture S",
+          "type": "number"
+        },
+        "t_deliver_s": {
+          "minimum": 0,
+          "title": "T Deliver S",
+          "type": "number"
+        },
+        "t_end_s": {
+          "minimum": 0,
+          "title": "T End S",
+          "type": "number"
+        },
+        "t_start_s": {
+          "minimum": 0,
+          "title": "T Start S",
+          "type": "number"
+        },
+        "validity": {
+          "enum": [
+            "valid",
+            "missing",
+            "saturated",
+            "stale"
+          ],
+          "title": "Validity",
+          "type": "string"
+        },
+        "width": {
+          "const": 640,
+          "title": "Width",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "t_capture_s",
+        "t_deliver_s",
+        "validity",
+        "frame_id",
+        "camera_id",
+        "width",
+        "height",
+        "encoding",
+        "png_base64",
+        "calibration_id",
+        "k",
+        "exposure",
+        "t_start_s",
+        "t_end_s"
+      ],
+      "title": "RGBSample",
+      "type": "object"
+    },
+    "RequestHelp": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "minimum": 1,
+          "title": "Action Id",
+          "type": "integer"
+        },
+        "kind": {
+          "const": "request_help",
+          "title": "Kind",
+          "type": "string"
+        },
+        "measurement": {
+          "enum": [
+            "reference_irradiance",
+            "rear_inspection"
+          ],
+          "title": "Measurement",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "timeout_s": {
+          "exclusiveMinimum": 0,
+          "maximum": 15,
+          "title": "Timeout S",
+          "type": "number"
+        }
+      },
+      "required": [
+        "schema_version",
+        "action_id",
+        "timeout_s",
+        "kind",
+        "measurement"
+      ],
+      "title": "RequestHelp",
+      "type": "object"
+    },
+    "SafeStop": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "minimum": 1,
+          "title": "Action Id",
+          "type": "integer"
+        },
+        "kind": {
+          "const": "safe_stop",
+          "title": "Kind",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "timeout_s": {
+          "exclusiveMinimum": 0,
+          "maximum": 15,
+          "title": "Timeout S",
+          "type": "number"
+        }
+      },
+      "required": [
+        "schema_version",
+        "action_id",
+        "timeout_s",
+        "kind"
+      ],
+      "title": "SafeStop",
+      "type": "object"
+    },
+    "ScalarSample": {
+      "additionalProperties": false,
+      "properties": {
+        "channel": {
+          "enum": [
+            "voltage_v",
+            "current_a",
+            "temperature_c",
+            "reference_w_m2"
+          ],
+          "title": "Channel",
+          "type": "string"
+        },
+        "sensor_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_-]+$",
+          "title": "Sensor Id",
+          "type": "string"
+        },
+        "sigma": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Sigma"
+        },
+        "t_capture_s": {
+          "minimum": 0,
+          "title": "T Capture S",
+          "type": "number"
+        },
+        "t_deliver_s": {
+          "minimum": 0,
+          "title": "T Deliver S",
+          "type": "number"
+        },
+        "validity": {
+          "enum": [
+            "valid",
+            "missing",
+            "saturated",
+            "stale"
+          ],
+          "title": "Validity",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Value"
+        }
+      },
+      "required": [
+        "t_capture_s",
+        "t_deliver_s",
+        "validity",
+        "channel",
+        "value",
+        "sigma",
+        "sensor_id"
+      ],
+      "title": "ScalarSample",
+      "type": "object"
+    },
+    "SetVoltage": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "minimum": 1,
+          "title": "Action Id",
+          "type": "integer"
+        },
+        "kind": {
+          "const": "set_voltage",
+          "title": "Kind",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "timeout_s": {
+          "exclusiveMinimum": 0,
+          "maximum": 15,
+          "title": "Timeout S",
+          "type": "number"
+        },
+        "voltage_v": {
+          "maximum": 4.0,
+          "minimum": 0.2,
+          "title": "Voltage V",
+          "type": "number"
+        }
+      },
+      "required": [
+        "schema_version",
+        "action_id",
+        "timeout_s",
+        "kind",
+        "voltage_v"
+      ],
+      "title": "SetVoltage",
+      "type": "object"
+    },
+    "StartedEvent": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "information_started",
+          "default": "information_started",
+          "title": "Kind",
+          "type": "string"
+        },
+        "pending": {
+          "$ref": "#/$defs/PendingInformation"
+        }
+      },
+      "required": [
+        "pending"
+      ],
+      "title": "StartedEvent",
+      "type": "object"
+    },
+    "Wait": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "minimum": 1,
+          "title": "Action Id",
+          "type": "integer"
+        },
+        "duration_s": {
+          "maximum": 5,
+          "minimum": 0.1,
+          "title": "Duration S",
+          "type": "number"
+        },
+        "kind": {
+          "const": "wait",
+          "title": "Kind",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "timeout_s": {
+          "exclusiveMinimum": 0,
+          "maximum": 15,
+          "title": "Timeout S",
+          "type": "number"
+        }
+      },
+      "required": [
+        "schema_version",
+        "action_id",
+        "timeout_s",
+        "kind",
+        "duration_s"
+      ],
+      "title": "Wait",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "events": {
+      "items": {
+        "discriminator": {
+          "mapping": {
+            "information_completed": "#/$defs/CompletedEvent",
+            "information_started": "#/$defs/StartedEvent",
+            "physical_decision": "#/$defs/PhysicalEvent"
+          },
+          "propertyName": "kind"
+        },
+        "oneOf": [
+          {
+            "$ref": "#/$defs/StartedEvent"
+          },
+          {
+            "$ref": "#/$defs/CompletedEvent"
+          },
+          {
+            "$ref": "#/$defs/PhysicalEvent"
+          }
+        ]
+      },
+      "title": "Events",
+      "type": "array"
+    },
+    "initial_observation": {
+      "$ref": "#/$defs/Observation"
+    },
+    "limits": {
+      "$ref": "#/$defs/InteractionLimits"
+    },
+    "mode": {
+      "enum": [
+        "recorded_interface",
+        "recorded_replay"
+      ],
+      "title": "Mode",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "interaction/1.0",
+      "default": "interaction/1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "task": {
+      "$ref": "#/$defs/PublicTask"
+    }
+  },
+  "required": [
+    "mode",
+    "limits",
+    "task",
+    "initial_observation",
+    "events"
+  ],
+  "title": "InteractionTranscript",
+  "type": "object"
+}

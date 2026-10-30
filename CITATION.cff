@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "PV investigation simulator (agent_pv)"
+abstract: "A small, deterministic simulator of a photovoltaic panel, a movable camera, sensors and a controllable load, with hidden causes and an evaluator, for building and fairly comparing agents that investigate PV systems."
+authors:
+  - family-names: He
+    given-names: Wei
+    affiliation: "King's College London"
+version: 0.0.1
+date-released: 2026-10-30
+license: MIT
+repository-code: "https://github.com/hewei8622/agent_pv"
+keywords:
+  - photovoltaics
+  - simulation
+  - agents
+  - fault diagnosis
+  - MuJoCo

@@ -1,0 +1,25 @@
+{
+  "protocol_version": "source_response_v1",
+  "scope": "Interactive prototype step 1; uniform source response; no policy evaluation",
+  "duration_s": 8.0,
+  "event_s": 2.0,
+  "initial_dni_w_m2": 800.0,
+  "changed_dni_w_m2": 400.0,
+  "dhi_w_m2": 100.0,
+  "voltage_v": 1.8,
+  "seed": 20261019,
+  "noise": false,
+  "reference_step_s": 0.0005,
+  "reference_refinement_step_s": 0.00025,
+  "tolerances": {
+    "current_a": 1e-12,
+    "power_w": 1e-11,
+    "temperature_c": 5e-6,
+    "reference_refinement_c": 1e-9,
+    "electrical_energy_j": 1e-4,
+    "absorbed_energy_j": 1e-8,
+    "energy_balance_j": 1e-8,
+    "sensor_latency_s": 1e-12,
+    "render_mean_decrease_code_values": 1.0
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "schema_version": "paired-report-qa/1.0",
+  "completed_utc": "2026-10-19T13:45:25.371102+00:00",
+  "scope": "PDF text, evidence and page rendering only; no assertion of complete browser gesture QA",
+  "status": "passed",
+  "pdf": "output/pdf/PAIRED_INVESTIGATION_REPORT_20261019.pdf",
+  "pdf_sha256": "b2c18548cb0253eb5f55bc0ecb30b0e27f41fa1140f5eaa78be4945e787e2bfd",
+  "pages": 11,
+  "render_command": "XDG_CACHE_HOME=tmp/pdfs/paired/cache /opt/homebrew/bin/pdftoppm -r 110 -png output/pdf/PAIRED_INVESTIGATION_REPORT_20261019.pdf tmp/pdfs/paired/build-04/pages/page",
+  "visual_review": {
+    "producer": "All 11 build02 pages directly inspected; final build04 page2 directly inspected after wrapped-title corrections. The other 10 final page PNGs are byte-identical to the inspected versions.",
+    "root_confirmation": "Root independently inspected all 11 build03 pages, then final build04 page2 and hash-compared the other 10 final page PNGs unchanged.",
+    "observations": "Readable text and figures, contained diagram labels, no clipped tables, distinct timeline callouts, no legend overlap, consistent page numbering and footers.",
+    "all_final_pages_covered": true
+  },
+  "text_checks": {
+    "pages": 11,
+    "all_pages_nonempty": true,
+    "no_replacement_character": true
+  },
+  "source_integrity": {
+    "consumed_input_count": 55,
+    "all_still_match": true,
+    "freeze_content_and_experiment_link_checked": true,
+    "retained_artifact_index_checked": true
+  },
+  "qualifications": [
+    "A is a deterministic bounded goal planner; no LLM, live external service or cross-episode memory.",
+    "Four paired development cases, one episode per arm and case; no inferential statistics.",
+    "All paired physical outcomes and resource use tied; no adaptive advantage claimed.",
+    "3D geometry is evaluator reconstruction; zero new RGB frames.",
+    "C04 operational verification at 6.92 s uses a 6.90 s sample; the separate 7.10 s prediction outcome becomes usable at 12.12 s.",
+    "At 16 s cleanup disconnect follows the last integrated interval; no continued post-episode generation claim.",
+    "875 tests is the retained nonrender JUnit regression; no new rendering or hardware validation claimed."
+  ],
+  "render_png_sha256": {
+    "tmp/pdfs/paired/build-04/pages/page-01.png": "806c158ebf5f03f3d8140cbcd23689d6e28942e06f4e431502b19f79773de688",
+    "tmp/pdfs/paired/build-04/pages/page-02.png": "4f1de8283e981efff22f4c1006ef19f8e935dd21f304dbb75b0ff4ce5dcada6c",
+    "tmp/pdfs/paired/build-04/pages/page-03.png": "ae5cdd0fedea35e8cc74b2bed345c14ad7248564c92a41fe340959f23c5afbce",
+    "tmp/pdfs/paired/build-04/pages/page-04.png": "67c544eda049555bc2f52888f66a414d784161ac706c1bfdd5a814e531b11845",
+    "tmp/pdfs/paired/build-04/pages/page-05.png": "f7713142d459377ebf20608fe376e798aad2d687a4daee718587ef6f8d7d0cb9",
+    "tmp/pdfs/paired/build-04/pages/page-06.png": "c426e3628330614be00abe86f3031f5ba5fe392757a77f6035ba8f2c2b3fcb28",
+    "tmp/pdfs/paired/build-04/pages/page-07.png": "9a0c4fa7c2e7dd63b788c56afcc8cf82c1934b2838d80874e21e86620d6acb2b",
+    "tmp/pdfs/paired/build-04/pages/page-08.png": "d1ca1e4bc833019d33327b94a1454764e94d286e520549733656d657efe1857d",
+    "tmp/pdfs/paired/build-04/pages/page-09.png": "7cd331b76cde5ee1c302a892ecaa7182b6762184491ff9312d7f2cf607fcff96",
+    "tmp/pdfs/paired/build-04/pages/page-10.png": "2ea8b75cbe80abcd03bc2cac4efe540c09bcdb2278c0f13c4498c4fe44fc160f",
+    "tmp/pdfs/paired/build-04/pages/page-11.png": "48b2eced58c6d0fb218d2315a8a671164ef014ca1d739dd7d1687225975c43db"
+  },
+  "pixel_comparison_to_reviewed_build02": {
+    "page-01.png": true,
+    "page-02.png": false,
+    "page-03.png": true,
+    "page-04.png": true,
+    "page-05.png": true,
+    "page-06.png": true,
+    "page-07.png": true,
+    "page-08.png": true,
+    "page-09.png": true,
+    "page-10.png": true,
+    "page-11.png": true
+  },
+  "superseded_drafts": [
+    "tmp/pdfs/paired/build-01/report.pdf",
+    "tmp/pdfs/paired/build-02/report.pdf",
+    "tmp/pdfs/paired/build-03/report.pdf"
+  ],
+  "build_command": "MPLCONFIGDIR=tmp/pdfs/paired/matplotlib XDG_CACHE_HOME=tmp/pdfs/paired/cache .tools/pdf-report/bin/python scripts/build_paired_report.py --manifest runs/paired-investigation-20261019/paired_manifest.json --freeze private_eval/paired-investigation-freeze-20261019.json --test-xml runs/paired-build-20261019/nonrender.xml --output output/pdf/PAIRED_INVESTIGATION_REPORT_20261019.pdf --work tmp/pdfs/paired/build-04/figures"
+}

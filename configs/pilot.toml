@@ -1,0 +1,136 @@
+schema_version = "1.0"
+mode = "trusted-policy/local"
+
+[simulation]
+dt_s = 0.002
+horizon_s = 60.0
+decision_overhead_s = 0.2
+minimum_decision_spacing_s = 0.1
+verification_tail_s = 2.0
+max_action_timeout_s = 15.0
+
+[backend]
+name = "mujoco"
+camera = "agent_rgb"
+renderer = "classic"
+
+[camera]
+width = 640
+height = 480
+fovy_deg = 45.0
+home_position_m = [0.0, -0.45, 0.35]
+slide_limits_m = [-0.15, 0.15]
+yaw_limits_rad = [-0.7853981633974483, 0.7853981633974483]
+pitch_limits_rad = [-0.5235987755982988, 0.5235987755982988]
+slide_rate_m_s = 0.05
+slide_acceleration_m_s2 = 0.20
+angular_rate_rad_s = 0.50
+angular_acceleration_rad_s2 = 1.0
+settle_s = 0.20
+headlight = false
+
+[servos]
+carriage_mass_kg = 0.10
+yaw_mass_kg = 0.03
+camera_mass_kg = 0.02
+slide_kp_n_m = 100.0
+slide_damping_n_s_m = 5.0
+slide_force_cap_n = 5.0
+hinge_kp_nm_rad = 0.5
+hinge_damping_nm_s_rad = 0.02
+hinge_torque_cap_nm = 0.2
+
+[pv]
+backend = "piecewise_cell_v1"
+cells_per_substring = 4
+substrings_in_series = 2
+voltage_limits_v = [0.2, 4.0]
+current_limit_a = 2.0
+initial_voltage_v = 1.8
+reference_irradiance_w_m2 = 1000.0
+reference_temperature_c = 25.0
+isc_reference_a = 1.0
+isc_temperature_coefficient_per_k = 0.0005
+voc_reference_v = 0.60
+voc_temperature_coefficient_v_k = -0.002
+voc_log_irradiance_coefficient_v = 0.03
+reverse_resistance_ohm = 1.0
+bypass_voltage_v = 0.30
+bisection_current_bounds_a = [0.0, 2.0]
+root_convention = "lowest_nonnegative_root"
+
+[thermal]
+absorptance = 0.9
+heat_capacity_j_k = 30.0
+conductance_w_k = 0.6
+trip_temperature_c = 90.0
+update = "exact_linear_cooling_frozen_input"
+
+[sensors]
+numeric_hz = 10.0
+encoder_hz = 20.0
+rgb_max_hz = 2.0
+numeric_latency_s = 0.02
+encoder_latency_s = 0.01
+rgb_latency_s = 0.10
+# ADR 0006: six 2 ms ticks, with an exact midpoint after three ticks.
+rgb_exposure_s = 0.012
+rgb_approximation = "midpoint_snapshot"
+# Nominal M2 noise magnitudes; disabled by pilot flags below.
+voltage_sigma_v = 0.01
+current_sigma_a = 0.005
+temperature_sigma_c = 0.2
+reference_sigma_w_m2 = 5.0
+slide_sigma_m = 0.0005
+angular_sigma_rad = 0.001
+
+[load]
+delay_s = 0.10
+slew_v_s = 10.0
+settle_s = 0.2
+probe_dwell_bounds_s = [0.2, 2.0]
+probe_max_points = 3
+wait_bounds_s = [0.1, 5.0]
+help_delay_s = 5.0
+
+[budgets]
+time_s = 60.0
+rgb_frames = 20
+voltage_points = 12
+help_requests = 1
+decisions = 100
+slide_path_m = 1.5
+angular_path_rad = 6.0
+
+[cost_weights]
+pv_energy_scale_j = 60.0
+rgb = 0.1
+voltage_point = 0.2
+help_request = 1.0
+slide_per_m = 0.5
+angle_per_rad = 0.05
+
+[private_world]
+panel_size_m = [0.30, 0.20]
+panel_center_m = [0.0, 0.0, 0.0]
+panel_normal = [0.0, 0.0, 1.0]
+columns = 4
+rows = 2
+cell_area_m2 = 0.0075
+source_direction = [0.0, 0.0, 1.0]
+dni_w_m2 = 800.0
+dhi_w_m2 = 100.0
+transmission = [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+series_resistance_ohm = 0.0
+ambient_temperature_c = 25.0
+initial_temperature_c = 25.0
+reference_position_m = [0.20, 0.10, 0.01]
+optical_grid_per_axis = 8
+diffuse_visibility = "uniform_unoccluded"
+reflected_w_m2 = 0.0
+
+[pilot]
+numeric_noise = false
+encoder_noise = false
+actuator_failures = false
+rgb_required = true

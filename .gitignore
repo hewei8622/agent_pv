@@ -1,0 +1,29 @@
+.venv*/
+.tools/
+runs/
+private_eval/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.hypothesis/
+dist/
+*.egg-info/
+.env
+.env.*
+.DS_Store
+
+# Superseded viewer builds (large, kept locally and on Drive, not in git)
+output/workflow/build-01/
+output/workflow/build-02/
+output/workflow/paired-01/
+output/workflow/paired-02/
+
+# Notebook by-products
+notebooks/figures/
+.ipynb_checkpoints/
+tmp/
+
+# Evaluator replays embed hidden truth; build them locally, never commit them
+output/workflow/**/*-evaluator.html
+output/workflow/**/*-evaluator.manifest.json

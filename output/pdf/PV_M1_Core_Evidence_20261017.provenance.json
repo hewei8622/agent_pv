@@ -1,0 +1,306 @@
+{
+  "schema_version": "1.0",
+  "created_utc": "2026-10-17T14:38:55.139253+00:00",
+  "output": "./output/pdf/PV_M1_Core_Evidence_20261017.pdf",
+  "pdf_sha256": "6eb9c6510f551684597c505166467937bb604aa79ee30c27e9d19a349ef338fe",
+  "pages": 6,
+  "draft": false,
+  "full_m1_pass": false,
+  "read_only_generation": true,
+  "policy_wall_time_interpretation": "injected replay-accounting fixture; no benchmark inference latency measured",
+  "sources": [
+    {
+      "id": "S1",
+      "label": "Verified source recording manifest",
+      "path": "./runs/m1-followthrough/independent-review/private/followthrough-core-source/manifest.json",
+      "sha256": "b616608c58e8cb638b80c8a38de4ef50c0a357dc68664c6e38b6c5f3e3305f76",
+      "snapshot": "./runs/m1-followthrough/report/PV_M1_Core_Evidence_20261017/inputs/S01-manifest.json",
+      "bytes": 7441,
+      "show_in_pdf": true
+    },
+    {
+      "id": "S2",
+      "label": "Private actual-state trace",
+      "path": "./runs/m1-followthrough/independent-review/private/followthrough-core-source/truth.jsonl",
+      "sha256": "c885b14a759bb86b6979ad0718cfd6fb530dc46d3c9012d3a5d83b14cca0ec95",
+      "snapshot": "./runs/m1-followthrough/report/PV_M1_Core_Evidence_20261017/inputs/S02-truth.jsonl",
+      "bytes": 2856240,
+      "show_in_pdf": true
+    },
+    {
+      "id": "S3",
+      "label": "Recorded energy and cost metrics",
+      "path": "./runs/m1-followthrough/independent-review/private/followthrough-core-source/metrics.json",
+      "sha256": "e18a90fd0f988711af50d01caefb9412eb81341a3db95825191e01452cad1d37",
+      "snapshot": "./runs/m1-followthrough/report/PV_M1_Core_Evidence_20261017/inputs/S03-metrics.json",
+      "bytes": 1464,
+      "show_in_pdf": true
+    },
+    {
+      "id": "S4",
+      "label": "Expanded private configuration",
+      "path": "./runs/m1-followthrough/independent-review/private/followthrough-core-source/config.json",
+      "sha256": "fef54964e97a8c3901e56230a8dc2f02f0d2ed98d6de9e55826462a4601099f8",
+      "snapshot": "./runs/m1-followthrough/report/PV_M1_Core_Evidence_20261017/inputs/S04-config.json",
+      "bytes": 2907,
+      "show_in_pdf": true
+    },
+    {
+      "id": "S5",
+      "label": "JUnit test evidence",
+      "path": "./runs/m1-followthrough/core-tests-final.xml",
+      "sha256": "3aeb5cadb1f593fb745931c0c010e23425aaa4573e052d8ca3305191eb25f720",
+      "snapshot": "./runs/m1-followthrough/report/PV_M1_Core_Evidence_20261017/inputs/S05-core-tests-final.xml",
+      "bytes": 48816,
+      "show_in_pdf": true
+    },
+    {
+      "id": "S6",
+      "label": "Independent review input",
+      "path": "./output/review/M1_FOLLOWTHROUGH_REVIEW_20261017.txt",
+      "sha256": "d273ece5209ac5a0409c48b511b9aad8aa8dd71302d016ca0fef82de474961ad",
+      "snapshot": "./runs/m1-followthrough/report/PV_M1_Core_Evidence_20261017/inputs/S06-M1_FOLLOWTHROUGH_REVIEW_20261017.txt",
+      "bytes": 9017,
+      "show_in_pdf": true
+    },
+    {
+      "id": "S7",
+      "label": "Matched recorded-action replay report",
+      "path": "./runs/m1-followthrough/independent-review/followthrough-core-replay/evidence/replay.json",
+      "sha256": "da11cfe1cddf223975482efcc3b20792ac405cdac446e3beac6ea4c76eeb1d47",
+      "snapshot": "./runs/m1-followthrough/report/PV_M1_Core_Evidence_20261017/inputs/S07-replay.json",
+      "bytes": 2446,
+      "show_in_pdf": true
+    },
+    {
+      "id": "S8",
+      "label": "Independent core replay fixture source",
+      "path": "./runs/m1-followthrough/independent-review/check_current_core.py",
+      "sha256": "5899ce06e6ab9927a10fa2244dc5fa492f9d768427ef5e7a5b03c7d253842efb",
+      "snapshot": "./runs/m1-followthrough/report/PV_M1_Core_Evidence_20261017/inputs/S08-check_current_core.py",
+      "bytes": 4399,
+      "show_in_pdf": true
+    }
+  ],
+  "tests": {
+    "total": 386,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 386,
+    "groups": {
+      "tests.unit.test_command_recorder": 7,
+      "tests.unit.test_config_cli": 36,
+      "tests.unit.test_contracts": 59,
+      "tests.unit.test_fiducials": 6,
+      "tests.unit.test_m1_batch_audit": 30,
+      "tests.unit.test_m1_cli": 6,
+      "tests.unit.test_m1_desktop_controller": 4,
+      "tests.unit.test_motion": 15,
+      "tests.unit.test_optics": 16,
+      "tests.unit.test_png_contract": 31,
+      "tests.unit.test_policies": 17,
+      "tests.unit.test_pv": 36,
+      "tests.unit.test_recorder": 13,
+      "tests.unit.test_scenarios": 9,
+      "tests.unit.test_scheduler": 19,
+      "tests.unit.test_sensors": 14,
+      "tests.unit.test_thermal": 17,
+      "tests.security.test_policy_boundary": 16,
+      "tests.integration.test_budget_stop": 10,
+      "tests.integration.test_m1_core": 19,
+      "tests.integration.test_m1_replay": 6
+    },
+    "render_cases": 0,
+    "time_s": 14.394,
+    "timestamps": [
+      "2026-10-17T15:34:58.546575+01:00"
+    ]
+  },
+  "review_verdict": "BLOCKED_PENDING_DESKTOP",
+  "historical_source_changes": [],
+  "measurements": {
+    "electrical_thermal": "./runs/m1-followthrough/report/PV_M1_Core_Evidence_20261017/figures/electrical_thermal.png",
+    "motion": "./runs/m1-followthrough/report/PV_M1_Core_Evidence_20261017/figures/actual_joint_motion.png",
+    "geometry": "./runs/m1-followthrough/report/PV_M1_Core_Evidence_20261017/figures/recorded_camera_geometry.png",
+    "sample_count": 2461,
+    "elapsed_s": 4.92,
+    "temperature_start_c": 25.0,
+    "temperature_final_c": 32.44182951906106,
+    "power_min_w": 0.598845774247935,
+    "power_max_w": 1.0570890174705778,
+    "maximum_power_identity_error_w": 0.0,
+    "q_final": [
+      0.05999999999999996,
+      0.09999999999999988,
+      0.03999999999999993
+    ],
+    "setpoint_final": [
+      0.06,
+      0.1,
+      0.04
+    ],
+    "maximum_dynamic_tracking_error": [
+      0.002501068698178348,
+      0.011001522091685902,
+      0.006578803024787371
+    ],
+    "final_tracking_error": [
+      3.469446951953614e-17,
+      1.249000902703301e-16,
+      6.938893903907228e-17
+    ],
+    "camera_start_m": [
+      0.0,
+      -0.45,
+      0.35
+    ],
+    "camera_final_m": [
+      0.05999999999999996,
+      -0.45,
+      0.35
+    ]
+  },
+  "figures": [
+    {
+      "path": "./runs/m1-followthrough/report/PV_M1_Core_Evidence_20261017/figures/electrical_thermal.png",
+      "sha256": "99cebd14e806562c218a253a37e9c3af52b022b730a64e9cc459c1dbaf4f81e3",
+      "kind": "scientific plot, not MuJoCo RGB"
+    },
+    {
+      "path": "./runs/m1-followthrough/report/PV_M1_Core_Evidence_20261017/figures/actual_joint_motion.png",
+      "sha256": "311654f337e1393b787066519f9ba30c682f2e6f6ca79b6c72c078c6a34784b3",
+      "kind": "scientific plot, not MuJoCo RGB"
+    },
+    {
+      "path": "./runs/m1-followthrough/report/PV_M1_Core_Evidence_20261017/figures/recorded_camera_geometry.png",
+      "sha256": "893b9f5421c4a4d4a36a8bfef2e06cbdb00c75bf9dcc623fb674bce78eeccae7",
+      "kind": "scientific plot, not MuJoCo RGB"
+    }
+  ],
+  "command": {
+    "argv": [
+      "scripts/build_m1_evidence_report.py",
+      "--manifest",
+      "runs/m1-followthrough/independent-review/private/followthrough-core-source/manifest.json",
+      "--tests",
+      "runs/m1-followthrough/core-tests-final.xml",
+      "--review",
+      "output/review/M1_FOLLOWTHROUGH_REVIEW_20261017.txt",
+      "--reproducer",
+      "runs/m1-followthrough/independent-review/check_current_core.py",
+      "--output",
+      "output/pdf/PV_M1_Core_Evidence_20261017.pdf"
+    ],
+    "cwd": ".",
+    "python": "3.11.17 (main, Oct 14 2026, 00:55:17) [Clang 23.1.3 ]"
+  },
+  "recorded_runtime": {
+    "command": {
+      "argv": [
+        "runs/m1-followthrough/independent-review/check_current_core.py"
+      ],
+      "cwd": ".",
+      "started_utc": "2026-10-17T14:27:05.124434+00:00"
+    },
+    "git": {
+      "dirty_diff": "b20a075e0970de8b541cfcc61d0a8236a37c7e2aa3e9b13b027167f3c24b603e",
+      "dirty_diff_exit_code": 0,
+      "revision": "4fc6ac028ea77f8c65966bdd57ea7cda53755b07",
+      "revision_exit_code": 0,
+      "status": "M docs/decisions/0008-m1-runtime-conventions.md\n M scripts/record_command.py\n M scripts/run_m1_desktop.py\n M src/pv_sim/env.py\n?? docs/decisions/0009-m1-autonomous-followthrough.md\n?? output/\n?? scripts/audit_m1_batch.py\n?? scripts/build_m1_evidence_report.py\n?? tests/integration/test_budget_stop.py\n?? tests/unit/test_command_recorder.py\n?? tests/unit/test_m1_batch_audit.py\n?? tests/unit/test_m1_desktop_controller.py",
+      "status_exit_code": 0
+    },
+    "libraries": {
+      "Pillow": "12.3.0",
+      "mujoco": "3.3.7",
+      "numpy": "2.4.6",
+      "pv-investigation-sim": "0.0.1",
+      "pydantic": "2.14.1"
+    },
+    "machine": "arm64",
+    "mujoco_gl": "default",
+    "platform": "macOS-15.7.4-arm64-arm-64bit",
+    "python": "3.11.17 (main, Oct 14 2026, 00:55:17) [Clang 23.1.3 ]",
+    "renderer": "mujoco_classic"
+  },
+  "report_runtime": {
+    "reportlab": "5.0.1",
+    "matplotlib": "3.11.2",
+    "pypdf": "6.21.0",
+    "Pillow": "12.3.0",
+    "numpy": "2.4.6"
+  },
+  "generator": {
+    "path": "./scripts/build_m1_evidence_report.py",
+    "sha256": "a63b7a8efda8f2f813d913d04068b6d97eb082694a7fac8879d943ddbdee06b8"
+  },
+  "visual_qa": "pending rendered-page inspection",
+  "bundle_files": [
+    {
+      "path": "build_m1_evidence_report.py",
+      "sha256": "a63b7a8efda8f2f813d913d04068b6d97eb082694a7fac8879d943ddbdee06b8",
+      "bytes": 45127
+    },
+    {
+      "path": "figures/actual_joint_motion.png",
+      "sha256": "311654f337e1393b787066519f9ba30c682f2e6f6ca79b6c72c078c6a34784b3",
+      "bytes": 86986
+    },
+    {
+      "path": "figures/electrical_thermal.png",
+      "sha256": "99cebd14e806562c218a253a37e9c3af52b022b730a64e9cc459c1dbaf4f81e3",
+      "bytes": 85165
+    },
+    {
+      "path": "figures/recorded_camera_geometry.png",
+      "sha256": "893b9f5421c4a4d4a36a8bfef2e06cbdb00c75bf9dcc623fb674bce78eeccae7",
+      "bytes": 139563
+    },
+    {
+      "path": "inputs/S01-manifest.json",
+      "sha256": "b616608c58e8cb638b80c8a38de4ef50c0a357dc68664c6e38b6c5f3e3305f76",
+      "bytes": 7441
+    },
+    {
+      "path": "inputs/S02-truth.jsonl",
+      "sha256": "c885b14a759bb86b6979ad0718cfd6fb530dc46d3c9012d3a5d83b14cca0ec95",
+      "bytes": 2856240
+    },
+    {
+      "path": "inputs/S03-metrics.json",
+      "sha256": "e18a90fd0f988711af50d01caefb9412eb81341a3db95825191e01452cad1d37",
+      "bytes": 1464
+    },
+    {
+      "path": "inputs/S04-config.json",
+      "sha256": "fef54964e97a8c3901e56230a8dc2f02f0d2ed98d6de9e55826462a4601099f8",
+      "bytes": 2907
+    },
+    {
+      "path": "inputs/S05-core-tests-final.xml",
+      "sha256": "3aeb5cadb1f593fb745931c0c010e23425aaa4573e052d8ca3305191eb25f720",
+      "bytes": 48816
+    },
+    {
+      "path": "inputs/S06-M1_FOLLOWTHROUGH_REVIEW_20261017.txt",
+      "sha256": "d273ece5209ac5a0409c48b511b9aad8aa8dd71302d016ca0fef82de474961ad",
+      "bytes": 9017
+    },
+    {
+      "path": "inputs/S07-replay.json",
+      "sha256": "da11cfe1cddf223975482efcc3b20792ac405cdac446e3beac6ea4c76eeb1d47",
+      "bytes": 2446
+    },
+    {
+      "path": "inputs/S08-check_current_core.py",
+      "sha256": "5899ce06e6ab9927a10fa2244dc5fa492f9d768427ef5e7a5b03c7d253842efb",
+      "bytes": 4399
+    },
+    {
+      "path": "measurements.json",
+      "sha256": "f0e029313fde642d0588482a05c3eab716afd1e18b8aac40f63b081573ec25ae",
+      "bytes": 1440
+    }
+  ]
+}

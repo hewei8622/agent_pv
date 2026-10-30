@@ -1,0 +1,2085 @@
+{
+  "schema_version": "1.0",
+  "scope": "Frozen M2 full test inventory, collection only; no execution credit",
+  "testcases": [
+    {
+      "classname": "tests.integration.test_budget_stop",
+      "name": "test_actual_budget_overrun_brakes_and_confirms_before_terminal[angular]"
+    },
+    {
+      "classname": "tests.integration.test_budget_stop",
+      "name": "test_actual_budget_overrun_brakes_and_confirms_before_terminal[slide]"
+    },
+    {
+      "classname": "tests.integration.test_budget_stop",
+      "name": "test_budget_stop_cancels_each_running_action_without_continuing_it[finish-fields3]"
+    },
+    {
+      "classname": "tests.integration.test_budget_stop",
+      "name": "test_budget_stop_cancels_each_running_action_without_continuing_it[move_camera-fields4]"
+    },
+    {
+      "classname": "tests.integration.test_budget_stop",
+      "name": "test_budget_stop_cancels_each_running_action_without_continuing_it[probe_voltage-fields2]"
+    },
+    {
+      "classname": "tests.integration.test_budget_stop",
+      "name": "test_budget_stop_cancels_each_running_action_without_continuing_it[set_voltage-fields1]"
+    },
+    {
+      "classname": "tests.integration.test_budget_stop",
+      "name": "test_budget_stop_cancels_each_running_action_without_continuing_it[wait-fields0]"
+    },
+    {
+      "classname": "tests.integration.test_budget_stop",
+      "name": "test_guard_during_decision_overhead_rejects_before_acceptance"
+    },
+    {
+      "classname": "tests.integration.test_budget_stop",
+      "name": "test_horizon_can_interrupt_budget_braking_without_claiming_safe_stop"
+    },
+    {
+      "classname": "tests.integration.test_budget_stop",
+      "name": "test_unconfirmed_budget_stop_is_bounded_error_and_cannot_resume"
+    },
+    {
+      "classname": "tests.integration.test_m1_core",
+      "name": "test_explicit_backend_numerical_failure_stops_without_new_invalid_samples"
+    },
+    {
+      "classname": "tests.integration.test_m1_core",
+      "name": "test_finish_retains_load_and_charges_exact_two_second_verification_tail"
+    },
+    {
+      "classname": "tests.integration.test_m1_core",
+      "name": "test_idempotent_retry_preserves_time_and_budget_conflict_is_charged"
+    },
+    {
+      "classname": "tests.integration.test_m1_core",
+      "name": "test_illegal_target_rejected_before_motion_but_decision_time_is_charged"
+    },
+    {
+      "classname": "tests.integration.test_m1_core",
+      "name": "test_load_delay_slew_and_measured_confirmation"
+    },
+    {
+      "classname": "tests.integration.test_m1_core",
+      "name": "test_malformed_positive_id_different_payload_conflicts_and_charges_once"
+    },
+    {
+      "classname": "tests.integration.test_m1_core",
+      "name": "test_malformed_positive_id_identical_retry_is_cached_without_overhead"
+    },
+    {
+      "classname": "tests.integration.test_m1_core",
+      "name": "test_move_is_finite_bounded_and_observably_settled"
+    },
+    {
+      "classname": "tests.integration.test_m1_core",
+      "name": "test_move_timeout_brakes_at_reached_pose_without_teleport"
+    },
+    {
+      "classname": "tests.integration.test_m1_core",
+      "name": "test_move_timeout_returns_measured_stop_before_next_action"
+    },
+    {
+      "classname": "tests.integration.test_m1_core",
+      "name": "test_new_set_after_timeout_reconnects_and_verifies_actual_voltage"
+    },
+    {
+      "classname": "tests.integration.test_m1_core",
+      "name": "test_overbudget_probe_rejected_atomically"
+    },
+    {
+      "classname": "tests.integration.test_m1_core",
+      "name": "test_probe_delivers_three_settled_dwell_pairs_and_restores_prior_load"
+    },
+    {
+      "classname": "tests.integration.test_m1_core",
+      "name": "test_probe_timeout_restores_with_bounded_cleanup_and_no_hidden_success"
+    },
+    {
+      "classname": "tests.integration.test_m1_core",
+      "name": "test_reset_and_wait_capture_integer_time_and_actual_pv_identity"
+    },
+    {
+      "classname": "tests.integration.test_m1_core",
+      "name": "test_safe_stop_reports_actual_disconnected_state_and_new_measurements"
+    },
+    {
+      "classname": "tests.integration.test_m1_core",
+      "name": "test_set_confirmation_timeout_cleans_up_even_after_physical_settle"
+    },
+    {
+      "classname": "tests.integration.test_m1_core",
+      "name": "test_set_timeout_cancels_pending_command_and_disconnects"
+    },
+    {
+      "classname": "tests.integration.test_m1_core",
+      "name": "test_subtick_safe_stop_of_actual_moving_rig_does_not_freeze_motion"
+    },
+    {
+      "classname": "tests.integration.test_m1_replay",
+      "name": "test_actual_mujoco_recorded_actions_replay_same_source_and_exact_ticks"
+    },
+    {
+      "classname": "tests.integration.test_m1_replay",
+      "name": "test_artifact_cap_stops_append_and_preserves_failure_manifest"
+    },
+    {
+      "classname": "tests.integration.test_m1_replay",
+      "name": "test_replay_refuses_existing_run_without_overwrite"
+    },
+    {
+      "classname": "tests.integration.test_m1_replay",
+      "name": "test_replay_refuses_tampered_actions_before_creating_output"
+    },
+    {
+      "classname": "tests.integration.test_m1_replay",
+      "name": "test_replay_reports_private_divergence_even_with_consistent_artifact_hashes[metrics.json]"
+    },
+    {
+      "classname": "tests.integration.test_m1_replay",
+      "name": "test_replay_reports_private_divergence_even_with_consistent_artifact_hashes[truth.jsonl]"
+    },
+    {
+      "classname": "tests.integration.test_m2_actions",
+      "name": "test_composed_noise_delay_and_load_drop_recording_replays_exactly"
+    },
+    {
+      "classname": "tests.integration.test_m2_actions",
+      "name": "test_delayed_command_is_cancelled_at_timeout_and_cannot_apply_during_later_wait"
+    },
+    {
+      "classname": "tests.integration.test_m2_actions",
+      "name": "test_delayed_load_separates_acknowledgement_application_and_fresh_measurement"
+    },
+    {
+      "classname": "tests.integration.test_m2_actions",
+      "name": "test_direct_requests_obey_each_advertised_limit_before_any_command[move_camera-fields0]"
+    },
+    {
+      "classname": "tests.integration.test_m2_actions",
+      "name": "test_direct_requests_obey_each_advertised_limit_before_any_command[move_camera-fields1]"
+    },
+    {
+      "classname": "tests.integration.test_m2_actions",
+      "name": "test_direct_requests_obey_each_advertised_limit_before_any_command[probe_voltage-fields3]"
+    },
+    {
+      "classname": "tests.integration.test_m2_actions",
+      "name": "test_direct_requests_obey_each_advertised_limit_before_any_command[set_voltage-fields2]"
+    },
+    {
+      "classname": "tests.integration.test_m2_actions",
+      "name": "test_dropped_load_never_claims_applied_target_and_retry_is_idempotent"
+    },
+    {
+      "classname": "tests.integration.test_m2_actions",
+      "name": "test_dropped_probe_point_restores_previous_requested_load_without_false_point_feedback"
+    },
+    {
+      "classname": "tests.integration.test_m2_actions",
+      "name": "test_dropped_reconnect_to_stored_voltage_cannot_claim_load_completion"
+    },
+    {
+      "classname": "tests.integration.test_m2_actions",
+      "name": "test_exhausted_decision_fallback_with_missing_feedback_is_one_bounded_stop"
+    },
+    {
+      "classname": "tests.integration.test_m2_actions",
+      "name": "test_missing_encoder_stop_confirmation_is_bounded_incomplete_and_blocks_resume"
+    },
+    {
+      "classname": "tests.integration.test_m2_actions",
+      "name": "test_missing_or_stale_numeric_data_cannot_verify_applied_load[profile0]"
+    },
+    {
+      "classname": "tests.integration.test_m2_actions",
+      "name": "test_missing_or_stale_numeric_data_cannot_verify_applied_load[profile1]"
+    },
+    {
+      "classname": "tests.integration.test_m2_actions",
+      "name": "test_private_actuation_evidence_is_excluded_from_public_recording"
+    },
+    {
+      "classname": "tests.integration.test_m2_actions",
+      "name": "test_probe_restore_failure_uses_one_cleanup_tail_and_measured_disconnection[delay]"
+    },
+    {
+      "classname": "tests.integration.test_m2_actions",
+      "name": "test_probe_restore_failure_uses_one_cleanup_tail_and_measured_disconnection[drop]"
+    },
+    {
+      "classname": "tests.integration.test_m2_actions",
+      "name": "test_rail_locked_direct_action_rejected_before_motion_and_fault_counter"
+    },
+    {
+      "classname": "tests.integration.test_m2_actions",
+      "name": "test_safe_stop_remains_available_with_non_time_budgets_exhausted"
+    },
+    {
+      "classname": "tests.integration.test_m2_actions",
+      "name": "test_stalled_move_keeps_actual_pose_and_cannot_claim_settled_frame_then_recovers"
+    },
+    {
+      "classname": "tests.integration.test_m2_actions",
+      "name": "test_terminal_rejection_is_cached_without_extra_decisions_or_time"
+    },
+    {
+      "classname": "tests.integration.test_m2_actions",
+      "name": "test_zero_latency_reset_delivers_real_tick_zero_samples_without_advancing"
+    },
+    {
+      "classname": "tests.render.test_calibration",
+      "name": "test_actual_camera_basis_independent_expectation"
+    },
+    {
+      "classname": "tests.render.test_calibration",
+      "name": "test_fiducial_projection_from_analytic_geometry[0--0.1]"
+    },
+    {
+      "classname": "tests.render.test_calibration",
+      "name": "test_fiducial_projection_from_analytic_geometry[1-0.0]"
+    },
+    {
+      "classname": "tests.render.test_calibration",
+      "name": "test_fiducial_projection_from_analytic_geometry[2-0.1]"
+    },
+    {
+      "classname": "tests.render.test_calibration",
+      "name": "test_required_real_named_rgb"
+    },
+    {
+      "classname": "tests.render.test_m1_camera",
+      "name": "test_fiducials_follow_measured_pose_analytic_projection[0--0.1-0]"
+    },
+    {
+      "classname": "tests.render.test_m1_camera",
+      "name": "test_fiducials_follow_measured_pose_analytic_projection[0--0.1-1]"
+    },
+    {
+      "classname": "tests.render.test_m1_camera",
+      "name": "test_fiducials_follow_measured_pose_analytic_projection[0--0.1-2]"
+    },
+    {
+      "classname": "tests.render.test_m1_camera",
+      "name": "test_fiducials_follow_measured_pose_analytic_projection[0--0.1-3]"
+    },
+    {
+      "classname": "tests.render.test_m1_camera",
+      "name": "test_fiducials_follow_measured_pose_analytic_projection[0--0.1-4]"
+    },
+    {
+      "classname": "tests.render.test_m1_camera",
+      "name": "test_fiducials_follow_measured_pose_analytic_projection[1-0.0-0]"
+    },
+    {
+      "classname": "tests.render.test_m1_camera",
+      "name": "test_fiducials_follow_measured_pose_analytic_projection[1-0.0-1]"
+    },
+    {
+      "classname": "tests.render.test_m1_camera",
+      "name": "test_fiducials_follow_measured_pose_analytic_projection[1-0.0-2]"
+    },
+    {
+      "classname": "tests.render.test_m1_camera",
+      "name": "test_fiducials_follow_measured_pose_analytic_projection[1-0.0-3]"
+    },
+    {
+      "classname": "tests.render.test_m1_camera",
+      "name": "test_fiducials_follow_measured_pose_analytic_projection[1-0.0-4]"
+    },
+    {
+      "classname": "tests.render.test_m1_camera",
+      "name": "test_fiducials_follow_measured_pose_analytic_projection[2-0.1-0]"
+    },
+    {
+      "classname": "tests.render.test_m1_camera",
+      "name": "test_fiducials_follow_measured_pose_analytic_projection[2-0.1-1]"
+    },
+    {
+      "classname": "tests.render.test_m1_camera",
+      "name": "test_fiducials_follow_measured_pose_analytic_projection[2-0.1-2]"
+    },
+    {
+      "classname": "tests.render.test_m1_camera",
+      "name": "test_fiducials_follow_measured_pose_analytic_projection[2-0.1-3]"
+    },
+    {
+      "classname": "tests.render.test_m1_camera",
+      "name": "test_fiducials_follow_measured_pose_analytic_projection[2-0.1-4]"
+    },
+    {
+      "classname": "tests.render.test_m1_camera",
+      "name": "test_required_rgb_actual_body_fixed_camera_and_motion"
+    },
+    {
+      "classname": "tests.render.test_m1_loop",
+      "name": "test_actual_rgb_scan_probe_and_new_operating_point_verification"
+    },
+    {
+      "classname": "tests.render.test_m2_sensor_delivery",
+      "name": "test_dropped_real_capture_keeps_timing_null_payload_charge_and_no_free_wait_frame"
+    },
+    {
+      "classname": "tests.render.test_m2_sensor_delivery",
+      "name": "test_late_frame_keeps_original_capture_after_timeout_and_actual_move[late_stale]"
+    },
+    {
+      "classname": "tests.render.test_m2_sensor_delivery",
+      "name": "test_late_frame_keeps_original_capture_after_timeout_and_actual_move[late_valid]"
+    },
+    {
+      "classname": "tests.render.test_m2_visibility",
+      "name": "test_actual_production_and_calibration_frames_are_separate_and_nonblank[narrow_screen]"
+    },
+    {
+      "classname": "tests.render.test_m2_visibility",
+      "name": "test_actual_production_and_calibration_frames_are_separate_and_nonblank[rail_locked]"
+    },
+    {
+      "classname": "tests.render.test_m2_visibility",
+      "name": "test_actual_production_and_calibration_frames_are_separate_and_nonblank[reframe]"
+    },
+    {
+      "classname": "tests.render.test_m2_visibility",
+      "name": "test_actual_production_and_calibration_frames_are_separate_and_nonblank[wide_screen]"
+    },
+    {
+      "classname": "tests.render.test_m2_visibility",
+      "name": "test_rendered_visibility_distinguishes_framing_translation_and_rail_limit[narrow_screen]"
+    },
+    {
+      "classname": "tests.render.test_m2_visibility",
+      "name": "test_rendered_visibility_distinguishes_framing_translation_and_rail_limit[rail_locked]"
+    },
+    {
+      "classname": "tests.render.test_m2_visibility",
+      "name": "test_rendered_visibility_distinguishes_framing_translation_and_rail_limit[reframe]"
+    },
+    {
+      "classname": "tests.render.test_m2_visibility",
+      "name": "test_rendered_visibility_distinguishes_framing_translation_and_rail_limit[wide_screen]"
+    },
+    {
+      "classname": "tests.security.test_policy_boundary",
+      "name": "test_baseline_reset_has_no_private_arguments[FixedPolicy]"
+    },
+    {
+      "classname": "tests.security.test_policy_boundary",
+      "name": "test_baseline_reset_has_no_private_arguments[ScanPolicy]"
+    },
+    {
+      "classname": "tests.security.test_policy_boundary",
+      "name": "test_duplicate_decision_id_is_replaced_by_next_safe_stop"
+    },
+    {
+      "classname": "tests.security.test_policy_boundary",
+      "name": "test_invalid_history_never_reaches_policy[episode]"
+    },
+    {
+      "classname": "tests.security.test_policy_boundary",
+      "name": "test_invalid_history_never_reaches_policy[sensor]"
+    },
+    {
+      "classname": "tests.security.test_policy_boundary",
+      "name": "test_invalid_history_never_reaches_policy[sequence]"
+    },
+    {
+      "classname": "tests.security.test_policy_boundary",
+      "name": "test_invalid_history_never_reaches_policy[time]"
+    },
+    {
+      "classname": "tests.security.test_policy_boundary",
+      "name": "test_invalid_results_fall_back_without_error_or_path_leak[exception]"
+    },
+    {
+      "classname": "tests.security.test_policy_boundary",
+      "name": "test_invalid_results_fall_back_without_error_or_path_leak[future_ref]"
+    },
+    {
+      "classname": "tests.security.test_policy_boundary",
+      "name": "test_invalid_results_fall_back_without_error_or_path_leak[oversized]"
+    },
+    {
+      "classname": "tests.security.test_policy_boundary",
+      "name": "test_invalid_results_fall_back_without_error_or_path_leak[raw_json]"
+    },
+    {
+      "classname": "tests.security.test_policy_boundary",
+      "name": "test_invalid_results_fall_back_without_error_or_path_leak[wrong_id]"
+    },
+    {
+      "classname": "tests.security.test_policy_boundary",
+      "name": "test_measured_latency_overrun_is_rejected_on_return"
+    },
+    {
+      "classname": "tests.security.test_policy_boundary",
+      "name": "test_only_public_records_reach_policy_after_json_roundtrip"
+    },
+    {
+      "classname": "tests.security.test_policy_boundary",
+      "name": "test_policy_import_graph_has_only_public_contract_and_own_code"
+    },
+    {
+      "classname": "tests.security.test_policy_boundary",
+      "name": "test_unadvertised_help_is_rejected_at_boundary"
+    },
+    {
+      "classname": "tests.unit.test_command_recorder",
+      "name": "test_bad_recorder_input_is_rejected_before_launch[arguments0]"
+    },
+    {
+      "classname": "tests.unit.test_command_recorder",
+      "name": "test_bad_recorder_input_is_rejected_before_launch[arguments1]"
+    },
+    {
+      "classname": "tests.unit.test_command_recorder",
+      "name": "test_bad_recorder_input_is_rejected_before_launch[arguments2]"
+    },
+    {
+      "classname": "tests.unit.test_command_recorder",
+      "name": "test_bad_recorder_input_is_rejected_before_launch[arguments3]"
+    },
+    {
+      "classname": "tests.unit.test_command_recorder",
+      "name": "test_recorder_retains_failure_and_logs_only_declared_overrides"
+    },
+    {
+      "classname": "tests.unit.test_command_recorder",
+      "name": "test_successful_leader_cannot_leave_running_descendant"
+    },
+    {
+      "classname": "tests.unit.test_command_recorder",
+      "name": "test_timeout_terminates_ignoring_descendant_process"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_bad_config[budgets-decisions-2.5]"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_bad_config[budgets-rgb_frames--1]"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_bad_config[camera-extra-1]"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_bad_config[camera-fovy_deg-90]"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_bad_config[camera-headlight-True]"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_bad_config[camera-slide_limits_m-value2]"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_bad_config[camera-width-640]"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_bad_config[camera-width-True]"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_bad_config[pilot-numeric_noise-True]"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_bad_config[pilot-rgb_required-False]"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_bad_config[private_world-ambient_temperature_c-41]"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_bad_config[private_world-cell_area_m2-0.1]"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_bad_config[private_world-dhi_w_m2--1]"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_bad_config[private_world-dni_w_m2-1201]"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_bad_config[private_world-source_direction-value11]"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_bad_config[pv-initial_voltage_v-0.1]"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_bad_config[pv-voltage_limits_v-value7]"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_bad_config[sensors-numeric_hz-7]"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_bad_config[simulation-dt_s-0.001]"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_bad_config[thermal-conductance_w_k-nan]"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_bad_config[thermal-heat_capacity_j_k-0]"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_cli_help_valid_and_invalid"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_complete_config_roundtrip"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_evidence_overwrite_refused"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_explicitly_disabled_renderer_reports_block_not_success"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_exposure_with_tick_aligned_midpoint_is_accepted[0.004]"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_exposure_with_tick_aligned_midpoint_is_accepted[0.012]"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_exposure_with_tick_aligned_midpoint_is_accepted[0.02]"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_exposure_without_positive_tick_aligned_midpoint_is_rejected[0.002]"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_exposure_without_positive_tick_aligned_midpoint_is_rejected[0.006]"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_exposure_without_positive_tick_aligned_midpoint_is_rejected[0.014]"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_exposure_without_positive_tick_aligned_midpoint_is_rejected[0.01]"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_exposure_without_positive_tick_aligned_midpoint_is_rejected[1e-12]"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_exposure_without_positive_tick_aligned_midpoint_is_rejected[1e-15]"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_generated_schemas_match"
+    },
+    {
+      "classname": "tests.unit.test_config_cli",
+      "name": "test_pilot_uses_authorized_12ms_exposure_and_2ms_tick"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_absent_sensors_and_future_references_rejected"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_all_action_variants_roundtrip[capture_rgb-fields3]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_all_action_variants_roundtrip[finish-fields7]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_all_action_variants_roundtrip[move_camera-fields0]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_all_action_variants_roundtrip[probe_voltage-fields2]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_all_action_variants_roundtrip[request_help-fields5]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_all_action_variants_roundtrip[safe_stop-fields6]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_all_action_variants_roundtrip[set_voltage-fields1]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_all_action_variants_roundtrip[wait-fields4]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_bad_probe[voltages0-0.5]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_bad_probe[voltages1-0.5]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_bad_probe[voltages2-0.5]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_bad_probe[voltages3-0.5]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_bad_probe[voltages4-0.19]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_bad_probe[voltages5-2.01]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_bad_probe[voltages6-0.5]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_bad_probe[voltages7-0.5]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_bad_scalar[sigma--1]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_bad_scalar[t_deliver_s--1]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_bad_scalar[true_cell_irradiance-900]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_bad_scalar[value-None]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_bad_scalar[value-nan]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_malformed_action_rejected[action_id-0]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_malformed_action_rejected[action_id-1.5]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_malformed_action_rejected[action_id-1]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_malformed_action_rejected[action_id-True]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_malformed_action_rejected[capture_after_settle-1]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_malformed_action_rejected[capture_after_settle-true]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_malformed_action_rejected[filename-/private/canary]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_malformed_action_rejected[kind-execute_python]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_malformed_action_rejected[pitch_rad--0.5235987855982989]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_malformed_action_rejected[pitch_rad--inf]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_malformed_action_rejected[schema_version-2.0]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_malformed_action_rejected[slide_m--0.151]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_malformed_action_rejected[slide_m-0.151]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_malformed_action_rejected[slide_m-0.1]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_malformed_action_rejected[slide_m-True]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_malformed_action_rejected[slide_m-nan]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_malformed_action_rejected[timeout_s-0]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_malformed_action_rejected[timeout_s-15.01]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_malformed_action_rejected[true_pose-value20]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_malformed_action_rejected[units-cm]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_malformed_action_rejected[yaw_rad-0.7853981733974483]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_malformed_action_rejected[yaw_rad-inf]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_missing_and_stale_semantics"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_no_private_module_imports"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_png_payload_metadata_and_times"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_prediction_and_belief_validation"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_truth_fields_rejected_every_boundary[future_events]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_truth_fields_rejected_every_boundary[masks]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_truth_fields_rejected_every_boundary[private_path]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_truth_fields_rejected_every_boundary[reward]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_truth_fields_rejected_every_boundary[scenario_family]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_truth_fields_rejected_every_boundary[score]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_truth_fields_rejected_every_boundary[seed]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_truth_fields_rejected_every_boundary[true_pose]"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_unadvertised_actions_and_narrower_limits"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_valid_records_and_deep_immutability"
+    },
+    {
+      "classname": "tests.unit.test_contracts",
+      "name": "test_valid_slide_property"
+    },
+    {
+      "classname": "tests.unit.test_fiducials",
+      "name": "test_displaced_marker_still_fails_two_pixel_projection_limit[0]"
+    },
+    {
+      "classname": "tests.unit.test_fiducials",
+      "name": "test_displaced_marker_still_fails_two_pixel_projection_limit[1]"
+    },
+    {
+      "classname": "tests.unit.test_fiducials",
+      "name": "test_displaced_marker_still_fails_two_pixel_projection_limit[2]"
+    },
+    {
+      "classname": "tests.unit.test_fiducials",
+      "name": "test_shading_does_not_shift_centroid[0]"
+    },
+    {
+      "classname": "tests.unit.test_fiducials",
+      "name": "test_shading_does_not_shift_centroid[1]"
+    },
+    {
+      "classname": "tests.unit.test_fiducials",
+      "name": "test_shading_does_not_shift_centroid[2]"
+    },
+    {
+      "classname": "tests.unit.test_m1_batch_audit",
+      "name": "test_cli_missing_evidence_returns_four_and_never_overwrites"
+    },
+    {
+      "classname": "tests.unit.test_m1_batch_audit",
+      "name": "test_command_records_must_match_executed_batch[duplicate]"
+    },
+    {
+      "classname": "tests.unit.test_m1_batch_audit",
+      "name": "test_command_records_must_match_executed_batch[extra]"
+    },
+    {
+      "classname": "tests.unit.test_m1_batch_audit",
+      "name": "test_command_records_must_match_executed_batch[missing_stdout]"
+    },
+    {
+      "classname": "tests.unit.test_m1_batch_audit",
+      "name": "test_command_records_must_match_executed_batch[nonzero]"
+    },
+    {
+      "classname": "tests.unit.test_m1_batch_audit",
+      "name": "test_command_records_must_match_executed_batch[wrong_seed]"
+    },
+    {
+      "classname": "tests.unit.test_m1_batch_audit",
+      "name": "test_command_stdout_cannot_conceal_incomplete_test_execution[1 passed in 1.0s]"
+    },
+    {
+      "classname": "tests.unit.test_m1_batch_audit",
+      "name": "test_command_stdout_cannot_conceal_incomplete_test_execution[1 passed, 1 xfailed in 1.0s]"
+    },
+    {
+      "classname": "tests.unit.test_m1_batch_audit",
+      "name": "test_command_stdout_cannot_conceal_incomplete_test_execution[22 passed, 377 deselected in 2.0s]"
+    },
+    {
+      "classname": "tests.unit.test_m1_batch_audit",
+      "name": "test_command_stdout_cannot_conceal_incomplete_test_execution[no executed summary]"
+    },
+    {
+      "classname": "tests.unit.test_m1_batch_audit",
+      "name": "test_complete_command_metadata_without_pilots_never_passes"
+    },
+    {
+      "classname": "tests.unit.test_m1_batch_audit",
+      "name": "test_complete_frozen_render_inventory_has_22_named_cases"
+    },
+    {
+      "classname": "tests.unit.test_m1_batch_audit",
+      "name": "test_corrupt_recording_artifact_rejected_before_any_success_claim"
+    },
+    {
+      "classname": "tests.unit.test_m1_batch_audit",
+      "name": "test_full_test_identity_inventory_rejects_coverage_changes[duplicate]"
+    },
+    {
+      "classname": "tests.unit.test_m1_batch_audit",
+      "name": "test_full_test_identity_inventory_rejects_coverage_changes[extra_case]"
+    },
+    {
+      "classname": "tests.unit.test_m1_batch_audit",
+      "name": "test_full_test_identity_inventory_rejects_coverage_changes[missing_core]"
+    },
+    {
+      "classname": "tests.unit.test_m1_batch_audit",
+      "name": "test_incomplete_manifest_rejected_even_if_hash_is_recomputed"
+    },
+    {
+      "classname": "tests.unit.test_m1_batch_audit",
+      "name": "test_inventory_and_junit_summary_match_complete_synthetic_input"
+    },
+    {
+      "classname": "tests.unit.test_m1_batch_audit",
+      "name": "test_junit_cannot_pass_when_required_execution_is_absent[bad_count]"
+    },
+    {
+      "classname": "tests.unit.test_m1_batch_audit",
+      "name": "test_junit_cannot_pass_when_required_execution_is_absent[missing_render]"
+    },
+    {
+      "classname": "tests.unit.test_m1_batch_audit",
+      "name": "test_junit_cannot_pass_when_required_execution_is_absent[skip]"
+    },
+    {
+      "classname": "tests.unit.test_m1_batch_audit",
+      "name": "test_junit_cannot_pass_when_required_execution_is_absent[zero_cases]"
+    },
+    {
+      "classname": "tests.unit.test_m1_batch_audit",
+      "name": "test_junit_child_skip_is_rejected_even_with_false_zero_summary"
+    },
+    {
+      "classname": "tests.unit.test_m1_batch_audit",
+      "name": "test_later_audit_metadata_is_allowed_without_weakening_seven_command_checks"
+    },
+    {
+      "classname": "tests.unit.test_m1_batch_audit",
+      "name": "test_missing_batch_is_incomplete_and_does_not_create_evidence"
+    },
+    {
+      "classname": "tests.unit.test_m1_batch_audit",
+      "name": "test_recorded_config_must_match_exact_cli_declared_config"
+    },
+    {
+      "classname": "tests.unit.test_m1_batch_audit",
+      "name": "test_render_only_junit_cannot_replace_frozen_complete_suite"
+    },
+    {
+      "classname": "tests.unit.test_m1_batch_audit",
+      "name": "test_rendered_metric_gate_rejects_core_or_unverified_claims"
+    },
+    {
+      "classname": "tests.unit.test_m1_batch_audit",
+      "name": "test_running_batch_is_explicitly_incomplete"
+    },
+    {
+      "classname": "tests.unit.test_m1_batch_audit",
+      "name": "test_three_arbitrary_render_module_cases_cannot_substitute_required_named_cases"
+    },
+    {
+      "classname": "tests.unit.test_m1_cli",
+      "name": "test_m1_help[demo]"
+    },
+    {
+      "classname": "tests.unit.test_m1_cli",
+      "name": "test_m1_help[replay]"
+    },
+    {
+      "classname": "tests.unit.test_m1_cli",
+      "name": "test_m1_invalid_input[arguments0]"
+    },
+    {
+      "classname": "tests.unit.test_m1_cli",
+      "name": "test_m1_invalid_input[arguments1]"
+    },
+    {
+      "classname": "tests.unit.test_m1_cli",
+      "name": "test_m1_invalid_input[arguments2]"
+    },
+    {
+      "classname": "tests.unit.test_m1_cli",
+      "name": "test_pilot_cap_counts_complete_pilots_not_replays"
+    },
+    {
+      "classname": "tests.unit.test_m1_desktop_controller",
+      "name": "test_dry_run_discloses_live_commands_and_audit_without_writes"
+    },
+    {
+      "classname": "tests.unit.test_m1_desktop_controller",
+      "name": "test_outer_timeout_retains_incomplete_report_without_retry"
+    },
+    {
+      "classname": "tests.unit.test_m1_desktop_controller",
+      "name": "test_outer_watchdog_allows_recorder_to_stop_real_descendant"
+    },
+    {
+      "classname": "tests.unit.test_m1_desktop_controller",
+      "name": "test_real_command_failure_stops_before_next_job_and_preserves_status"
+    },
+    {
+      "classname": "tests.unit.test_m2_config",
+      "name": "test_actuator_fixture_must_be_explicitly_enabled"
+    },
+    {
+      "classname": "tests.unit.test_m2_config",
+      "name": "test_development_config_expands_and_roundtrips_without_public_fault_fields"
+    },
+    {
+      "classname": "tests.unit.test_m2_config",
+      "name": "test_historical_m1_canonical_config_digest_is_unchanged"
+    },
+    {
+      "classname": "tests.unit.test_m2_config",
+      "name": "test_invalid_private_fixture_rejected[patch0]"
+    },
+    {
+      "classname": "tests.unit.test_m2_config",
+      "name": "test_invalid_private_fixture_rejected[patch10]"
+    },
+    {
+      "classname": "tests.unit.test_m2_config",
+      "name": "test_invalid_private_fixture_rejected[patch11]"
+    },
+    {
+      "classname": "tests.unit.test_m2_config",
+      "name": "test_invalid_private_fixture_rejected[patch12]"
+    },
+    {
+      "classname": "tests.unit.test_m2_config",
+      "name": "test_invalid_private_fixture_rejected[patch1]"
+    },
+    {
+      "classname": "tests.unit.test_m2_config",
+      "name": "test_invalid_private_fixture_rejected[patch2]"
+    },
+    {
+      "classname": "tests.unit.test_m2_config",
+      "name": "test_invalid_private_fixture_rejected[patch3]"
+    },
+    {
+      "classname": "tests.unit.test_m2_config",
+      "name": "test_invalid_private_fixture_rejected[patch4]"
+    },
+    {
+      "classname": "tests.unit.test_m2_config",
+      "name": "test_invalid_private_fixture_rejected[patch5]"
+    },
+    {
+      "classname": "tests.unit.test_m2_config",
+      "name": "test_invalid_private_fixture_rejected[patch6]"
+    },
+    {
+      "classname": "tests.unit.test_m2_config",
+      "name": "test_invalid_private_fixture_rejected[patch7]"
+    },
+    {
+      "classname": "tests.unit.test_m2_config",
+      "name": "test_invalid_private_fixture_rejected[patch8]"
+    },
+    {
+      "classname": "tests.unit.test_m2_config",
+      "name": "test_invalid_private_fixture_rejected[patch9]"
+    },
+    {
+      "classname": "tests.unit.test_m2_verification",
+      "name": "test_desktop_dry_run_has_no_pilot_and_no_skip_flags"
+    },
+    {
+      "classname": "tests.unit.test_m2_verification",
+      "name": "test_empty_timeline_references_are_an_integrity_failure"
+    },
+    {
+      "classname": "tests.unit.test_m2_verification",
+      "name": "test_exact_inventory_required[-False]"
+    },
+    {
+      "classname": "tests.unit.test_m2_verification",
+      "name": "test_exact_inventory_required[<testcase classname=\"tests.render.fixture\" name=\"camera\"/>-True]"
+    },
+    {
+      "classname": "tests.unit.test_m2_verification",
+      "name": "test_exact_inventory_required[<testcase classname=\"tests.render.fixture\" name=\"camera\"/><testcase classname=\"tests.render.fixture\" name=\"camera\"/>-False]"
+    },
+    {
+      "classname": "tests.unit.test_m2_verification",
+      "name": "test_exact_inventory_required[<testcase classname=\"tests.render.fixture\" name=\"camera\"><error/></testcase>-False]"
+    },
+    {
+      "classname": "tests.unit.test_m2_verification",
+      "name": "test_exact_inventory_required[<testcase classname=\"tests.render.fixture\" name=\"camera\"><failure/></testcase>-False]"
+    },
+    {
+      "classname": "tests.unit.test_m2_verification",
+      "name": "test_exact_inventory_required[<testcase classname=\"tests.render.fixture\" name=\"camera\"><skipped/></testcase>-False]"
+    },
+    {
+      "classname": "tests.unit.test_m2_verification",
+      "name": "test_exact_inventory_required[<testcase classname=\"tests.render.fixture\" name=\"other\"/>-False]"
+    },
+    {
+      "classname": "tests.unit.test_m2_verification",
+      "name": "test_no_rendered_files_cannot_pass"
+    },
+    {
+      "classname": "tests.unit.test_m2_verification",
+      "name": "test_verify_help_and_bad_inputs_do_not_start_tests"
+    },
+    {
+      "classname": "tests.unit.test_m2_visibility_analytic",
+      "name": "test_actual_joint_motion_distinguishes_reframe_reveal_and_reachable_limit[narrow_screen]"
+    },
+    {
+      "classname": "tests.unit.test_m2_visibility_analytic",
+      "name": "test_actual_joint_motion_distinguishes_reframe_reveal_and_reachable_limit[rail_locked]"
+    },
+    {
+      "classname": "tests.unit.test_m2_visibility_analytic",
+      "name": "test_actual_joint_motion_distinguishes_reframe_reveal_and_reachable_limit[reframe]"
+    },
+    {
+      "classname": "tests.unit.test_m2_visibility_analytic",
+      "name": "test_actual_joint_motion_distinguishes_reframe_reveal_and_reachable_limit[wide_screen]"
+    },
+    {
+      "classname": "tests.unit.test_m2_visibility_analytic",
+      "name": "test_edges_thickness_parallel_rays_and_segment_endpoints"
+    },
+    {
+      "classname": "tests.unit.test_m2_visibility_analytic",
+      "name": "test_fixture_boundaries_and_no_m1_marker_or_screen"
+    },
+    {
+      "classname": "tests.unit.test_m2_visibility_analytic",
+      "name": "test_independent_screen_plane_and_finite_thickness_rays[-0.09]"
+    },
+    {
+      "classname": "tests.unit.test_m2_visibility_analytic",
+      "name": "test_independent_screen_plane_and_finite_thickness_rays[-0.15]"
+    },
+    {
+      "classname": "tests.unit.test_m2_visibility_analytic",
+      "name": "test_independent_screen_plane_and_finite_thickness_rays[0.09]"
+    },
+    {
+      "classname": "tests.unit.test_m2_visibility_analytic",
+      "name": "test_independent_screen_plane_and_finite_thickness_rays[0.0]"
+    },
+    {
+      "classname": "tests.unit.test_m2_visibility_analytic",
+      "name": "test_independent_screen_plane_and_finite_thickness_rays[0.15]"
+    },
+    {
+      "classname": "tests.unit.test_m2_visibility_analytic",
+      "name": "test_rail_locked_is_advertised_and_context_rejects_translation"
+    },
+    {
+      "classname": "tests.unit.test_m2_visibility_analytic",
+      "name": "test_screen_source_shading_fails_explicitly_until_m3"
+    },
+    {
+      "classname": "tests.unit.test_m2_visibility_analytic",
+      "name": "test_shared_finite_geometry_light_and_unshaded_source_certificate[narrow_screen]"
+    },
+    {
+      "classname": "tests.unit.test_m2_visibility_analytic",
+      "name": "test_shared_finite_geometry_light_and_unshaded_source_certificate[rail_locked]"
+    },
+    {
+      "classname": "tests.unit.test_m2_visibility_analytic",
+      "name": "test_shared_finite_geometry_light_and_unshaded_source_certificate[reframe]"
+    },
+    {
+      "classname": "tests.unit.test_m2_visibility_analytic",
+      "name": "test_shared_finite_geometry_light_and_unshaded_source_certificate[wide_screen]"
+    },
+    {
+      "classname": "tests.unit.test_m2_visibility_analytic",
+      "name": "test_wide_screen_blocks_complete_rail_and_rotation_cannot_change_ray"
+    },
+    {
+      "classname": "tests.unit.test_motion",
+      "name": "test_actual_stall_is_observed_without_fabricated_tracking"
+    },
+    {
+      "classname": "tests.unit.test_motion",
+      "name": "test_bounded_halt_and_reversal_without_state_write"
+    },
+    {
+      "classname": "tests.unit.test_motion",
+      "name": "test_finite_move_bounded_ramps_forces_limits_and_settle"
+    },
+    {
+      "classname": "tests.unit.test_motion",
+      "name": "test_home_side_yaw_pitch_frames_from_measured_pose[target0]"
+    },
+    {
+      "classname": "tests.unit.test_motion",
+      "name": "test_home_side_yaw_pitch_frames_from_measured_pose[target1]"
+    },
+    {
+      "classname": "tests.unit.test_motion",
+      "name": "test_home_side_yaw_pitch_frames_from_measured_pose[target2]"
+    },
+    {
+      "classname": "tests.unit.test_motion",
+      "name": "test_home_side_yaw_pitch_frames_from_measured_pose[target3]"
+    },
+    {
+      "classname": "tests.unit.test_motion",
+      "name": "test_home_side_yaw_pitch_frames_from_measured_pose[target4]"
+    },
+    {
+      "classname": "tests.unit.test_motion",
+      "name": "test_manifest_matches_optical_and_compiled_cells"
+    },
+    {
+      "classname": "tests.unit.test_motion",
+      "name": "test_reject_illegal_targets_without_advancing[target0]"
+    },
+    {
+      "classname": "tests.unit.test_motion",
+      "name": "test_reject_illegal_targets_without_advancing[target1]"
+    },
+    {
+      "classname": "tests.unit.test_motion",
+      "name": "test_reject_illegal_targets_without_advancing[target2]"
+    },
+    {
+      "classname": "tests.unit.test_motion",
+      "name": "test_reject_illegal_targets_without_advancing[target3]"
+    },
+    {
+      "classname": "tests.unit.test_motion",
+      "name": "test_reject_illegal_targets_without_advancing[target4]"
+    },
+    {
+      "classname": "tests.unit.test_motion",
+      "name": "test_snapshot_owned_immutable_reset_and_clearance"
+    },
+    {
+      "classname": "tests.unit.test_optics",
+      "name": "test_complete_rig_sweep_does_not_change_incident_power"
+    },
+    {
+      "classname": "tests.unit.test_optics",
+      "name": "test_midpoint_grid_covers_full_cell_area_and_linear_moments"
+    },
+    {
+      "classname": "tests.unit.test_optics",
+      "name": "test_reference_is_local_incident_not_transmitted_cell_average"
+    },
+    {
+      "classname": "tests.unit.test_optics",
+      "name": "test_reference_patch_cannot_silently_occlude_cells"
+    },
+    {
+      "classname": "tests.unit.test_optics",
+      "name": "test_rig_intersection_is_explicit_unsupported_not_false_visibility"
+    },
+    {
+      "classname": "tests.unit.test_optics",
+      "name": "test_shared_source_cosine_and_diffuse_counted_once"
+    },
+    {
+      "classname": "tests.unit.test_optics",
+      "name": "test_uniform_beam_independent_area_power_reference_and_geometry"
+    },
+    {
+      "classname": "tests.unit.test_optics",
+      "name": "test_unshaded_quadrature_converges_exactly[16]"
+    },
+    {
+      "classname": "tests.unit.test_optics",
+      "name": "test_unshaded_quadrature_converges_exactly[32]"
+    },
+    {
+      "classname": "tests.unit.test_optics",
+      "name": "test_unsupported_optical_domain_rejects[source0]"
+    },
+    {
+      "classname": "tests.unit.test_optics",
+      "name": "test_unsupported_optical_domain_rejects[source1]"
+    },
+    {
+      "classname": "tests.unit.test_optics",
+      "name": "test_unsupported_optical_domain_rejects[source2]"
+    },
+    {
+      "classname": "tests.unit.test_optics",
+      "name": "test_unsupported_optical_domain_rejects[source3]"
+    },
+    {
+      "classname": "tests.unit.test_optics",
+      "name": "test_zero_diffuse_only_and_upper_domain[0.0-0.0-0.0]"
+    },
+    {
+      "classname": "tests.unit.test_optics",
+      "name": "test_zero_diffuse_only_and_upper_domain[0.0-100.0-100.0]"
+    },
+    {
+      "classname": "tests.unit.test_optics",
+      "name": "test_zero_diffuse_only_and_upper_domain[1200.0-200.0-1400.0]"
+    },
+    {
+      "classname": "tests.unit.test_png_contract",
+      "name": "test_critical_chunk_structure_rejected[duplicate-iend]"
+    },
+    {
+      "classname": "tests.unit.test_png_contract",
+      "name": "test_critical_chunk_structure_rejected[duplicate-ihdr]"
+    },
+    {
+      "classname": "tests.unit.test_png_contract",
+      "name": "test_critical_chunk_structure_rejected[early-iend]"
+    },
+    {
+      "classname": "tests.unit.test_png_contract",
+      "name": "test_critical_chunk_structure_rejected[idat-crc]"
+    },
+    {
+      "classname": "tests.unit.test_png_contract",
+      "name": "test_critical_chunk_structure_rejected[iend-crc]"
+    },
+    {
+      "classname": "tests.unit.test_png_contract",
+      "name": "test_critical_chunk_structure_rejected[late-ihdr]"
+    },
+    {
+      "classname": "tests.unit.test_png_contract",
+      "name": "test_critical_chunk_structure_rejected[long-ihdr]"
+    },
+    {
+      "classname": "tests.unit.test_png_contract",
+      "name": "test_critical_chunk_structure_rejected[missing-idat]"
+    },
+    {
+      "classname": "tests.unit.test_png_contract",
+      "name": "test_critical_chunk_structure_rejected[missing-iend]"
+    },
+    {
+      "classname": "tests.unit.test_png_contract",
+      "name": "test_critical_chunk_structure_rejected[missing-ihdr]"
+    },
+    {
+      "classname": "tests.unit.test_png_contract",
+      "name": "test_critical_chunk_structure_rejected[oversized-chunk]"
+    },
+    {
+      "classname": "tests.unit.test_png_contract",
+      "name": "test_critical_chunk_structure_rejected[short-chunk-framing]"
+    },
+    {
+      "classname": "tests.unit.test_png_contract",
+      "name": "test_critical_chunk_structure_rejected[short-ihdr]"
+    },
+    {
+      "classname": "tests.unit.test_png_contract",
+      "name": "test_critical_chunk_structure_rejected[trailing-data]"
+    },
+    {
+      "classname": "tests.unit.test_png_contract",
+      "name": "test_idat_stream_must_contain_only_complete_image[extra-pixels]"
+    },
+    {
+      "classname": "tests.unit.test_png_contract",
+      "name": "test_idat_stream_must_contain_only_complete_image[missing-zlib-trailer]"
+    },
+    {
+      "classname": "tests.unit.test_png_contract",
+      "name": "test_idat_stream_must_contain_only_complete_image[second-zlib-stream]"
+    },
+    {
+      "classname": "tests.unit.test_png_contract",
+      "name": "test_idat_stream_must_contain_only_complete_image[short-pixels]"
+    },
+    {
+      "classname": "tests.unit.test_png_contract",
+      "name": "test_idat_stream_must_contain_only_complete_image[trailing-idat-data]"
+    },
+    {
+      "classname": "tests.unit.test_png_contract",
+      "name": "test_nonconforming_ihdr_fields_rejected[fields0]"
+    },
+    {
+      "classname": "tests.unit.test_png_contract",
+      "name": "test_nonconforming_ihdr_fields_rejected[fields1]"
+    },
+    {
+      "classname": "tests.unit.test_png_contract",
+      "name": "test_nonconforming_ihdr_fields_rejected[fields2]"
+    },
+    {
+      "classname": "tests.unit.test_png_contract",
+      "name": "test_nonconforming_ihdr_fields_rejected[fields3]"
+    },
+    {
+      "classname": "tests.unit.test_png_contract",
+      "name": "test_original_payload_size_limit_retained"
+    },
+    {
+      "classname": "tests.unit.test_png_contract",
+      "name": "test_reviewer_counterexamples_rejected[review-invalid-idat-correct-crc]"
+    },
+    {
+      "classname": "tests.unit.test_png_contract",
+      "name": "test_reviewer_counterexamples_rejected[review-nonempty-iend]"
+    },
+    {
+      "classname": "tests.unit.test_png_contract",
+      "name": "test_reviewer_counterexamples_rejected[review-rgb16]"
+    },
+    {
+      "classname": "tests.unit.test_png_contract",
+      "name": "test_valid_rgb8_controls_preserve_pixels_and_payload[adam7]"
+    },
+    {
+      "classname": "tests.unit.test_png_contract",
+      "name": "test_valid_rgb8_controls_preserve_pixels_and_payload[captured]"
+    },
+    {
+      "classname": "tests.unit.test_png_contract",
+      "name": "test_valid_rgb8_controls_preserve_pixels_and_payload[split-idat]"
+    },
+    {
+      "classname": "tests.unit.test_png_contract",
+      "name": "test_valid_rgb8_controls_preserve_pixels_and_payload[synthetic]"
+    },
+    {
+      "classname": "tests.unit.test_policies",
+      "name": "test_baselines_do_not_assume_action_success[FixedPolicy-accepted]"
+    },
+    {
+      "classname": "tests.unit.test_policies",
+      "name": "test_baselines_do_not_assume_action_success[FixedPolicy-cancelled]"
+    },
+    {
+      "classname": "tests.unit.test_policies",
+      "name": "test_baselines_do_not_assume_action_success[FixedPolicy-failed]"
+    },
+    {
+      "classname": "tests.unit.test_policies",
+      "name": "test_baselines_do_not_assume_action_success[FixedPolicy-rejected]"
+    },
+    {
+      "classname": "tests.unit.test_policies",
+      "name": "test_baselines_do_not_assume_action_success[FixedPolicy-timed_out]"
+    },
+    {
+      "classname": "tests.unit.test_policies",
+      "name": "test_baselines_do_not_assume_action_success[ScanPolicy-accepted]"
+    },
+    {
+      "classname": "tests.unit.test_policies",
+      "name": "test_baselines_do_not_assume_action_success[ScanPolicy-cancelled]"
+    },
+    {
+      "classname": "tests.unit.test_policies",
+      "name": "test_baselines_do_not_assume_action_success[ScanPolicy-failed]"
+    },
+    {
+      "classname": "tests.unit.test_policies",
+      "name": "test_baselines_do_not_assume_action_success[ScanPolicy-rejected]"
+    },
+    {
+      "classname": "tests.unit.test_policies",
+      "name": "test_baselines_do_not_assume_action_success[ScanPolicy-timed_out]"
+    },
+    {
+      "classname": "tests.unit.test_policies",
+      "name": "test_fixed_waits_to_leave_two_second_tail_without_camera_or_help"
+    },
+    {
+      "classname": "tests.unit.test_policies",
+      "name": "test_scan_complete_public_sequence_uses_probe_then_new_verification"
+    },
+    {
+      "classname": "tests.unit.test_policies",
+      "name": "test_scan_completed_move_without_encoder_confirmation_stops"
+    },
+    {
+      "classname": "tests.unit.test_policies",
+      "name": "test_scan_missing_stale_or_unmatched_dwell_point_stops[change0]"
+    },
+    {
+      "classname": "tests.unit.test_policies",
+      "name": "test_scan_missing_stale_or_unmatched_dwell_point_stops[change1]"
+    },
+    {
+      "classname": "tests.unit.test_policies",
+      "name": "test_scan_missing_stale_or_unmatched_dwell_point_stops[change2]"
+    },
+    {
+      "classname": "tests.unit.test_policies",
+      "name": "test_scan_old_measurements_cannot_verify_new_set"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_analytic_maximum_and_no_solver_dependency"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_asymmetric_substrings_analytic_root[0.2]"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_asymmetric_substrings_analytic_root[0.5]"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_asymmetric_substrings_analytic_root[1.0]"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_asymmetric_substrings_analytic_root[1.8]"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_asymmetric_substrings_analytic_root[2.4]"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_asymmetric_substrings_analytic_root[3.0]"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_asymmetric_substrings_analytic_root[4.0]"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_current_bound_rejected[-0.01]"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_current_bound_rejected[2.01]"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_current_bound_rejected[inf]"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_dark_substring_independent_breakpoints"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_disconnection_open_circuit_and_blackout"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_independent_dense_grid_and_monotonicity"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_invalid_irradiance_rejected[values0]"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_invalid_irradiance_rejected[values1]"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_invalid_irradiance_rejected[values2]"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_invalid_voltage_rejected[0.19]"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_invalid_voltage_rejected[4.01]"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_invalid_voltage_rejected[True]"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_invalid_voltage_rejected[inf]"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_invalid_voltage_rejected[nan]"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_lowest_root_convention_on_flat_fixture"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_maximum_respects_voltage_limit_and_open_circuit"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_numerical_and_energy_failures_are_not_clipped"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_partial_shade_topology_and_bypass"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_temperature_and_connection_resistance_closed_form[0.0]"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_temperature_and_connection_resistance_closed_form[25.0]"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_temperature_and_connection_resistance_closed_form[60.0]"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_temperature_and_connection_resistance_closed_form[89.0]"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_uniform_analytic_series_and_power_identity[0.2]"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_uniform_analytic_series_and_power_identity[0.8]"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_uniform_analytic_series_and_power_identity[1.8]"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_uniform_analytic_series_and_power_identity[2.4]"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_uniform_analytic_series_and_power_identity[3.0]"
+    },
+    {
+      "classname": "tests.unit.test_pv",
+      "name": "test_uniform_analytic_series_and_power_identity[4.0]"
+    },
+    {
+      "classname": "tests.unit.test_recorder",
+      "name": "test_comparison_detects_numeric_timestamp_and_feedback_changes"
+    },
+    {
+      "classname": "tests.unit.test_recorder",
+      "name": "test_frame_path_escape_refused"
+    },
+    {
+      "classname": "tests.unit.test_recorder",
+      "name": "test_hash_mutation_detected"
+    },
+    {
+      "classname": "tests.unit.test_recorder",
+      "name": "test_incomplete_and_failed_runs_remain_explicit"
+    },
+    {
+      "classname": "tests.unit.test_recorder",
+      "name": "test_invalid_run_names_rejected[.hidden]"
+    },
+    {
+      "classname": "tests.unit.test_recorder",
+      "name": "test_invalid_run_names_rejected[invalid.name]"
+    },
+    {
+      "classname": "tests.unit.test_recorder",
+      "name": "test_invalid_run_names_rejected[with space]"
+    },
+    {
+      "classname": "tests.unit.test_recorder",
+      "name": "test_nested_public_private_directories_rejected"
+    },
+    {
+      "classname": "tests.unit.test_recorder",
+      "name": "test_nonmonotonic_and_nonfinite_events_rejected"
+    },
+    {
+      "classname": "tests.unit.test_recorder",
+      "name": "test_overwrite_and_companion_collisions_refused"
+    },
+    {
+      "classname": "tests.unit.test_recorder",
+      "name": "test_raw_invalid_actions_and_duplicate_observations_are_preserved"
+    },
+    {
+      "classname": "tests.unit.test_recorder",
+      "name": "test_real_png_saved_once_and_hydrated_without_host_path_leakage"
+    },
+    {
+      "classname": "tests.unit.test_recorder",
+      "name": "test_recording_separates_private_data_and_finalizes_hashes"
+    },
+    {
+      "classname": "tests.unit.test_scenarios",
+      "name": "test_bad_seed_arguments_rejected[-1-0]"
+    },
+    {
+      "classname": "tests.unit.test_scenarios",
+      "name": "test_bad_seed_arguments_rejected[0--1]"
+    },
+    {
+      "classname": "tests.unit.test_scenarios",
+      "name": "test_bad_seed_arguments_rejected[0-1.0]"
+    },
+    {
+      "classname": "tests.unit.test_scenarios",
+      "name": "test_bad_seed_arguments_rejected[0-False]"
+    },
+    {
+      "classname": "tests.unit.test_scenarios",
+      "name": "test_bad_seed_arguments_rejected[1.0-0]"
+    },
+    {
+      "classname": "tests.unit.test_scenarios",
+      "name": "test_bad_seed_arguments_rejected[True-0]"
+    },
+    {
+      "classname": "tests.unit.test_scenarios",
+      "name": "test_invalid_capture_key_is_rejected[-0-noise]"
+    },
+    {
+      "classname": "tests.unit.test_scenarios",
+      "name": "test_invalid_capture_key_is_rejected[1-0-noise]"
+    },
+    {
+      "classname": "tests.unit.test_scenarios",
+      "name": "test_invalid_capture_key_is_rejected[voltage--1-noise]"
+    },
+    {
+      "classname": "tests.unit.test_scenarios",
+      "name": "test_invalid_capture_key_is_rejected[voltage-0-]"
+    },
+    {
+      "classname": "tests.unit.test_scenarios",
+      "name": "test_invalid_capture_key_is_rejected[voltage-0.5-noise]"
+    },
+    {
+      "classname": "tests.unit.test_scenarios",
+      "name": "test_invalid_capture_key_is_rejected[voltage-True-noise]"
+    },
+    {
+      "classname": "tests.unit.test_scenarios",
+      "name": "test_pcg64_pinned_and_named_draws_independent"
+    },
+    {
+      "classname": "tests.unit.test_scenarios",
+      "name": "test_unknown_stream_rejected_and_large_seed_supported"
+    },
+    {
+      "classname": "tests.unit.test_scenarios",
+      "name": "test_versioned_capture_known_vector_and_call_order_independence"
+    },
+    {
+      "classname": "tests.unit.test_scenarios",
+      "name": "test_versioned_known_seed_vector"
+    },
+    {
+      "classname": "tests.unit.test_scheduler",
+      "name": "test_atomic_probe_token_gate_and_reserved_tail"
+    },
+    {
+      "classname": "tests.unit.test_scheduler",
+      "name": "test_delivery_tick_boundary_and_stable_same_kind_sequence"
+    },
+    {
+      "classname": "tests.unit.test_scheduler",
+      "name": "test_integer_rounding_preserves_exposure_midpoint_and_deadline"
+    },
+    {
+      "classname": "tests.unit.test_scheduler",
+      "name": "test_invalid_clock_timestep_rejected[-0.002]"
+    },
+    {
+      "classname": "tests.unit.test_scheduler",
+      "name": "test_invalid_clock_timestep_rejected[.002]"
+    },
+    {
+      "classname": "tests.unit.test_scheduler",
+      "name": "test_invalid_clock_timestep_rejected[0.0]"
+    },
+    {
+      "classname": "tests.unit.test_scheduler",
+      "name": "test_invalid_clock_timestep_rejected[True]"
+    },
+    {
+      "classname": "tests.unit.test_scheduler",
+      "name": "test_invalid_clock_timestep_rejected[inf]"
+    },
+    {
+      "classname": "tests.unit.test_scheduler",
+      "name": "test_invalid_clock_timestep_rejected[nan]"
+    },
+    {
+      "classname": "tests.unit.test_scheduler",
+      "name": "test_ledger_raw_units_and_energy_balance_remain_separate_from_utility"
+    },
+    {
+      "classname": "tests.unit.test_scheduler",
+      "name": "test_noninteger_or_negative_queue_ticks_rejected[-1]"
+    },
+    {
+      "classname": "tests.unit.test_scheduler",
+      "name": "test_noninteger_or_negative_queue_ticks_rejected[0.5]"
+    },
+    {
+      "classname": "tests.unit.test_scheduler",
+      "name": "test_noninteger_or_negative_queue_ticks_rejected[1.0]"
+    },
+    {
+      "classname": "tests.unit.test_scheduler",
+      "name": "test_noninteger_or_negative_queue_ticks_rejected[5]"
+    },
+    {
+      "classname": "tests.unit.test_scheduler",
+      "name": "test_noninteger_or_negative_queue_ticks_rejected[True]"
+    },
+    {
+      "classname": "tests.unit.test_scheduler",
+      "name": "test_noninteger_or_negative_queue_ticks_rejected[nan]"
+    },
+    {
+      "classname": "tests.unit.test_scheduler",
+      "name": "test_queued_capture_is_an_immutable_historical_value"
+    },
+    {
+      "classname": "tests.unit.test_scheduler",
+      "name": "test_simultaneous_events_sort_by_kind_then_sequence"
+    },
+    {
+      "classname": "tests.unit.test_scheduler",
+      "name": "test_unknown_kind_and_rounding_do_not_silently_default"
+    },
+    {
+      "classname": "tests.unit.test_sensor_integrity",
+      "name": "test_delayed_stale_rgb_queue_preserves_midpoint_pixels_and_all_times"
+    },
+    {
+      "classname": "tests.unit.test_sensor_integrity",
+      "name": "test_disabled_conditions_preserve_m1_records_exactly[False]"
+    },
+    {
+      "classname": "tests.unit.test_sensor_integrity",
+      "name": "test_disabled_conditions_preserve_m1_records_exactly[True]"
+    },
+    {
+      "classname": "tests.unit.test_sensor_integrity",
+      "name": "test_dropout_retains_capture_metadata_and_nulls_all_values"
+    },
+    {
+      "classname": "tests.unit.test_sensor_integrity",
+      "name": "test_dropout_schedule_and_jitter_use_independent_purposes"
+    },
+    {
+      "classname": "tests.unit.test_sensor_integrity",
+      "name": "test_encoder_errors_have_declared_independent_axis_scales"
+    },
+    {
+      "classname": "tests.unit.test_sensor_integrity",
+      "name": "test_encoder_noise_uses_position_uncertainty_and_omits_undeclared_rates"
+    },
+    {
+      "classname": "tests.unit.test_sensor_integrity",
+      "name": "test_gaussian_channel_noise_has_declared_scale_and_no_shared_channel_error"
+    },
+    {
+      "classname": "tests.unit.test_sensor_integrity",
+      "name": "test_integer_jitter_is_bounded_inclusive_and_scalar_batch_stays_simultaneous"
+    },
+    {
+      "classname": "tests.unit.test_sensor_integrity",
+      "name": "test_no_clipping_to_actuation_bounds_is_invented"
+    },
+    {
+      "classname": "tests.unit.test_sensor_integrity",
+      "name": "test_noise_is_capture_indexed_and_independent_of_extra_actions_and_sensor_calls"
+    },
+    {
+      "classname": "tests.unit.test_sensor_integrity",
+      "name": "test_private_transport_config_does_not_enter_public_task"
+    },
+    {
+      "classname": "tests.unit.test_sensor_integrity",
+      "name": "test_sensor_model_rejects_invalid_seed_even_with_noise_disabled[-1]"
+    },
+    {
+      "classname": "tests.unit.test_sensor_integrity",
+      "name": "test_sensor_model_rejects_invalid_seed_even_with_noise_disabled[1.5]"
+    },
+    {
+      "classname": "tests.unit.test_sensor_integrity",
+      "name": "test_sensor_model_rejects_invalid_seed_even_with_noise_disabled[1]"
+    },
+    {
+      "classname": "tests.unit.test_sensor_integrity",
+      "name": "test_sensor_model_rejects_invalid_seed_even_with_noise_disabled[True]"
+    },
+    {
+      "classname": "tests.unit.test_sensor_integrity",
+      "name": "test_stale_threshold_compares_original_capture_age_strictly[encoder-0.008-stale]"
+    },
+    {
+      "classname": "tests.unit.test_sensor_integrity",
+      "name": "test_stale_threshold_compares_original_capture_age_strictly[encoder-0.01-valid]"
+    },
+    {
+      "classname": "tests.unit.test_sensor_integrity",
+      "name": "test_stale_threshold_compares_original_capture_age_strictly[numeric-0.018-stale]"
+    },
+    {
+      "classname": "tests.unit.test_sensor_integrity",
+      "name": "test_stale_threshold_compares_original_capture_age_strictly[numeric-0.02-valid]"
+    },
+    {
+      "classname": "tests.unit.test_sensor_integrity",
+      "name": "test_stale_threshold_compares_original_capture_age_strictly[rgb-0.104-stale]"
+    },
+    {
+      "classname": "tests.unit.test_sensor_integrity",
+      "name": "test_stale_threshold_compares_original_capture_age_strictly[rgb-0.106-valid]"
+    },
+    {
+      "classname": "tests.unit.test_sensor_integrity",
+      "name": "test_transport_rejects_ambiguous_or_nonchronological_timing[numeric-1-2]"
+    },
+    {
+      "classname": "tests.unit.test_sensor_integrity",
+      "name": "test_transport_rejects_ambiguous_or_nonchronological_timing[rgb-1-None]"
+    },
+    {
+      "classname": "tests.unit.test_sensor_integrity",
+      "name": "test_transport_rejects_ambiguous_or_nonchronological_timing[rgb-2-1]"
+    },
+    {
+      "classname": "tests.unit.test_sensor_integrity",
+      "name": "test_transport_rejects_ambiguous_or_nonchronological_timing[unknown-1-None]"
+    },
+    {
+      "classname": "tests.unit.test_sensors",
+      "name": "test_encoder_uses_snapshot_tick_and_only_allowed_coordinates"
+    },
+    {
+      "classname": "tests.unit.test_sensors",
+      "name": "test_invalid_capture_tick_is_rejected[-1]"
+    },
+    {
+      "classname": "tests.unit.test_sensors",
+      "name": "test_invalid_capture_tick_is_rejected[0.5]"
+    },
+    {
+      "classname": "tests.unit.test_sensors",
+      "name": "test_invalid_capture_tick_is_rejected[1]"
+    },
+    {
+      "classname": "tests.unit.test_sensors",
+      "name": "test_invalid_capture_tick_is_rejected[True]"
+    },
+    {
+      "classname": "tests.unit.test_sensors",
+      "name": "test_numeric_core_task_explicitly_withholds_rgb"
+    },
+    {
+      "classname": "tests.unit.test_sensors",
+      "name": "test_rgb_encodes_supplied_real_fixture_and_exact_exposure_ticks"
+    },
+    {
+      "classname": "tests.unit.test_sensors",
+      "name": "test_samples_validate_against_the_advertised_task"
+    },
+    {
+      "classname": "tests.unit.test_sensors",
+      "name": "test_scalar_capture_clock_and_nominal_uncertainty_are_preserved"
+    },
+    {
+      "classname": "tests.unit.test_sensors",
+      "name": "test_task_projection_has_nominal_intrinsics_and_no_help"
+    },
+    {
+      "classname": "tests.unit.test_sensors",
+      "name": "test_task_projection_is_independent_of_private_world_values"
+    },
+    {
+      "classname": "tests.unit.test_sensors",
+      "name": "test_wrong_rgb_format_is_rejected_without_coercion[shape0-uint8]"
+    },
+    {
+      "classname": "tests.unit.test_sensors",
+      "name": "test_wrong_rgb_format_is_rejected_without_coercion[shape1-float]"
+    },
+    {
+      "classname": "tests.unit.test_sensors",
+      "name": "test_wrong_rgb_format_is_rejected_without_coercion[shape2-uint8]"
+    },
+    {
+      "classname": "tests.unit.test_thermal",
+      "name": "test_cooling_closed_form_and_signed_ambient_heat"
+    },
+    {
+      "classname": "tests.unit.test_thermal",
+      "name": "test_energy_violation_rejected_and_outputs_immutable"
+    },
+    {
+      "classname": "tests.unit.test_thermal",
+      "name": "test_explicit_temperature_power_coupling_refines_and_conserves"
+    },
+    {
+      "classname": "tests.unit.test_thermal",
+      "name": "test_frozen_heat_closed_form_and_conservation[0.002]"
+    },
+    {
+      "classname": "tests.unit.test_thermal",
+      "name": "test_frozen_heat_closed_form_and_conservation[0.1]"
+    },
+    {
+      "classname": "tests.unit.test_thermal",
+      "name": "test_frozen_heat_closed_form_and_conservation[2.0]"
+    },
+    {
+      "classname": "tests.unit.test_thermal",
+      "name": "test_frozen_heat_closed_form_and_conservation[60.0]"
+    },
+    {
+      "classname": "tests.unit.test_thermal",
+      "name": "test_invalid_input_rejected[25.0-irradiance1-0.0-0.002]"
+    },
+    {
+      "classname": "tests.unit.test_thermal",
+      "name": "test_invalid_input_rejected[25.0-irradiance2-0.0-0.002]"
+    },
+    {
+      "classname": "tests.unit.test_thermal",
+      "name": "test_invalid_input_rejected[25.0-irradiance3-0.0-0.002]"
+    },
+    {
+      "classname": "tests.unit.test_thermal",
+      "name": "test_invalid_input_rejected[25.0-irradiance4--0.1-0.002]"
+    },
+    {
+      "classname": "tests.unit.test_thermal",
+      "name": "test_invalid_input_rejected[25.0-irradiance5-inf-0.002]"
+    },
+    {
+      "classname": "tests.unit.test_thermal",
+      "name": "test_invalid_input_rejected[25.0-irradiance6-0.0-0.0]"
+    },
+    {
+      "classname": "tests.unit.test_thermal",
+      "name": "test_invalid_input_rejected[25.0-irradiance7-0.0--0.1]"
+    },
+    {
+      "classname": "tests.unit.test_thermal",
+      "name": "test_invalid_input_rejected[25.0-irradiance8-0.0-inf]"
+    },
+    {
+      "classname": "tests.unit.test_thermal",
+      "name": "test_invalid_input_rejected[nan-irradiance0-0.0-0.002]"
+    },
+    {
+      "classname": "tests.unit.test_thermal",
+      "name": "test_semigroup_substeps_and_source_step"
+    }
+  ],
+  "count": 519,
+  "render_cases": 33,
+  "retained_m1_cases": 408
+}

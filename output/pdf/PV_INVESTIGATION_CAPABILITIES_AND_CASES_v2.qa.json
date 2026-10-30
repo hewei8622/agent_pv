@@ -1,0 +1,91 @@
+{
+  "status": "passed",
+  "pdf": "output/pdf/PV_INVESTIGATION_CAPABILITIES_AND_CASES_v2.pdf",
+  "pdf_sha256": "6a5e06187d98ed2d811487d1c22952efe7b6d874f5dec8e8e685c3eed4c2f424",
+  "scope": "Presentation-only explanation of retained evidence; no new simulation, camera render, or regression run",
+  "producer_visual_review": {
+    "agent": "capability_report_builder",
+    "all_final_pages_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "result": "Legible text and figures; no clipping, overlapping labels, misplaced headers, broken tables or overflow observed. Final page 5 removes arrow-adjacent annotation collision found in draft."
+  },
+  "render_command": "XDG_CACHE_HOME=\"$PWD/tmp/pdfs/capabilities/cache\" /opt/homebrew/bin/pdftoppm -scale-to 1400 -png output/pdf/PV_INVESTIGATION_CAPABILITIES_AND_CASES_v2.pdf tmp/pdfs/capabilities/build-02/page",
+  "rendered_pages_sha256": {
+    "tmp/pdfs/capabilities/build-02/page-01.png": "d0b37dd5b30a7f9389486dd08793d977597b1efad77d08de125b2478ce841a95",
+    "tmp/pdfs/capabilities/build-02/page-02.png": "4eabd9a77850c3aa094f163a3bf98260bdf343cc51a12517df84320d33cdcd54",
+    "tmp/pdfs/capabilities/build-02/page-03.png": "b217968c0191f32a901cac78bb772ec055ed9ba240238f9a5da63cc0303daced",
+    "tmp/pdfs/capabilities/build-02/page-04.png": "aa4f1b64aab4f78bf0f38e83c22103109cf5c9d857a65176333e856783d7b7ee",
+    "tmp/pdfs/capabilities/build-02/page-05.png": "c4235b26a5fddc627aa3e40903fd6f28043a7023f707d3aa60c9ef4f1a9a921a",
+    "tmp/pdfs/capabilities/build-02/page-06.png": "458e7222bd7ae7408c93d473c5df6e9e02e5d581e16509d2606443592b0626a4",
+    "tmp/pdfs/capabilities/build-02/page-07.png": "e660aad0ad24f8291dd556ca7f1b575800b5574e7a0ce4a11a058efc1764abff",
+    "tmp/pdfs/capabilities/build-02/page-08.png": "e0b20bd2a42565f225ed36e45a7247073f839835bf5e6e2eef630bdd60867352",
+    "tmp/pdfs/capabilities/build-02/page-09.png": "e55673e1c0144ab1ec07f2194b148eb6e55553415568224a90c259c9d6a450cc",
+    "tmp/pdfs/capabilities/build-02/page-10.png": "f3c9115382a421752113be386956a5c524d15784a40874b859163d1f9a294c0d"
+  },
+  "input_hashes_verified": 160,
+  "retained_index_entries_verified": 147,
+  "old_report": {
+    "not_modified_by_this_builder": true,
+    "not_an_input_to_v2": true,
+    "observed_sha256": "1b54e5801af2e7f77831a330e4139df17dc1e207af231801773d969f3bc86019",
+    "historical_manifest_sha256": "b2c18548cb0253eb5f55bc0ecb30b0e27f41fa1140f5eaa78be4945e787e2bfd",
+    "note": "Historical manifest and current old-PDF hash differ. This builder did not establish the old-PDF initial hash and makes no before/after claim about that external change. Retained experiment sources used by v2 all verify."
+  },
+  "source_hashes_unchanged_after_render": true,
+  "builder_ruff": "passed",
+  "independent_review": {
+    "status": "passed",
+    "review_record": "output/review/CAPABILITY_REPORT_V2_REVIEW_20261019.txt",
+    "review_record_sha256": "b4598602281a694d1a84bfac2e016da22ce423769952350a9f5c4c52d857b22a",
+    "reviewer": "/root/report_reader_review",
+    "scope": "Explanation, evidence consistency and rendered presentation; not new experiment acceptance"
+  },
+  "heading_clipping_check": {
+    "status": "no_clipping",
+    "pages": [
+      3,
+      5,
+      8,
+      9
+    ],
+    "method": "Direct 2x crops of the unchanged final page PNGs, plus PDF text extraction. All initial characters present; full-page tool display artefact only.",
+    "proof_crop_sha256": {
+      "tmp/pdfs/capabilities/build-02/heading-03.png": "fe1b117ee86958ccc8b82d7400d13b1d45eaf74f5b35c8095085bb2b52c02e89",
+      "tmp/pdfs/capabilities/build-02/heading-05.png": "174d2907b03d1ae726d59e73c5d9f89a05b45bd5ec23f1118034d086b2ef6273",
+      "tmp/pdfs/capabilities/build-02/heading-08.png": "ffea89bc69ddc35cd4ebeec0952d1451733cb12bdf8b10d2455011d69f19600e",
+      "tmp/pdfs/capabilities/build-02/heading-09.png": "5ea192824ee548c3051e864c258f4c955bc9bc0869ba2da7ab664de4a10fafa5"
+    }
+  },
+  "post_build_source_note": "Only the builder module docstring was clarified after PDF creation to state that the old report is left untouched and retained experiment inputs are hash-checked. No executable/report content or PDF changed; the manifest records the current script hash.",
+  "root_visual_review": {
+    "status": "passed",
+    "all_final_pages_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "heading_crops_checked": [
+      3,
+      5,
+      9
+    ],
+    "result": "No presentation blocker; apparent missing heading letters were full-page image-display artefacts, confirmed with direct crops."
+  }
+}

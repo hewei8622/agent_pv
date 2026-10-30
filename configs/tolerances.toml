@@ -1,0 +1,27 @@
+# v7 §12 proposed engineering checks, frozen before execution; not physical accuracy.
+schema_version = "1.0"
+[m0]
+frame_residual = 1e-10
+projection_pixels = 2.0
+# A known coloured calibration scene must occupy an image region and have contrast.
+minimum_unique_colours = 16
+minimum_pixel_standard_deviation = 1.0
+[m1_planned_not_executed]
+slide_limit_slack_m = 1e-4
+angle_limit_slack_rad = 1e-3
+slide_settle_error_m = 0.001
+angle_settle_error_rad = 0.01
+power_relative = 1e-10
+power_absolute_w = 1e-10
+root_residual_v = 1e-6
+thermal_closed_form_c = 1e-6
+energy_residual_fraction = 0.001
+energy_scale_floor_j = 1.0
+
+# Same pinned host/runtime only; frozen before the first M1 replay.
+[m1_replay]
+version = "m1-replay-v1"
+numeric_absolute = 1e-10
+numeric_relative = 1e-10
+pixel_max_absolute = 2
+pixel_mean_absolute = 0.1

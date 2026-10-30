@@ -1,0 +1,9 @@
+{
+  "schema_version": "interaction/1.0",
+  "max_requests": 3,
+  "human_deadline_s": 300.0,
+  "internet_deadline_s": 30.0,
+  "max_wire_bytes": 65536,
+  "max_question_bytes": 2000,
+  "max_reply_bytes": 16000
+}

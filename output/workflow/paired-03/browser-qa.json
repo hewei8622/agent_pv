@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-10-19T13:44:07.419904+00:00",
+  "status": "passed permitted checks; manual orbit drag not verified",
+  "final_build": "paired-03",
+  "checks": {
+    "final evaluator C04 at 4.7 s": "question/reply and both 3D reconstructions visible; declared not_predictable displayed correctly",
+    "final evaluator C04 at 16 s": "supported outcomes and cost equality match source; terminal cleanup labelled",
+    "final public C04 at 16 s": "private geometry absent, evaluator option disabled, evaluator outcome table absent, console errors zero",
+    "earlier paired-02 unchanged controls": "case selection, seek, next decision, play/pause and public-perspective toggle exercised; C02 before/after source step shows time gating"
+  },
+  "unverified": {
+    "manual_orbit_drag": "Raw CDP pointer input was rejected by browser approval review, reporting declined permission. No alternate pointer path or workaround attempted."
+  },
+  "sha256": {
+    "browser-survey-plots.jpg": "f49d1a08b4e346ba23410e13b09754a2d78f68a6af2e3d980d18dafbcf2e1352",
+    "paired-evaluator.html": "64e08d2d7bf3d94a9398b0253fd9d42b8f467d33d1dd7565babed95f971b4975",
+    "browser-public.jpg": "2969a5f9660cef78b430c05856f6cba7bf51a6a111036d50af7a0efbe7edb687",
+    "browser-survey-3d.jpg": "29bcbf84684b181ee7526bff15d570e78407745d97d72e3327080da76cc63a06",
+    "paired-public.html": "94982372b5d8747e6e835881a67417f8a359e60fd9c5b82e5bfd77c59e428b52"
+  }
+}

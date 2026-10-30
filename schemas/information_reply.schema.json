@@ -1,0 +1,96 @@
+{
+  "$defs": {
+    "InformationSource": {
+      "additionalProperties": false,
+      "properties": {
+        "source_date": {
+          "anyOf": [
+            {
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Date"
+        },
+        "title": {
+          "maxLength": 500,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "url": {
+          "anyOf": [
+            {
+              "maxLength": 2048,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Url"
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "title": "InformationSource",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "outcome": {
+      "enum": [
+        "available",
+        "unavailable",
+        "timed_out",
+        "cancelled",
+        "invalid_response"
+      ],
+      "title": "Outcome",
+      "type": "string"
+    },
+    "provenance": {
+      "enum": [
+        "recorded",
+        "simulated"
+      ],
+      "title": "Provenance",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "interaction/1.0",
+      "default": "interaction/1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "sources": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/InformationSource"
+      },
+      "maxItems": 8,
+      "title": "Sources",
+      "type": "array"
+    },
+    "text": {
+      "default": "",
+      "maxLength": 16000,
+      "title": "Text",
+      "type": "string"
+    }
+  },
+  "required": [
+    "outcome",
+    "provenance"
+  ],
+  "title": "InformationReply",
+  "type": "object"
+}

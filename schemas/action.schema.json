@@ -1,0 +1,393 @@
+{
+  "$defs": {
+    "CaptureRGB": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "minimum": 1,
+          "title": "Action Id",
+          "type": "integer"
+        },
+        "kind": {
+          "const": "capture_rgb",
+          "title": "Kind",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "timeout_s": {
+          "exclusiveMinimum": 0,
+          "maximum": 15,
+          "title": "Timeout S",
+          "type": "number"
+        }
+      },
+      "required": [
+        "schema_version",
+        "action_id",
+        "timeout_s",
+        "kind"
+      ],
+      "title": "CaptureRGB",
+      "type": "object"
+    },
+    "Finish": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "minimum": 1,
+          "title": "Action Id",
+          "type": "integer"
+        },
+        "kind": {
+          "const": "finish",
+          "title": "Kind",
+          "type": "string"
+        },
+        "resolution": {
+          "enum": [
+            "resolved",
+            "unresolved",
+            "help_needed"
+          ],
+          "title": "Resolution",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "timeout_s": {
+          "exclusiveMinimum": 0,
+          "maximum": 15,
+          "title": "Timeout S",
+          "type": "number"
+        }
+      },
+      "required": [
+        "schema_version",
+        "action_id",
+        "timeout_s",
+        "kind",
+        "resolution"
+      ],
+      "title": "Finish",
+      "type": "object"
+    },
+    "MoveCamera": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "minimum": 1,
+          "title": "Action Id",
+          "type": "integer"
+        },
+        "capture_after_settle": {
+          "title": "Capture After Settle",
+          "type": "boolean"
+        },
+        "kind": {
+          "const": "move_camera",
+          "title": "Kind",
+          "type": "string"
+        },
+        "pitch_rad": {
+          "maximum": 0.5235987755982988,
+          "minimum": -0.5235987755982988,
+          "title": "Pitch Rad",
+          "type": "number"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "slide_m": {
+          "maximum": 0.15,
+          "minimum": -0.15,
+          "title": "Slide M",
+          "type": "number"
+        },
+        "timeout_s": {
+          "exclusiveMinimum": 0,
+          "maximum": 15,
+          "title": "Timeout S",
+          "type": "number"
+        },
+        "yaw_rad": {
+          "maximum": 0.7853981633974483,
+          "minimum": -0.7853981633974483,
+          "title": "Yaw Rad",
+          "type": "number"
+        }
+      },
+      "required": [
+        "schema_version",
+        "action_id",
+        "timeout_s",
+        "kind",
+        "slide_m",
+        "yaw_rad",
+        "pitch_rad",
+        "capture_after_settle"
+      ],
+      "title": "MoveCamera",
+      "type": "object"
+    },
+    "ProbeVoltage": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "minimum": 1,
+          "title": "Action Id",
+          "type": "integer"
+        },
+        "dwell_s": {
+          "maximum": 2.0,
+          "minimum": 0.2,
+          "title": "Dwell S",
+          "type": "number"
+        },
+        "kind": {
+          "const": "probe_voltage",
+          "title": "Kind",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "timeout_s": {
+          "exclusiveMinimum": 0,
+          "maximum": 15,
+          "title": "Timeout S",
+          "type": "number"
+        },
+        "voltages_v": {
+          "items": {
+            "maximum": 4.0,
+            "minimum": 0.2,
+            "type": "number"
+          },
+          "maxItems": 3,
+          "minItems": 1,
+          "title": "Voltages V",
+          "type": "array"
+        }
+      },
+      "required": [
+        "schema_version",
+        "action_id",
+        "timeout_s",
+        "kind",
+        "voltages_v",
+        "dwell_s"
+      ],
+      "title": "ProbeVoltage",
+      "type": "object"
+    },
+    "RequestHelp": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "minimum": 1,
+          "title": "Action Id",
+          "type": "integer"
+        },
+        "kind": {
+          "const": "request_help",
+          "title": "Kind",
+          "type": "string"
+        },
+        "measurement": {
+          "enum": [
+            "reference_irradiance",
+            "rear_inspection"
+          ],
+          "title": "Measurement",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "timeout_s": {
+          "exclusiveMinimum": 0,
+          "maximum": 15,
+          "title": "Timeout S",
+          "type": "number"
+        }
+      },
+      "required": [
+        "schema_version",
+        "action_id",
+        "timeout_s",
+        "kind",
+        "measurement"
+      ],
+      "title": "RequestHelp",
+      "type": "object"
+    },
+    "SafeStop": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "minimum": 1,
+          "title": "Action Id",
+          "type": "integer"
+        },
+        "kind": {
+          "const": "safe_stop",
+          "title": "Kind",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "timeout_s": {
+          "exclusiveMinimum": 0,
+          "maximum": 15,
+          "title": "Timeout S",
+          "type": "number"
+        }
+      },
+      "required": [
+        "schema_version",
+        "action_id",
+        "timeout_s",
+        "kind"
+      ],
+      "title": "SafeStop",
+      "type": "object"
+    },
+    "SetVoltage": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "minimum": 1,
+          "title": "Action Id",
+          "type": "integer"
+        },
+        "kind": {
+          "const": "set_voltage",
+          "title": "Kind",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "timeout_s": {
+          "exclusiveMinimum": 0,
+          "maximum": 15,
+          "title": "Timeout S",
+          "type": "number"
+        },
+        "voltage_v": {
+          "maximum": 4.0,
+          "minimum": 0.2,
+          "title": "Voltage V",
+          "type": "number"
+        }
+      },
+      "required": [
+        "schema_version",
+        "action_id",
+        "timeout_s",
+        "kind",
+        "voltage_v"
+      ],
+      "title": "SetVoltage",
+      "type": "object"
+    },
+    "Wait": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "minimum": 1,
+          "title": "Action Id",
+          "type": "integer"
+        },
+        "duration_s": {
+          "maximum": 5,
+          "minimum": 0.1,
+          "title": "Duration S",
+          "type": "number"
+        },
+        "kind": {
+          "const": "wait",
+          "title": "Kind",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "timeout_s": {
+          "exclusiveMinimum": 0,
+          "maximum": 15,
+          "title": "Timeout S",
+          "type": "number"
+        }
+      },
+      "required": [
+        "schema_version",
+        "action_id",
+        "timeout_s",
+        "kind",
+        "duration_s"
+      ],
+      "title": "Wait",
+      "type": "object"
+    }
+  },
+  "discriminator": {
+    "mapping": {
+      "capture_rgb": "#/$defs/CaptureRGB",
+      "finish": "#/$defs/Finish",
+      "move_camera": "#/$defs/MoveCamera",
+      "probe_voltage": "#/$defs/ProbeVoltage",
+      "request_help": "#/$defs/RequestHelp",
+      "safe_stop": "#/$defs/SafeStop",
+      "set_voltage": "#/$defs/SetVoltage",
+      "wait": "#/$defs/Wait"
+    },
+    "propertyName": "kind"
+  },
+  "oneOf": [
+    {
+      "$ref": "#/$defs/MoveCamera"
+    },
+    {
+      "$ref": "#/$defs/SetVoltage"
+    },
+    {
+      "$ref": "#/$defs/ProbeVoltage"
+    },
+    {
+      "$ref": "#/$defs/CaptureRGB"
+    },
+    {
+      "$ref": "#/$defs/Wait"
+    },
+    {
+      "$ref": "#/$defs/RequestHelp"
+    },
+    {
+      "$ref": "#/$defs/SafeStop"
+    },
+    {
+      "$ref": "#/$defs/Finish"
+    }
+  ]
+}

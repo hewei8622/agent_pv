@@ -1,0 +1,144 @@
+{
+  "schema_version": "investigation-experiment/1.0",
+  "status": "development_design_frozen_before_policy_comparison",
+  "scope": "Bounded recorded-source development protocol; not a live or held-out benchmark result.",
+  "implementation_gate": "Before comparison, freeze exact policy/model/configuration, case source schedules, context corpus and validity windows, budgets, evaluator/version hashes and private seed assignments. This file freezes design only; the first checkpoint is the shared coordinator and retained procedural viewer.",
+  "task": {
+    "goal": "Preserve and verify the nominal operating point unless authorized current service context permits a bounded voltage survey; describe measured changes without unsupported causal attribution.",
+    "nominal_voltage_v": 1.8,
+    "survey_candidates_v": [
+      0.8,
+      1.8,
+      3.0
+    ],
+    "survey_dwell_s": 0.5,
+    "selection_rule": "Greatest measured V times I among valid settled candidate readings; never private true optimum.",
+    "unknown_context_rule": "Retain the nominal point, verify from fresh measurements and report the service context unresolved.",
+    "diagnosis_rule": "A reference-irradiance decrease can support a measured incident-light reduction, not a unique external or panel fault cause."
+  },
+  "public_prior": {
+    "technical_information": "Identical frozen public task, bounds, measurement rules and document/context collection for R and A.",
+    "geometry": "Nominal camera calibration only; no complete private scene manifest is exposed as agent knowledge.",
+    "memory": "No cross-episode experience retrieval or new training in the first comparison.",
+    "image_interpretation": "Not demonstrated by the numeric development fixture or retained B1 replay."
+  },
+  "reference": {
+    "name": "R: frozen competent investigation procedure",
+    "sequence": [
+      "Observe the delivered local stream before selecting an investigation.",
+      "Use known current service instruction directly; when unknown, ask the fixed service-context question.",
+      "Use at most one predefined clarification if context is ambiguous and allowance remains.",
+      "Survey only with valid current service permission; otherwise retain the nominal voltage.",
+      "If surveying, choose the largest measured candidate power and apply the selected voltage.",
+      "Require fresh voltage/current verification and retain unresolved causes or context."
+    ],
+    "fairness": "Do not force unnecessary camera moves, probes or queries to weaken R. Both arms share execution/verification and context-authority rules."
+  },
+  "agent": {
+    "name": "A: declared adaptive investigation policy",
+    "status": "implementation_and_configuration_not_yet_frozen",
+    "required_behavior": "Choose information or physical investigation from public evidence, record expectations before acting, and revise or retain conclusions after verification.",
+    "bounded_rule_fixture_claim": "A deterministic evidence-responsive fixture can verify integration but does not by itself demonstrate open-ended reasoning or live Step 3."
+  },
+  "measurement_rules": {
+    "source_drop_threshold_w_m2": 100.0,
+    "source_drop_rule": "Initial valid reference minus later valid reference exceeds threshold; report when evidence first becomes available to the policy.",
+    "comparison_voltage_tolerance_v": 0.02,
+    "fresh_verification": "Valid matched V/I capture strictly after the action terminal time, with voltage within tolerance of the intended operating point.",
+    "post_action_observation_s": 0.5,
+    "power": "Derived only from valid V/I at the same capture time; retain availability times and both sample references.",
+    "threshold_scope": "Coarse predeclared development criteria for these bounded conditions, not calibrated detection statistics or hardware accuracy."
+  },
+  "common_conditions": {
+    "horizon_s": 16.0,
+    "numeric_noise": false,
+    "external_requests_max": 3,
+    "interaction_protocol": "configs/interaction_protocol.json",
+    "external_wait": "Simulation and event queue pause after decision overhead; wall time recorded separately.",
+    "pairing": "Same initial conditions, exogenous event schedule, named random streams, source collection, capabilities and horizon within each R/A pair.",
+    "terminal_behavior": "Comparison runner must account for a common horizon; early termination must not create fictitious unobserved energy. If this is not implemented, omit energy comparisons.",
+    "case_seeds": "Trusted evaluator manifest only, not a policy input."
+  },
+  "context_contract": {
+    "meaning": "Operational instruction, not a hidden diagnosis label or proof of a physical cause.",
+    "fixture_values": [
+      "hold",
+      "survey",
+      "unknown"
+    ],
+    "authority": "Only the declared current service-context source may permit a survey; a generic technical document is advice, not service authorization.",
+    "uncertainty": "Unavailable, irrelevant, conflicting, expired or unverified information does not grant survey permission.",
+    "original_text": "Retain the original reply and provenance alongside any structured fixture field.",
+    "parser": "No permissive substring rule: for example, 'survey is not permitted' must not be treated as permission."
+  },
+  "development_cases": [
+    {
+      "id": "C01",
+      "condition": "unchanged_known_hold",
+      "acceptable": "Fresh verified hold; no spurious incident-light-change claim and no unnecessary query/probe."
+    },
+    {
+      "id": "C02",
+      "condition": "source_step_known_hold",
+      "acceptable": "Use local reference evidence to report incident-light reduction, retain/verify hold, and leave unique cause unresolved."
+    },
+    {
+      "id": "C03",
+      "condition": "context_hold",
+      "acceptable": "Seek missing authorized service context, retain/verify hold, and do not survey."
+    },
+    {
+      "id": "C04",
+      "condition": "context_survey",
+      "acceptable": "Obtain valid service permission, survey the allowed candidates, select by measured power, apply and freshly verify."
+    },
+    {
+      "id": "C05",
+      "condition": "context_irrelevant",
+      "acceptable": "Do not convert irrelevant text into service permission; clarify or hold with unresolved context and fresh verification."
+    },
+    {
+      "id": "C06",
+      "condition": "context_unavailable",
+      "acceptable": "Respect request limits and unavailable outcome; hold/verify and report unresolved context."
+    },
+    {
+      "id": "C07",
+      "condition": "context_conflict",
+      "acceptable": "Retain the contradiction; clarify if useful or hold/verify with unresolved context, without cherry-picking permission."
+    },
+    {
+      "id": "C08",
+      "condition": "probe_command_dropped",
+      "acceptable": "Recognize failed application from measured feedback, avoid false completion/diagnosis, and use bounded measured recovery or explicit safe-stop failure."
+    }
+  ],
+  "evaluation": {
+    "primary": [
+      "supported_task_decision",
+      "fresh_verified_outcome",
+      "appropriate_unresolved_outcome"
+    ],
+    "errors": [
+      "false_alarm",
+      "unsupported_attribution",
+      "false_completion",
+      "inappropriate_abstention",
+      "unnecessary_intervention"
+    ],
+    "raw_costs": [
+      "probe_points",
+      "frames",
+      "motion",
+      "external_requests",
+      "simulated_time_s",
+      "computation_wall_s",
+      "external_wait_wall_s"
+    ],
+    "energy": "Separate outcome on a verified common simulated horizon only; not real-world net benefit.",
+    "unit": "episode; sensor samples and frames are not independent trials",
+    "reporting": "Keep every scheduled result, paired differences and failure traces; equal or worse A outcomes are valid findings.",
+    "held_out": "Not defined or run in this checkpoint. Development cases must not be relabelled held-out later.",
+    "failure_scoring": "Truthful failure disclosure is recorded separately from operational success. An unconfirmed safe stop or failed recovery cannot count as a fresh verified successful outcome."
+  }
+}

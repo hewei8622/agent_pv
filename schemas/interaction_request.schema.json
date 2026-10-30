@@ -1,0 +1,76 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "channel": {
+      "enum": [
+        "human",
+        "internet"
+      ],
+      "title": "Channel",
+      "type": "string"
+    },
+    "episode_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_-]+$",
+      "title": "Episode Id",
+      "type": "string"
+    },
+    "information_gap": {
+      "maxLength": 2000,
+      "minLength": 1,
+      "title": "Information Gap",
+      "type": "string"
+    },
+    "intended_decision": {
+      "maxLength": 2000,
+      "minLength": 1,
+      "title": "Intended Decision",
+      "type": "string"
+    },
+    "parent_request_id": {
+      "anyOf": [
+        {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_-]+$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Parent Request Id"
+    },
+    "question": {
+      "maxLength": 2000,
+      "minLength": 1,
+      "title": "Question",
+      "type": "string"
+    },
+    "request_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_-]+$",
+      "title": "Request Id",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "interaction/1.0",
+      "default": "interaction/1.0",
+      "title": "Schema Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "episode_id",
+    "request_id",
+    "channel",
+    "question",
+    "information_gap",
+    "intended_decision"
+  ],
+  "title": "InteractionRequest",
+  "type": "object"
+}

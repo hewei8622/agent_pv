@@ -1,0 +1,7 @@
+{
+  "source": "runs/m0-desktop-20261016T100908Z/agent_rgb.png",
+  "sha256": "feb98b0181b2a9826f9062675b0eced712055ed4e0b0466f2a8343a0ccb8fd90",
+  "capture_source_commit": "6b6a8c474794eb6751fd693c58ec8dbc13d3ab95",
+  "capture_utc": "2026-10-16T10:09:09Z",
+  "scope": "Original real M0 capture copied byte-for-byte as a valid PNG wire-contract control; not a fresh renderer invocation."
+}

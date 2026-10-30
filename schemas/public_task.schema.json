@@ -1,0 +1,396 @@
+{
+  "$defs": {
+    "Budgets": {
+      "additionalProperties": false,
+      "properties": {
+        "angular_path_rad": {
+          "minimum": 0,
+          "title": "Angular Path Rad",
+          "type": "number"
+        },
+        "decisions": {
+          "minimum": 0,
+          "title": "Decisions",
+          "type": "integer"
+        },
+        "help_requests": {
+          "minimum": 0,
+          "title": "Help Requests",
+          "type": "integer"
+        },
+        "rgb_frames": {
+          "minimum": 0,
+          "title": "Rgb Frames",
+          "type": "integer"
+        },
+        "slide_path_m": {
+          "minimum": 0,
+          "title": "Slide Path M",
+          "type": "number"
+        },
+        "time_s": {
+          "minimum": 0,
+          "title": "Time S",
+          "type": "number"
+        },
+        "voltage_points": {
+          "minimum": 0,
+          "title": "Voltage Points",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "time_s",
+        "rgb_frames",
+        "voltage_points",
+        "help_requests",
+        "decisions",
+        "slide_path_m",
+        "angular_path_rad"
+      ],
+      "title": "Budgets",
+      "type": "object"
+    },
+    "Calibration": {
+      "additionalProperties": false,
+      "properties": {
+        "calibration_id": {
+          "maxLength": 128,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_-]+$",
+          "title": "Calibration Id",
+          "type": "string"
+        },
+        "camera_axes": {
+          "const": "x_right_y_up_minus_z_forward",
+          "title": "Camera Axes",
+          "type": "string"
+        },
+        "camera_id": {
+          "const": "agent_rgb",
+          "title": "Camera Id",
+          "type": "string"
+        },
+        "fovy_deg": {
+          "title": "Fovy Deg",
+          "type": "number"
+        },
+        "height": {
+          "const": 480,
+          "title": "Height",
+          "type": "integer"
+        },
+        "home_position_m": {
+          "maxItems": 3,
+          "minItems": 3,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Home Position M",
+          "type": "array"
+        },
+        "k": {
+          "maxItems": 9,
+          "minItems": 9,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "K",
+          "type": "array"
+        },
+        "pixel_convention": {
+          "const": "top_left_center_0_0_x_right_y_down",
+          "title": "Pixel Convention",
+          "type": "string"
+        },
+        "width": {
+          "const": 640,
+          "title": "Width",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "calibration_id",
+        "camera_id",
+        "width",
+        "height",
+        "fovy_deg",
+        "k",
+        "home_position_m",
+        "pixel_convention",
+        "camera_axes"
+      ],
+      "title": "Calibration",
+      "type": "object"
+    },
+    "CostWeights": {
+      "additionalProperties": false,
+      "properties": {
+        "angle_per_rad": {
+          "minimum": 0,
+          "title": "Angle Per Rad",
+          "type": "number"
+        },
+        "help_request": {
+          "minimum": 0,
+          "title": "Help Request",
+          "type": "number"
+        },
+        "pv_energy_scale_j": {
+          "exclusiveMinimum": 0,
+          "title": "Pv Energy Scale J",
+          "type": "number"
+        },
+        "rgb": {
+          "minimum": 0,
+          "title": "Rgb",
+          "type": "number"
+        },
+        "slide_per_m": {
+          "minimum": 0,
+          "title": "Slide Per M",
+          "type": "number"
+        },
+        "voltage_point": {
+          "minimum": 0,
+          "title": "Voltage Point",
+          "type": "number"
+        }
+      },
+      "required": [
+        "pv_energy_scale_j",
+        "rgb",
+        "voltage_point",
+        "help_request",
+        "slide_per_m",
+        "angle_per_rad"
+      ],
+      "title": "CostWeights",
+      "type": "object"
+    },
+    "Limits": {
+      "additionalProperties": false,
+      "properties": {
+        "pitch_rad": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Pitch Rad",
+          "type": "array"
+        },
+        "slide_m": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Slide M",
+          "type": "array"
+        },
+        "voltage_v": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Voltage V",
+          "type": "array"
+        },
+        "yaw_rad": {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "title": "Yaw Rad",
+          "type": "array"
+        }
+      },
+      "required": [
+        "slide_m",
+        "yaw_rad",
+        "pitch_rad",
+        "voltage_v"
+      ],
+      "title": "Limits",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "allowed_adaptation": {
+      "maxLength": 1000,
+      "minLength": 1,
+      "title": "Allowed Adaptation",
+      "type": "string"
+    },
+    "available_actions": {
+      "items": {
+        "enum": [
+          "move_camera",
+          "set_voltage",
+          "probe_voltage",
+          "capture_rgb",
+          "wait",
+          "request_help",
+          "safe_stop",
+          "finish"
+        ],
+        "type": "string"
+      },
+      "title": "Available Actions",
+      "type": "array"
+    },
+    "available_help": {
+      "items": {
+        "enum": [
+          "reference_irradiance",
+          "rear_inspection"
+        ],
+        "type": "string"
+      },
+      "title": "Available Help",
+      "type": "array"
+    },
+    "budgets": {
+      "$ref": "#/$defs/Budgets"
+    },
+    "cost_weights": {
+      "$ref": "#/$defs/CostWeights"
+    },
+    "episode_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_-]+$",
+      "title": "Episode Id",
+      "type": "string"
+    },
+    "goal": {
+      "maxLength": 1000,
+      "minLength": 1,
+      "title": "Goal",
+      "type": "string"
+    },
+    "horizon_s": {
+      "exclusiveMinimum": 0,
+      "title": "Horizon S",
+      "type": "number"
+    },
+    "hypothesis_classes": {
+      "items": {
+        "maxLength": 128,
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9_-]+$",
+        "type": "string"
+      },
+      "title": "Hypothesis Classes",
+      "type": "array"
+    },
+    "knowledge_condition": {
+      "maxLength": 1000,
+      "minLength": 1,
+      "title": "Knowledge Condition",
+      "type": "string"
+    },
+    "limits": {
+      "$ref": "#/$defs/Limits"
+    },
+    "nominal_calibration": {
+      "$ref": "#/$defs/Calibration"
+    },
+    "schema_version": {
+      "const": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "sensors": {
+      "items": {
+        "enum": [
+          "voltage_v",
+          "current_a",
+          "temperature_c",
+          "reference_w_m2",
+          "encoders",
+          "rgb"
+        ],
+        "type": "string"
+      },
+      "title": "Sensors",
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "episode_id",
+    "goal",
+    "sensors",
+    "limits",
+    "available_actions",
+    "available_help",
+    "horizon_s",
+    "budgets",
+    "cost_weights",
+    "nominal_calibration",
+    "knowledge_condition",
+    "allowed_adaptation",
+    "hypothesis_classes"
+  ],
+  "title": "PublicTask",
+  "type": "object"
+}

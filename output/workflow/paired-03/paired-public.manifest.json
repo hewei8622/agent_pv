@@ -1,0 +1,492 @@
+{
+  "schema_version": "paired_investigation_viewer.v1",
+  "html": "output/workflow/paired-03/paired-public.html",
+  "html_sha256": "94982372b5d8747e6e835881a67417f8a359e60fd9c5b82e5bfd77c59e428b52",
+  "builder_sha256": "312f927e96adc1c585188ba8649ab01a69c29c58c19db53073208edb07e159ef",
+  "base_builder_sha256": "19f27475e91534f8db81d57a7723bebf678c2a36ef01f138be15d5c435601722",
+  "template_sha256": "450d9e86576bfbb1bed4a249c2c9f8c1ccde0e421fbb71400a6196f2d851357b",
+  "export_kind": "public_only",
+  "cases": 4,
+  "sources": [
+    {
+      "file": "task.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C01-R/public/task.json",
+      "sha256": "6346cc9a59eda92765458eb06889a99387bcd2e90ca0d03f25f1f9171c879801",
+      "visibility": "public"
+    },
+    {
+      "file": "observations.jsonl",
+      "artifact_path": "./runs/paired-investigation-20261019/C01-R/public/observations.jsonl",
+      "sha256": "0c5153a8fd8088f5f7709e9a58e44a4b5faa1711c6053fd4e95d7f665c5b731f",
+      "visibility": "public"
+    },
+    {
+      "file": "decisions.jsonl",
+      "artifact_path": "./runs/paired-investigation-20261019/C01-R/public/decisions.jsonl",
+      "sha256": "f20a53cd375cb854d435727264932d24c8c0f5fadfd1f7f59da76921111de1f5",
+      "visibility": "public"
+    },
+    {
+      "file": "actions.jsonl",
+      "artifact_path": "./runs/paired-investigation-20261019/C01-R/public/actions.jsonl",
+      "sha256": "a2b0f173c4c1c70fc0b16531e78dd9d887bfa5971d49b1e7ac610c89d14f42e3",
+      "visibility": "public"
+    },
+    {
+      "file": "investigation.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C01-R/public/investigation.json",
+      "sha256": "44191910b9e2d8c55042bed5a7594b695b5073bd6080124afeffd10a2bbea88a",
+      "visibility": "public"
+    },
+    {
+      "file": "public_brief.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C01-R/public/public_brief.json",
+      "sha256": "820d8fc809b2913c5cda88ceb7a5e94ddbf479fd8aeea9b6e5b2ac2b81c8b8f7",
+      "visibility": "public"
+    },
+    {
+      "file": "decision_timing.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C01-R/public/decision_timing.json",
+      "sha256": "7b62b82bd3b56e77f22b2482a8302ae59d95fd78af126e9a352b68e76df594a2",
+      "visibility": "public"
+    },
+    {
+      "file": "policy_audit.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C01-R/public/policy_audit.json",
+      "sha256": "d14f600dda16b89ee387dcf3eb8fff00d65e696c40a1096b98671bc61b60628c",
+      "visibility": "public"
+    },
+    {
+      "file": "verification.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C01-R/public/verification.json",
+      "sha256": "b8eeda6bbb8e30cee4155250f36afd222ccf6c18a1c3f6e22283f2374fe5ba32",
+      "visibility": "public"
+    },
+    {
+      "file": "assessment.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C01-R/public/assessment.json",
+      "sha256": "6e46fd38b7c1956c5110c673eac0796f4b0f3866659358f805a343a3a6f40223",
+      "visibility": "public"
+    },
+    {
+      "file": "task.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C01-A/public/task.json",
+      "sha256": "6346cc9a59eda92765458eb06889a99387bcd2e90ca0d03f25f1f9171c879801",
+      "visibility": "public"
+    },
+    {
+      "file": "observations.jsonl",
+      "artifact_path": "./runs/paired-investigation-20261019/C01-A/public/observations.jsonl",
+      "sha256": "0c5153a8fd8088f5f7709e9a58e44a4b5faa1711c6053fd4e95d7f665c5b731f",
+      "visibility": "public"
+    },
+    {
+      "file": "decisions.jsonl",
+      "artifact_path": "./runs/paired-investigation-20261019/C01-A/public/decisions.jsonl",
+      "sha256": "4b798f232b0c87280658293d2aaaf09874ad6c4a56a3d6dbf38758f81d901026",
+      "visibility": "public"
+    },
+    {
+      "file": "actions.jsonl",
+      "artifact_path": "./runs/paired-investigation-20261019/C01-A/public/actions.jsonl",
+      "sha256": "a2b0f173c4c1c70fc0b16531e78dd9d887bfa5971d49b1e7ac610c89d14f42e3",
+      "visibility": "public"
+    },
+    {
+      "file": "investigation.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C01-A/public/investigation.json",
+      "sha256": "22119c8ffa5181f7b12945636181377886c3c3b228b135aee2172116804e9d5d",
+      "visibility": "public"
+    },
+    {
+      "file": "public_brief.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C01-A/public/public_brief.json",
+      "sha256": "820d8fc809b2913c5cda88ceb7a5e94ddbf479fd8aeea9b6e5b2ac2b81c8b8f7",
+      "visibility": "public"
+    },
+    {
+      "file": "decision_timing.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C01-A/public/decision_timing.json",
+      "sha256": "c8cbaf42f267c6fa5c02cbbd6f5ab4444229f4d10de1c219e9bf08b73f73514f",
+      "visibility": "public"
+    },
+    {
+      "file": "policy_audit.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C01-A/public/policy_audit.json",
+      "sha256": "184aad5a883876586539ea9dcedb178ac350697585ce6b886ffb4b00add08a38",
+      "visibility": "public"
+    },
+    {
+      "file": "verification.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C01-A/public/verification.json",
+      "sha256": "b8eeda6bbb8e30cee4155250f36afd222ccf6c18a1c3f6e22283f2374fe5ba32",
+      "visibility": "public"
+    },
+    {
+      "file": "assessment.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C01-A/public/assessment.json",
+      "sha256": "e763d6e66873a98dde7a7786fc80b2edc7b06df8a52d06158c76abbb8410cbe0",
+      "visibility": "public"
+    },
+    {
+      "file": "task.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C02-R/public/task.json",
+      "sha256": "6346cc9a59eda92765458eb06889a99387bcd2e90ca0d03f25f1f9171c879801",
+      "visibility": "public"
+    },
+    {
+      "file": "observations.jsonl",
+      "artifact_path": "./runs/paired-investigation-20261019/C02-R/public/observations.jsonl",
+      "sha256": "d3510e723d49b254e2007962b0cf99220cf5829314bf66490b323fa947004ef4",
+      "visibility": "public"
+    },
+    {
+      "file": "decisions.jsonl",
+      "artifact_path": "./runs/paired-investigation-20261019/C02-R/public/decisions.jsonl",
+      "sha256": "6065040147917d33adb6ab052199cd431ad4be861bc96c411998d068866666db",
+      "visibility": "public"
+    },
+    {
+      "file": "actions.jsonl",
+      "artifact_path": "./runs/paired-investigation-20261019/C02-R/public/actions.jsonl",
+      "sha256": "a2b0f173c4c1c70fc0b16531e78dd9d887bfa5971d49b1e7ac610c89d14f42e3",
+      "visibility": "public"
+    },
+    {
+      "file": "investigation.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C02-R/public/investigation.json",
+      "sha256": "d6898a10374a29221ce579b59e449e03ee4086352a8ddb1886cccd65d3570e42",
+      "visibility": "public"
+    },
+    {
+      "file": "public_brief.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C02-R/public/public_brief.json",
+      "sha256": "820d8fc809b2913c5cda88ceb7a5e94ddbf479fd8aeea9b6e5b2ac2b81c8b8f7",
+      "visibility": "public"
+    },
+    {
+      "file": "decision_timing.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C02-R/public/decision_timing.json",
+      "sha256": "81ceef1a220dd027f3ae7c27ab8aa5f91f13946a3ed8993927b78435e114186e",
+      "visibility": "public"
+    },
+    {
+      "file": "policy_audit.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C02-R/public/policy_audit.json",
+      "sha256": "557d6f57ae8b8017bc6dc5a61b8fe57a0d6dc50b6cd6483d225cace3bd25b63c",
+      "visibility": "public"
+    },
+    {
+      "file": "verification.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C02-R/public/verification.json",
+      "sha256": "a78d39f000a7ab4ca5b8b5027d3e7663a2e7058b8b0e9c7c54ae6b8549a6f868",
+      "visibility": "public"
+    },
+    {
+      "file": "assessment.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C02-R/public/assessment.json",
+      "sha256": "f2cea77f485f68ddef6a683cd00d0ff1d754ce282c69db8f299fed3dbdcf0ce3",
+      "visibility": "public"
+    },
+    {
+      "file": "task.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C02-A/public/task.json",
+      "sha256": "6346cc9a59eda92765458eb06889a99387bcd2e90ca0d03f25f1f9171c879801",
+      "visibility": "public"
+    },
+    {
+      "file": "observations.jsonl",
+      "artifact_path": "./runs/paired-investigation-20261019/C02-A/public/observations.jsonl",
+      "sha256": "d3510e723d49b254e2007962b0cf99220cf5829314bf66490b323fa947004ef4",
+      "visibility": "public"
+    },
+    {
+      "file": "decisions.jsonl",
+      "artifact_path": "./runs/paired-investigation-20261019/C02-A/public/decisions.jsonl",
+      "sha256": "8aca60247a7f9b54878c785aece6eefe0f7cb922a8590f77cb0a1cef735639d5",
+      "visibility": "public"
+    },
+    {
+      "file": "actions.jsonl",
+      "artifact_path": "./runs/paired-investigation-20261019/C02-A/public/actions.jsonl",
+      "sha256": "a2b0f173c4c1c70fc0b16531e78dd9d887bfa5971d49b1e7ac610c89d14f42e3",
+      "visibility": "public"
+    },
+    {
+      "file": "investigation.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C02-A/public/investigation.json",
+      "sha256": "6b51cf9252adab037ed722a47bd00717b581975196947e65a20ff54e8f5f7561",
+      "visibility": "public"
+    },
+    {
+      "file": "public_brief.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C02-A/public/public_brief.json",
+      "sha256": "820d8fc809b2913c5cda88ceb7a5e94ddbf479fd8aeea9b6e5b2ac2b81c8b8f7",
+      "visibility": "public"
+    },
+    {
+      "file": "decision_timing.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C02-A/public/decision_timing.json",
+      "sha256": "da65efc8d7bb446b84ca178c959241d41fdb9c9e403cbfc55c34c727c1601032",
+      "visibility": "public"
+    },
+    {
+      "file": "policy_audit.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C02-A/public/policy_audit.json",
+      "sha256": "355930fa03198d7e4c131db48be5b39ad73debd65bc13316ef897fd34430cf58",
+      "visibility": "public"
+    },
+    {
+      "file": "verification.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C02-A/public/verification.json",
+      "sha256": "a78d39f000a7ab4ca5b8b5027d3e7663a2e7058b8b0e9c7c54ae6b8549a6f868",
+      "visibility": "public"
+    },
+    {
+      "file": "assessment.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C02-A/public/assessment.json",
+      "sha256": "2dc0e199d73e412a20274714ee018ca65529eac2f2ea25bd6986b2e92cf52196",
+      "visibility": "public"
+    },
+    {
+      "file": "task.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C03-R/public/task.json",
+      "sha256": "6346cc9a59eda92765458eb06889a99387bcd2e90ca0d03f25f1f9171c879801",
+      "visibility": "public"
+    },
+    {
+      "file": "observations.jsonl",
+      "artifact_path": "./runs/paired-investigation-20261019/C03-R/public/observations.jsonl",
+      "sha256": "69cdb32b18c3b37eff48fa8d4c4c6d6b87aa7bb800be0f64b8e315b68214ccb7",
+      "visibility": "public"
+    },
+    {
+      "file": "decisions.jsonl",
+      "artifact_path": "./runs/paired-investigation-20261019/C03-R/public/decisions.jsonl",
+      "sha256": "de91843a870f3d19eecb2586a8ced2c8a486fc4c253107cd0620aa244fcb56d4",
+      "visibility": "public"
+    },
+    {
+      "file": "actions.jsonl",
+      "artifact_path": "./runs/paired-investigation-20261019/C03-R/public/actions.jsonl",
+      "sha256": "28482eb9c924c96380ef434bf5779fe2d3675a2bd8a6ae59b06df60b4b354cdb",
+      "visibility": "public"
+    },
+    {
+      "file": "investigation.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C03-R/public/investigation.json",
+      "sha256": "f15372e136e1cfa545851cbe621057c53f65ec757d789ffe58a4c5d1d89c20f1",
+      "visibility": "public"
+    },
+    {
+      "file": "public_brief.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C03-R/public/public_brief.json",
+      "sha256": "83b58f755ff14aad7791bcf897e7897d774395857d0bf28f3b047a8dd9477b60",
+      "visibility": "public"
+    },
+    {
+      "file": "decision_timing.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C03-R/public/decision_timing.json",
+      "sha256": "4fc7caeea95c03ef53ed4f8c9ae3c7f491a89c168f32f35841dbf8686838973d",
+      "visibility": "public"
+    },
+    {
+      "file": "policy_audit.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C03-R/public/policy_audit.json",
+      "sha256": "98bec3788612a7c84d850ce5281b5a33a97d0814c5eced533268aee14fbaa4c5",
+      "visibility": "public"
+    },
+    {
+      "file": "verification.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C03-R/public/verification.json",
+      "sha256": "cf3607336132f62a8dfea272f2072fd0438b0ac94d64c832cfb3c2693b3dee76",
+      "visibility": "public"
+    },
+    {
+      "file": "assessment.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C03-R/public/assessment.json",
+      "sha256": "0b39ce5d8ad8b09640d26998f29d7f4d0e799ae54d303b2722b0b06619fbe038",
+      "visibility": "public"
+    },
+    {
+      "file": "task.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C03-A/public/task.json",
+      "sha256": "6346cc9a59eda92765458eb06889a99387bcd2e90ca0d03f25f1f9171c879801",
+      "visibility": "public"
+    },
+    {
+      "file": "observations.jsonl",
+      "artifact_path": "./runs/paired-investigation-20261019/C03-A/public/observations.jsonl",
+      "sha256": "69cdb32b18c3b37eff48fa8d4c4c6d6b87aa7bb800be0f64b8e315b68214ccb7",
+      "visibility": "public"
+    },
+    {
+      "file": "decisions.jsonl",
+      "artifact_path": "./runs/paired-investigation-20261019/C03-A/public/decisions.jsonl",
+      "sha256": "958ff652beff5f2639c5636020ab6e65e0148ffab9faad25044a1e2b2e535da8",
+      "visibility": "public"
+    },
+    {
+      "file": "actions.jsonl",
+      "artifact_path": "./runs/paired-investigation-20261019/C03-A/public/actions.jsonl",
+      "sha256": "28482eb9c924c96380ef434bf5779fe2d3675a2bd8a6ae59b06df60b4b354cdb",
+      "visibility": "public"
+    },
+    {
+      "file": "investigation.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C03-A/public/investigation.json",
+      "sha256": "2f4219a395c3d4a47f03b922515619205e12cc34bd36c93bc0d2f394994cab3a",
+      "visibility": "public"
+    },
+    {
+      "file": "public_brief.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C03-A/public/public_brief.json",
+      "sha256": "83b58f755ff14aad7791bcf897e7897d774395857d0bf28f3b047a8dd9477b60",
+      "visibility": "public"
+    },
+    {
+      "file": "decision_timing.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C03-A/public/decision_timing.json",
+      "sha256": "b2fc2fd9dfab4b1d65b4bf2c2006af8e71449f17dd19f4f3b10089e5fe5aa397",
+      "visibility": "public"
+    },
+    {
+      "file": "policy_audit.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C03-A/public/policy_audit.json",
+      "sha256": "a2b1fd8b4068286e31f0e9d9b328deca843d655b59cf6708baf30fca9ba20768",
+      "visibility": "public"
+    },
+    {
+      "file": "verification.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C03-A/public/verification.json",
+      "sha256": "cf3607336132f62a8dfea272f2072fd0438b0ac94d64c832cfb3c2693b3dee76",
+      "visibility": "public"
+    },
+    {
+      "file": "assessment.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C03-A/public/assessment.json",
+      "sha256": "256e1feb8e78621c63601c8cdd28a441f8a8230013941327868dd97fbc062622",
+      "visibility": "public"
+    },
+    {
+      "file": "task.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C04-R/public/task.json",
+      "sha256": "6346cc9a59eda92765458eb06889a99387bcd2e90ca0d03f25f1f9171c879801",
+      "visibility": "public"
+    },
+    {
+      "file": "observations.jsonl",
+      "artifact_path": "./runs/paired-investigation-20261019/C04-R/public/observations.jsonl",
+      "sha256": "e41b371cacfbc6a08867cbaae5930f541d6937b6a809a1770ef07f9389b10f0b",
+      "visibility": "public"
+    },
+    {
+      "file": "decisions.jsonl",
+      "artifact_path": "./runs/paired-investigation-20261019/C04-R/public/decisions.jsonl",
+      "sha256": "1da493ae55298cce64f00ba0eb439d9ae77bf24159a1d8dcf7c9afc21910f174",
+      "visibility": "public"
+    },
+    {
+      "file": "actions.jsonl",
+      "artifact_path": "./runs/paired-investigation-20261019/C04-R/public/actions.jsonl",
+      "sha256": "f3e28853e05abc08036783d9d926ca65c16ac9d9af5dc8070b00220478fb6f1e",
+      "visibility": "public"
+    },
+    {
+      "file": "investigation.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C04-R/public/investigation.json",
+      "sha256": "caadfc4a551e0e111ca77df34f0b95115f665121d8719b7e8ba2dcac78c861d7",
+      "visibility": "public"
+    },
+    {
+      "file": "public_brief.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C04-R/public/public_brief.json",
+      "sha256": "83b58f755ff14aad7791bcf897e7897d774395857d0bf28f3b047a8dd9477b60",
+      "visibility": "public"
+    },
+    {
+      "file": "decision_timing.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C04-R/public/decision_timing.json",
+      "sha256": "bdb90fffcc06833b74a0b097607e8c49965cafa9fa3df221c0376f5ec278e30e",
+      "visibility": "public"
+    },
+    {
+      "file": "policy_audit.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C04-R/public/policy_audit.json",
+      "sha256": "52fa5b9666f247b103523146462279bbf50b3d8af31d2cde78a528f568b00012",
+      "visibility": "public"
+    },
+    {
+      "file": "verification.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C04-R/public/verification.json",
+      "sha256": "34aee76e869122df9355530baae30770dba20f0f9a3e4dca44b2bed17401d0ca",
+      "visibility": "public"
+    },
+    {
+      "file": "assessment.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C04-R/public/assessment.json",
+      "sha256": "3f2541e65ed80ca3aa4510198261359c87de2f4635e83053d5450febbc6c00ac",
+      "visibility": "public"
+    },
+    {
+      "file": "task.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C04-A/public/task.json",
+      "sha256": "6346cc9a59eda92765458eb06889a99387bcd2e90ca0d03f25f1f9171c879801",
+      "visibility": "public"
+    },
+    {
+      "file": "observations.jsonl",
+      "artifact_path": "./runs/paired-investigation-20261019/C04-A/public/observations.jsonl",
+      "sha256": "e41b371cacfbc6a08867cbaae5930f541d6937b6a809a1770ef07f9389b10f0b",
+      "visibility": "public"
+    },
+    {
+      "file": "decisions.jsonl",
+      "artifact_path": "./runs/paired-investigation-20261019/C04-A/public/decisions.jsonl",
+      "sha256": "6d134b4c0313cb8b5b8ffaba15e1e40ade11d0e347c9f843fe9e09ebb69f698c",
+      "visibility": "public"
+    },
+    {
+      "file": "actions.jsonl",
+      "artifact_path": "./runs/paired-investigation-20261019/C04-A/public/actions.jsonl",
+      "sha256": "f3e28853e05abc08036783d9d926ca65c16ac9d9af5dc8070b00220478fb6f1e",
+      "visibility": "public"
+    },
+    {
+      "file": "investigation.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C04-A/public/investigation.json",
+      "sha256": "aaaad4d2a154c2a402b717f8f7013d5237ac441cb05d71663ea26a8f3382aebc",
+      "visibility": "public"
+    },
+    {
+      "file": "public_brief.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C04-A/public/public_brief.json",
+      "sha256": "83b58f755ff14aad7791bcf897e7897d774395857d0bf28f3b047a8dd9477b60",
+      "visibility": "public"
+    },
+    {
+      "file": "decision_timing.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C04-A/public/decision_timing.json",
+      "sha256": "c8157671bbc93e6056a6e8fb5412efb9ecb8c2daac26ebeb328a78df0d90ffe4",
+      "visibility": "public"
+    },
+    {
+      "file": "policy_audit.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C04-A/public/policy_audit.json",
+      "sha256": "5852a079dff7bec07f324128be59011b0800450e6728aac557ee08f46b89ca2f",
+      "visibility": "public"
+    },
+    {
+      "file": "verification.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C04-A/public/verification.json",
+      "sha256": "34aee76e869122df9355530baae30770dba20f0f9a3e4dca44b2bed17401d0ca",
+      "visibility": "public"
+    },
+    {
+      "file": "assessment.json",
+      "artifact_path": "./runs/paired-investigation-20261019/C04-A/public/assessment.json",
+      "sha256": "f1c9214d96f93643b934bcbfc8e4502df4dc468d487293c3f2d674aee2b0022f",
+      "visibility": "public"
+    }
+  ]
+}
